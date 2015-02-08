@@ -1,0 +1,2287 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	<link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <title>tacBOARD</title>
+</head>
+<body>
+	<header>
+		<div id="cd-logo"><a href="#0"><img src="img/logo.png" alt="Logo"></a></div>
+	</header>
+	<div id="cd-nav">
+		<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+		<nav id="cd-main-nav">
+			<ul>
+				<li class="nvbtn navitem tac-btn">
+                    <a href="#" class="tooltips">
+                        <img src="img/tac-icon.png"/>
+                        <span>Tac</span>
+                    </a>
+                </li>
+				<li class="nvbtn navitem">
+                    <a href="#" class="peeps-btn tooltips">
+                        <img src="img/peeps-icon.png"/>
+                        <span>Friends</span>
+                    </a>
+                </li>
+				<li class="nvbtn navitem time-line-btn">
+                    <a href="#" class="tooltips">
+                        <img src="img/time-line-icon.png"/>
+                        <span>Timeline</span>
+                    </a>
+                </li>
+				<li class="nvbtn navitem boards-btn">
+                    <a href="#" class="tooltips">
+                        <img src="img/boards-icon.png"/>
+                        <span>Boards</span>
+                    </a>
+                </li>
+                <li class="nvbtn navitem search-btn">
+                    <a href="#" class="tooltips">
+                        <img src="img/search-icon.png"/>
+                    </a>
+                </li>
+                <li class="navitem search-field-nav">
+                    <div class="search-box"/>
+                        <input placeholder="search" class="search-field"/>
+                    </div>
+                </li>
+                <li class="nvbtn navitem me-btn">
+                    <a href="#" class="tooltips">
+                        <img src="img/settings-icon.png"/>
+                        <span>Settings</span>
+                    </a>
+                </li>
+				<!--<li class="nvbtn navitem home-btn">
+                    <a href="#"><img src="img/home-icon.png"/></a>
+                </li>-->
+			</ul>
+            <div class="search-container-mobile">
+                 <input placeholder="search this board" class="search-field"/>
+            </div>
+		</nav>
+	</div>
+    
+	<main>
+        <div class="board-container">
+            <div class="board">
+                <img class="example-content" src="img/bg-example.jpg" width="2600" height="2200"/>
+            </div>
+        </div>
+                
+<!-- START SIDE SLIDE FRIENDS -->
+        <section id="friends" class="side-section">
+        	<div class="slide-section-header">
+            	<div class="slide-in-arrow">
+                    <a class="slide-close-link" href="#">
+                        <img src="img/slide-in-arrow.png"/>
+                    </a>   
+                </div>
+                <!--<div class="selector-text-this-board friend-this-btn">This Board</div>
+                <div class="selector-text-my-boards friend-my-btn">My Boards</div>-->
+                
+                <div class="slideout-stacked-title">People</div>
+                
+                <div class="selector-dd-container">
+					<div id="dd" class="dd selector-dd" tabindex="1">
+						<span>this board</span>
+                        <img class="dd-mini-menu" src="img/mini-menu-btn.png"/>
+						<ul class="dropdown">
+							<li><a href="#" class="friend-this-btn">this board</a></li>
+							<li><a href="#" class="friend-my-btn">my friends</a></li>
+							<li><a href="#" class="groups-my-btn">my groups</a></li>
+						</ul>
+					</div>
+				 </div>
+                
+                <div class="add-btn">
+                    <a class="add-link open-add-friend" href="#">
+                        <img src="img/plus-friend-icon.png"/>
+                    </a>   
+                </div>
+            </div><!--slide section header-->
+            
+            <div class="slide-section-friend-container">
+            	<div class="slide-section-content-scroll-box">
+                    <ul class="side-slide-item-list">
+                        <li class="side-slide-item friend-this">
+                            <div class="friend-img-box">
+                                <img src="img/sheneneh.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#ffa70f;">
+                            	Sheneneh
+                            </p>
+                            <a href="#" class="friend-menu-btn">
+                                <img class="friend-menu-btn-open" src="img/slide-item-menu-btn.png"/>
+                                <img class="friend-menu-btn-close" src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="friends-tacs-line">
+                            	tacs : 247 / 427<span>in<sup>2</sup></span>
+                            </div>
+                            <div class="friends-tacd-line">
+                            	tacd : 873 / 1627<span>in<sup>2</sup></span>       
+                            </div>
+                            <div class="friend-menu-container">
+                                <div class="friends-youve-tacd-line">
+                                    friends since <span>1/23/2015</span>
+                                </div>
+                                <div class="friends-tacd-you-line">
+                                    last tacd <span>2/17/2015</span>
+                                </div>
+                                <div class="friend-menu-nav-container">
+                                    <ul class="friend-menu-nav">
+                                        <li><a href="#"><img src="img/time-line-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/boards-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/home-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/remove-icon-wht.png"/></a></li>
+                                         <li class="friend-menu-last"><a href="#"><img src="img/plus-white-icon.png"/></a></li>
+                                    </ul>  
+                                    <div class="friends-menu-time-line-check-contianer">
+                                        <form>
+                                        <input id="Option" type="checkbox" checked>
+                                        <label class="checkbox" for="Option">
+                                            &emsp;include <span>Shanene</span> on my timeline
+                                        </label>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="side-slide-item">
+                            <div class="friend-img-box">
+                                <img src="img/chris-sacca.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#00aeef;">
+                            	Chris Sacca
+                            </p>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="friends-tacs-line">
+                            	tacs : 1117 / 2527<span>in<sup>2</sup></span>
+                            </div>
+                            <div class="friends-tacd-line">
+                            	tacd : 773 / 1427<span>in<sup>2</sup></span>       
+                            </div>
+                            <div class="friend-menu-container">
+                                <div class="friends-youve-tacd-line">
+                                    friends since <span>1/23/2015</span>
+                                </div>
+                                <div class="friends-tacd-you-line">
+                                    last tacd <span>2/17/2015</span>
+                                </div>
+                                <div class="friend-menu-nav-container">
+                                    <ul class="friend-menu-nav">
+                                        <li class="open-sacca-timeline"><a href="#"><img src="img/time-line-icon-wht.png"/></a></li>
+                                        <li class="open-sacca-boards"><a href="#"><img src="img/boards-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/home-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/remove-icon-wht.png"/></a></li>
+                                         <li class="friend-menu-last"><a href="#"><img src="img/plus-white-icon.png"/></a></li>
+                                    </ul>    
+                                    <div class="friends-menu-time-line-check-contianer">
+                                        <form>
+                                        <input id="Option2" type="checkbox" checked>
+                                        <label class="checkbox" for="Option2">
+                                            &emsp;include <span>Chris Sacca</span> on my timeline
+                                        </label>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="side-slide-item friend-this">
+                            <div class="friend-img-box">
+                                <img src="img/alf.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#8c6239;">
+                            	Alf
+                            </p>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="friends-tacs-line">
+                            	tacs : 12427 / 34227<span>in<sup>2</sup></span>
+                            </div>
+                            <div class="friends-tacd-line">
+                            	tacd : 3173 / 7627<span>in<sup>2</sup></span>       
+                            </div>
+                            <div class="friend-menu-container">
+                                <div class="friends-youve-tacd-line">
+                                    friends since <span>1/23/2015</span>
+                                </div>
+                                <div class="friends-tacd-you-line">
+                                    last tacd <span>2/17/2015</span>
+                                </div>
+                                <div class="friend-menu-nav-container">
+                                    <ul class="friend-menu-nav">
+                                        <li><a href="#"><img src="img/time-line-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/boards-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/home-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/remove-icon-wht.png"/></a></li>
+                                         <li class="friend-menu-last"><a href="#"><img src="img/plus-white-icon.png"/></a></li>
+                                    </ul>    
+                                    <div class="friends-menu-time-line-check-contianer">
+                                        <form>
+                                        <input id="Option3" type="checkbox" checked>
+                                        <label class="checkbox" for="Option3">
+                                            &emsp;include <span>Alf</span> on my timeline
+                                        </label>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="side-slide-item">
+                            <div class="friend-img-box">
+                                <img src="img/odb.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#cc0000;">
+                            	Ol' Dirty Bastard
+                            </p>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="friends-tacs-line">
+                            	tacs : 47 / 327<span>in<sup>2</sup></span>
+                            </div>
+                            <div class="friends-tacd-line">
+                            	tacd : 23873 / 51627<span>in<sup>2</sup></span>       
+                            </div>
+                            <div class="friend-menu-container">
+                                <div class="friends-youve-tacd-line">
+                                    friends since <span>1/23/2015</span>
+                                </div>
+                                <div class="friends-tacd-you-line">
+                                    last tacd <span>2/17/2015</span>
+                                </div>
+                                <div class="friend-menu-nav-container">
+                                    <ul class="friend-menu-nav">
+                                        <li><a href="#"><img src="img/time-line-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/boards-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/home-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/remove-icon-wht.png"/></a></li>
+                                         <li class="friend-menu-last"><a href="#"><img src="img/plus-white-icon.png"/></a></li>
+                                    </ul> 
+                                    <div class="friends-menu-time-line-check-contianer">
+                                        <form>
+                                        <input id="Option4" type="checkbox" checked>
+                                        <label class="checkbox" for="Option4">
+                                            &emsp;include <span>Ol' Dirty Bastard</span> on my timeline
+                                        </label>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="side-slide-item">
+                            <div class="friend-img-box">
+                                <img src="img/taylor-swift.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#1cbbb4;">
+                            	Taylor Swift
+                            </p>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="friends-tacs-line">
+                            	tacs : 42547 / 119427<span>in<sup>2</sup></span>
+                            </div>
+                            <div class="friends-tacd-line">
+                            	tacd : 6873 / 181627<span>in<sup>2</sup></span>       
+                            </div>
+                            <div class="friend-menu-container">
+                                <div class="friends-youve-tacd-line">
+                                    friends since <span>1/23/2015</span>
+                                </div>
+                                <div class="friends-tacd-you-line">
+                                    last tacd <span>2/17/2015</span>
+                                </div>
+                                <div class="friend-menu-nav-container">
+                                    <ul class="friend-menu-nav">
+                                        <li><a href="#"><img src="img/time-line-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/boards-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/home-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/remove-icon-wht.png"/></a></li>
+                                         <li class="friend-menu-last"><a href="#"><img src="img/plus-white-icon.png"/></a></li>
+                                    </ul> 
+                                    <div class="friends-menu-time-line-check-contianer">
+                                        <form>
+                                        <input id="Option5" type="checkbox" checked>
+                                        <label class="checkbox" for="Option5">
+                                            &emsp;include <span>Taylor Swift</span> on my timeline
+                                        </label>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="side-slide-item">
+                            <div class="friend-img-box">
+                                <img src="img/jess.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#ec008c;">
+                            	Jessica Day
+                            </p>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="friends-tacs-line">
+                            	tacs : 2547 / 9427<span>in<sup>2</sup></span>
+                            </div>
+                            <div class="friends-tacd-line">
+                            	tacd : 3873 / 101627<span>in<sup>2</sup></span>       
+                            </div>
+                            <div class="friend-menu-container">
+                                <div class="friends-youve-tacd-line">
+                                    friends since <span>1/23/2015</span>
+                                </div>
+                                <div class="friends-tacd-you-line">
+                                    last tacd <span>2/17/2015</span>
+                                </div>
+                                <div class="friend-menu-nav-container">
+                                    <ul class="friend-menu-nav">
+                                        <li><a href="#"><img src="img/time-line-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/boards-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/home-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/remove-icon-wht.png"/></a></li>
+                                         <li class="friend-menu-last"><a href="#"><img src="img/plus-white-icon.png"/></a></li>
+                                    </ul>  
+                                    <div class="friends-menu-time-line-check-contianer">
+                                        <form>
+                                        <input id="Option6" type="checkbox" checked>
+                                        <label class="checkbox" for="Option6">
+                                            &emsp;include <span>Jessica Day</span> on my timeline
+                                        </label>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="side-slide-item friend-this">
+                            <div class="friend-img-box">
+                                <img src="img/stringer-bell.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#000000;">
+                            	Stringer Bell
+                            </p>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="friends-tacs-line">
+                            	tacs : 357 / 927<span>in<sup>2</sup></span>
+                            </div>
+                            <div class="friends-tacd-line">
+                            	tacd : 873 / 1627<span>in<sup>2</sup></span>       
+                            </div>
+                            <div class="friend-menu-container">
+                                <div class="friends-youve-tacd-line">
+                                    friends since <span>1/23/2015</span>
+                                </div>
+                                <div class="friends-tacd-you-line">
+                                    last tacd <span>2/17/2015</span>
+                                </div>
+                                <div class="friend-menu-nav-container">
+                                    <ul class="friend-menu-nav">
+                                        <li><a href="#"><img src="img/time-line-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/boards-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/home-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/remove-icon-wht.png"/></a></li>
+                                         <li class="friend-menu-last"><a href="#"><img src="img/plus-white-icon.png"/></a></li>
+                                    </ul>   
+                                    <div class="friends-menu-time-line-check-contianer">
+                                        <form>
+                                        <input id="Option7" type="checkbox" checked>
+                                        <label class="checkbox" for="Option7">
+                                            &emsp;include <span>Stringer Bell</span> on my timeline
+                                        </label>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="side-slide-item">
+                            <div class="friend-img-box">
+                                <img src="img/liz-lemon.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#662d91;">
+                            	Liz Lemon
+                            </p>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="friends-tacs-line">
+                            	tacs : 1247 / 3427<span>in<sup>2</sup></span>
+                            </div>
+                            <div class="friends-tacd-line">
+                            	tacd : 8473 / 21627<span>in<sup>2</sup></span>       
+                            </div>
+                            <div class="friend-menu-container">
+                                <div class="friends-youve-tacd-line">
+                                    friends since <span>1/23/2015</span>
+                                </div>
+                                <div class="friends-tacd-you-line">
+                                    last tacd <span>2/17/2015</span>
+                                </div>
+                                <div class="friend-menu-nav-container">
+                                    <ul class="friend-menu-nav">
+                                        <li><a href="#"><img src="img/time-line-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/boards-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/home-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/remove-icon-wht.png"/></a></li>
+                                         <li class="friend-menu-last"><a href="#"><img src="img/plus-white-icon.png"/></a></li>
+                                    </ul> 
+                                    <div class="friends-menu-time-line-check-contianer">
+                                        <form>
+                                        <input id="Option8" type="checkbox" checked>
+                                        <label class="checkbox" for="Option8">
+                                            &emsp;include <span>Liz Lemon</span> on my timeline
+                                        </label>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="side-slide-item friend-this">
+                            <div class="friend-img-box">
+                                <img src="img/hipster-chick.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#00a651;">
+                            	Average Hipster Chick
+                            </p>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="friends-tacs-line">
+                            	tacs : 9247 / 20427<span>in<sup>2</sup></span>
+                            </div>
+                            <div class="friends-tacd-line">
+                            	tacd : 50873 / 181627<span>in<sup>2</sup></span>       
+                            </div>
+                            <div class="friend-menu-container">
+                                <div class="friends-youve-tacd-line">
+                                    friends since <span>1/23/2015</span>
+                                </div>
+                                <div class="friends-tacd-you-line">
+                                    last tacd <span>2/17/2015</span>
+                                </div>
+                                <div class="friend-menu-nav-container">
+                                    <ul class="friend-menu-nav">
+                                        <li><a href="#"><img src="img/time-line-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/boards-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/home-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/remove-icon-wht.png"/></a></li>
+                                         <li class="friend-menu-last"><a href="#"><img src="img/plus-white-icon.png"/></a></li>
+                                    </ul> 
+                                    <div class="friends-menu-time-line-check-contianer">
+                                        <form>
+                                        <input id="Option9" type="checkbox" checked>
+                                        <label class="checkbox" for="Option9">
+                                            &emsp;include <span>Average Hipster Chick</span> on my timeline
+                                        </label>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="side-slide-item">
+                            <div class="friend-img-box">
+                                <img src="img/he-man.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#f26522;">
+                            	He-Man
+                            </p>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="friends-tacs-line">
+                            	tacs : 247 / 427<span>in<sup>2</sup></span>
+                            </div>
+                            <div class="friends-tacd-line">
+                            	tacd : 873 / 1627<span>in<sup>2</sup></span>       
+                            </div>
+                            <div class="friend-menu-container">
+                                <div class="friends-youve-tacd-line">
+                                    friends since <span>1/23/2015</span>
+                                </div>
+                                <div class="friends-tacd-you-line">
+                                    last tacd <span>2/17/2015</span>
+                                </div>
+                                <div class="friend-menu-nav-container">
+                                    <ul class="friend-menu-nav">
+                                        <li><a href="#"><img src="img/time-line-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/boards-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/home-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/remove-icon-wht.png"/></a></li>
+                                         <li class="friend-menu-last"><a href="#"><img src="img/plus-white-icon.png"/></a></li>
+                                    </ul>  
+                                    <div class="friends-menu-time-line-check-contianer">
+                                        <form>
+                                        <input id="Option10" type="checkbox" checked>
+                                        <label class="checkbox" for="Option10">
+                                            &emsp;include <span>He-Man</span> on my timeline
+                                        </label>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="side-slide-item friend-this">
+                            <div class="friend-img-box">
+                                <img src="img/daphne.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#27a6bd;">
+                            	Daphne
+                            </p>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="friends-tacs-line">
+                            	tacs : 1347 / 4527<span>in<sup>2</sup></span>
+                            </div>
+                            <div class="friends-tacd-line">
+                            	tacd : 3 / 27<span>in<sup>2</sup></span>       
+                            </div>
+                            <div class="friend-menu-container">
+                                <div class="friends-youve-tacd-line">
+                                    friends since <span>1/23/2015</span>
+                                </div>
+                                <div class="friends-tacd-you-line">
+                                    last tacd <span>2/17/2015</span>
+                                </div>
+                                <div class="friend-menu-nav-container">
+                                    <ul class="friend-menu-nav">
+                                        <li><a href="#"><img src="img/time-line-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/boards-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/home-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/remove-icon-wht.png"/></a></li>
+                                         <li class="friend-menu-last"><a href="#"><img src="img/plus-white-icon.png"/></a></li>
+                                    </ul>  
+                                    <div class="friends-menu-time-line-check-contianer">
+                                        <form>
+                                        <input id="Option11" type="checkbox" checked>
+                                        <label class="checkbox" for="Option11">
+                                           &emsp;include <span>Daphne</span> on my timeline
+                                        </label>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="side-slide-item-list-bottom-pad"></div>
+            	</div>
+            </div>
+        </section>
+ <!-- END SIDE SLIDE FRIENDS -->
+
+ <!-- START SIDE SLIDE ADD FRIEND -->
+        <section id="add-friends" class="side-section">
+        	<div class="slide-section-header">
+            	<div class="close-add-btn">
+                    <a class="add-link close-add-friend" href="#">
+                        <img src="img/back2-friend-icon.png"/>
+                    </a>   
+                </div>
+                
+                <div class="add-friend-search">
+                    <div class="add-friend-search-box"/>
+                        <input placeholder="search tacBoard for friends" class="add-friend-search-field"/>
+                    </div>
+                </div>
+           </div><!--slide section header-->
+           <div class="slide-section-friend-container add-friend-list">
+            	<div class="slide-section-content-scroll-box">
+                    <ul class="side-slide-item-list">
+                        <li class="side-slide-item rolodex">
+                            <div class="friend-img-box">
+                                <img src="img/Duck-Dodgers.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#27a6bd;">
+                            	Duck Dodgers
+                            </p>
+                            <div class="plus-btn">
+                                <a class="plus-link" href="#">
+                                    <img class="plus-link-img" src="img/plus-white-icon.png"/>
+                                </a> 
+                            </div>
+                        </li>
+                        <li class="side-slide-item rolodex">
+                            <div class="friend-img-box">
+                                <img src="img/Walter-Matthau.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#39b54a;">
+                            	Walter Matthau
+                            </p>
+                            <div class="plus-btn">
+                                <a class="plus-link" href="#">
+                                    <img class="plus-link-img" src="img/plus-white-icon.png"/>
+                                </a> 
+                            </div>
+                        </li>
+                        <li class="side-slide-item rolodex">
+                            <div class="friend-img-box">
+                                <img src="img/Lois-Griffin.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#ec008c;">
+                            	Lois Griffin
+                            </p>
+                            <div class="plus-btn">
+                                <a class="plus-link" href="#">
+                                    <img class="plus-link-img" src="img/plus-white-icon.png"/>
+                                </a> 
+                            </div>
+                        </li>
+                        <li class="side-slide-item rolodex">
+                            <div class="friend-img-box">
+                                <img src="img/Kelly-Kapowski.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#00aeef;">
+                            	Kelly Kapowski
+                            </p>
+                            <div class="plus-btn">
+                                <a class="plus-link" href="#">
+                                    <img class="plus-link-img" src="img/plus-white-icon.png"/>
+                                </a> 
+                            </div>
+                        </li>
+                        <li class="side-slide-item rolodex">
+                            <div class="friend-img-box">
+                                <img src="img/Stephen-Colbert.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#0054a6;">
+                            	Stephen Colbert
+                            </p>
+                            <div class="plus-btn">
+                                <a class="plus-link" href="#">
+                                    <img class="plus-link-img" src="img/plus-white-icon.png"/>
+                                </a> 
+                            </div>
+                        </li>
+                        <li class="side-slide-item rolodex">
+                            <div class="friend-img-box">
+                                <img src="img/Mike-Smith.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#39b54a;">
+                            	Mike Smith
+                            </p>
+                            <div class="plus-btn">
+                                <a class="plus-link" href="#">
+                                    <img class="plus-link-img" src="img/plus-white-icon.png"/>
+                                </a> 
+                            </div>
+                        </li>
+                        <li class="side-slide-item rolodex">
+                            <div class="friend-img-box">
+                                <img class="plus-link-img" src="img/Sally-Thomas.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#f26522 ;">
+                            	Sally Thomas
+                            </p>
+                            <div class="plus-btn">
+                                <a class="plus-link" href="#">
+                                    <img class="plus-link-img" src="img/plus-white-icon.png"/>
+                                </a> 
+                            </div>
+                        </li>
+                        <li class="side-slide-item rolodex">
+                            <div class="friend-img-box">
+                                <img src="img/Danna-Mitchell.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#92278f;">
+                            	Danna Mitchell
+                            </p>
+                            <div class="plus-btn">
+                                <a class="plus-link" href="#">
+                                    <img class="plus-link-img" src="img/plus-white-icon.png"/>
+                                </a> 
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="side-slide-item-list-bottom-pad"></div>
+            	</div>
+            </div>
+        </section>
+<!-- END SIDE SLIDE ADD FRIEND -->
+
+
+<!-- START SIDE SLIDE Friend Timeline -->
+        <section id="friends-timeline" class="side-section">
+        	<div class="slide-section-header">
+                <div class="sub-slide-menu-title"><span class="timeline-name">Chris Sacca's</span> <span>Timeline</span></div>
+            	<div class="close-add-btn">
+                    <a class="add-link close-friend-timeline" href="#">
+                        <img src="img/slide-in-arrow.png"/>
+                    </a>   
+                </div>
+           </div><!--slide section header-->
+           <div class="slide-section-friend-container friend-timeline">
+            	<div class="slide-section-content-scroll-box">
+                    <div class="timeline-date-header">Monday 11/26/14</div>
+                    <ul class="side-slide-item-list timeline-slide-list">
+                        <li class="side-slide-item timeline-1" style="color:#00aeef;">
+                           <div class="time-line-tac">
+                               <div class="time-line-username">
+                                  Chris Sacca
+                               </div> 
+                               <div class="time-line-tac-copy">
+                                   Do your very best work, or get the fuck out of the way. 
+                               </div>
+                                    <div class="tl-date">
+                                        Monday 11/26/14
+                                    </div>
+                            </div>
+                        </li>
+                        <li class="side-slide-item timeline-1" style="color:#00aeef;">
+                           <div class="time-line-tac">
+                               <img class="time-line-img" src="https://pbs.twimg.com/media/B3Vir0iIcAAnS2S.jpg"/>
+                               <div class="time-line-username">
+                                  Chris Sacca
+                               </div> 
+                               <div class="time-line-tac-copy">
+                                   Cherpumple? What?
+                               </div>
+                                    <div class="tl-date">
+                                        Sunday 11/26/14
+                                    </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="timeline-date-header">Sunday 11/25/14</div>
+                    <ul class="side-slide-item-list timeline-slide-list">
+                        <li class="side-slide-item timeline-1" style="color:#00aeef;">
+                           <div class="time-line-tac">
+                               <img class="time-line-img" src="https://pbs.twimg.com/media/B3eg3OaCEAAIyBv.jpg"/>
+                               <div class="time-line-username">
+                                  Chris Sacca
+                               </div> 
+                               <div class="time-line-tac-copy">
+                                   I'm thankful for all the dead people because at least they tried. 
+                               </div>
+                                    <div class="tl-date">
+                                        Sunday 11/25/14
+                                    </div>
+                            </div>
+                        </li>
+                        <li class="side-slide-item timeline-1" style="color:#00aeef;">
+                           <div class="time-line-tac">
+                               <img class="time-line-img" src="https://pbs.twimg.com/media/B3JmHRgCUAAbENP.jpg"/>
+                               <div class="time-line-username">
+                                  Chris Sacca
+                               </div> 
+                               <div class="time-line-tac-copy">
+                                   Happy Thanksgiving Homies! 
+                               </div>
+                                    <div class="tl-date">
+                                        Sunday 11/25/14
+                                    </div>
+                            </div>
+                        </li>
+                        <li class="side-slide-item timeline-1" style="color:#00aeef;">
+                           <div class="time-line-tac">
+                               <img class="time-line-img" src="https://pbs.twimg.com/media/B3CD5HzCQAAJ1kQ.jpg:large"/>
+                               <div class="time-line-username">
+                                  Chris Sacca
+                               </div> 
+                               <div class="time-line-tac-copy">
+                                   1970s lego had the right idea   
+                               </div>
+                                    <div class="tl-date">
+                                        Sunday 11/25/14
+                                    </div>
+                            </div>
+                        </li>
+                        <li class="side-slide-item timeline-1" style="color:#00aeef;">
+                           <div class="time-line-tac">
+                               <div class="time-line-username">
+                                  Chris Sacca
+                               </div> 
+                               <div class="time-line-tac-copy">
+                                   Good stories always beat good spreadsheets. 
+                               </div>
+                                    <div class="tl-date">
+                                        Monday 11/25/14
+                                    </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="timeline-date-header">Saturday 11/23/14</div>
+                    <ul class="side-slide-item-list timeline-slide-list">
+                        <li class="side-slide-item timeline-1" style="color:#00aeef;">
+                           <div class="time-line-tac">
+                               <img class="time-line-img" src="img/qmark.jpg"/>
+                               <div class="time-line-username">
+                                  Chris Sacca
+                               </div> 
+                               <div class="time-line-tac-copy">
+                                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                               </div>
+                                    <div class="tl-date">
+                                        Sunday 11/23/14
+                                    </div>
+                            </div>
+                        </li>
+                        <li class="side-slide-item timeline-1" style="color:#00aeef;">
+                           <div class="time-line-tac">
+                               <div class="time-line-username">
+                                  Chris Sacca
+                               </div> 
+                               <div class="time-line-tac-copy">
+                                   Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.   
+                               </div>
+                                    <div class="tl-date">
+                                        Sunday 11/23/14
+                                    </div>
+                            </div>
+                        </li>
+                        <li class="side-slide-item timeline-1" style="color:#00aeef;">
+                           <div class="time-line-tac">
+                               <div class="time-line-username">
+                                  Chris Sacca
+                               </div> 
+                               <div class="time-line-tac-copy">
+                                   Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae. 
+                               </div>
+                                    <div class="tl-date">
+                                        Sunday 11/23/14
+                                    </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="side-slide-item-list-bottom-pad"></div>
+            	</div>
+            </div>
+        </section>
+<!-- END SIDE SLIDE friend timeline -->
+
+
+<!-- START SIDE SLIDE Friend boards -->
+        <section id="friends-board" class="side-section">
+        	<div class="slide-section-header">
+                <div class="sub-slide-menu-title"><span class="timeline-name">Chris Sacca's</span> <span>Boards</span></div>
+            	<div class="close-add-btn">
+                    <a class="add-link close-friend-timeline" href="#">
+                        <img src="img/slide-in-arrow.png"/>
+                    </a>   
+                </div>
+           </div><!--slide section header-->
+           <div class="slide-section-friend-container">
+            	<div class="slide-section-content-scroll-box">
+                    <ul class="side-slide-item-list boards-slide-list">
+                        <li class="side-slide-item">
+                            <div class="board-title" style="color:#00aeef;">
+                                Chris Sacca's Homeboard
+                            </div>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="board-host">
+                                host: Chris Sacca
+                            </div>
+                            <div class="board-number-of-guests">
+                                guests: 107
+                            </div>     
+                        </li>
+                        <li class="side-slide-item">
+                            <div class="board-title" style="color:#00aeef;">
+                                charity : water Haiti
+                            </div>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="board-host">
+                                host: Chris Sacca
+                            </div>
+                            <div class="board-number-of-guests">
+                                guests: 27
+                            </div>     
+                        </li>
+                        <li class="side-slide-item">
+                            <div class="board-title" style="color:#00aeef;">
+                                The Tony Hawk Foundation 2014
+                            </div>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="board-host">
+                                host: Chris Sacca
+                            </div>
+                            <div class="board-number-of-guests">
+                                guests: 58
+                            </div>     
+                        </li> 
+                        <li class="side-slide-item">
+                            <div class="board-title" style="color:#00aeef;">
+                                New Star Wars Movie
+                            </div>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="board-host">
+                                host: Chris Sacca
+                            </div>
+                            <div class="board-number-of-guests">
+                                guests: 42
+                            </div>     
+                        </li>  
+                        <li class="side-slide-item">
+                            <div class="board-title" style="color:#00aeef;">
+                                Back in Buffalo
+                            </div>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="board-host">
+                                host: Chris Sacca
+                            </div>
+                            <div class="board-number-of-guests">
+                                guests: 12
+                            </div>     
+                        </li>    
+                    </ul>
+                    <div class="side-slide-item-list-bottom-pad"></div>
+            	</div>
+            </div>
+        </section>
+<!-- END SIDE SLIDE friend boards -->
+
+
+<!-- START SIDE SLIDE TIMELINE -->
+        <section id="time-line" class="side-section">
+        <div class="slide-section-header">
+            	<div class="slide-in-arrow">
+                    <a class="slide-close-link" href="#">
+                        <img src="img/slide-in-arrow.png"/>
+                    </a>   
+                </div>
+                <!--<div class="selector-text-this-board">This Board</div>
+                <div class="selector-text-my-boards">My Boards</div>-->
+            <div class="slideout-stacked-title">Timeline</div>
+            <div class="selector-dd-container">
+					<div id="dd" class="dd selector-dd" tabindex="1">
+						<span>this board</span>
+                        <img class="dd-mini-menu" src="img/mini-menu-btn.png"/>
+						<ul class="dropdown">
+							<li><a href="#" class="timeline-all-btn">this board</a></li>
+							<li><a href="#" class="timeline-my-btn">my boards</a></li>
+						</ul>
+					</div>
+				 </div>
+            </div><!--slide section header-->
+            
+            <div class="slide-section-friend-container">
+            	<div class="slide-section-content-scroll-box">
+                    <div class="timeline-date-header">Monday 11/10/14</div>
+                    <ul class="side-slide-item-list timeline-slide-list">
+                        <li class="side-slide-item timeline-1 this-timeline" style="color:#27a6bd;">
+                           <div class="time-line-tac">
+                               <img class="time-line-img" src="img/girls-shopping.jpg"/>
+                               <div class="time-line-username">
+                                  Allison Smith
+                               </div> 
+                               <div class="time-line-tac-copy">
+                                   Yesterday was so much fun. Lets do that agian. Good times girlfriend!
+                               </div>
+                                    <div class="tl-date">
+                                        Monday 11/10/14
+                                    </div>
+                            </div>
+                        </li>
+                        <li class="side-slide-item all-timeline" style="color:#009cff;">
+                           <div class="time-line-tac">
+                               <div class="time-line-username">
+                                  Jessica McBell
+                               </div> 
+                               <div class="time-line-tac-copy">
+                                   I love those girls. Lets all do brunch soon.
+                               </div>
+                                    <div class="tl-date">
+                                        Monday 11/10/14
+                                    </div>
+                            </div>
+                        </li>
+                        <li class="side-slide-item this-timeline" style="color:#01b115;">
+                           <div class="time-line-tac">
+                               <img class="time-line-img" src="img/smiley.jpg"/>
+                               <div class="time-line-username">
+                                  Dave Hemla
+                               </div> 
+                               <div class="time-line-tac-copy">
+                                   You're my girl and all but you wont catch me shopping all day...well may for you. 
+                               </div>
+                                    <div class="tl-date">
+                                        Monday 11/10/14
+                                    </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="timeline-date-header">Sunday 11/9/14</div>
+                    <ul class="side-slide-item-list timeline-slide-list">
+                        <li class="side-slide-item all-timeline" style="color:#ec008c;">
+                           <div class="time-line-tac">
+                               <img class="time-line-img" src="img/boots.jpg"/>
+                               <div class="time-line-username">
+                                  Lillian Elderberry
+                               </div> 
+                               <div class="time-line-tac-copy">
+                                   OMG! You got those boots! I love them sooooo much. Would you hate me if I bought them too? Don't worry, I wont. 
+                               </div>
+                                    <div class="tl-date">
+                                        Sunday 11/9/14
+                                    </div>
+                            </div>
+                        </li>
+                        <li class="side-slide-item this-timeline" style="color:#27a6bd;">
+                           <div class="time-line-tac">
+                               <div class="time-line-username">
+                                  Ricky Bobby
+                               </div> 
+                               <div class="time-line-tac-copy">
+                                   Dear Lord baby Jesus, lyin' there in your ghost manger, just lookin' at your Baby Einstein developmental videos, learnin' 'bout shapes and colors.
+                               </div>
+                                    <div class="tl-date">
+                                        Sunday 11/9/14
+                                    </div>
+                            </div>
+                        </li>
+                        <li class="side-slide-item this-timeline" style="color:#01b18e;">
+                           <div class="time-line-tac">
+                               <img class="time-line-img" src="img/heart.jpg"/>
+                               <div class="time-line-username">
+                                  Heather Schmether
+                               </div> 
+                               <div class="time-line-tac-copy">
+                                   Just wanted to say you're the best!
+                               </div>
+                                    <div class="tl-date">
+                                        Sunday 11/9/14
+                                    </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="timeline-date-header">Saturday 11/8/14</div>
+                    <ul class="side-slide-item-list timeline-slide-list">
+                        <li class="side-slide-item this-timeline" style="color:#db0345 ;">
+                           <div class="time-line-tac">
+                               <img class="time-line-img" src="img/smiley2.jpg"/>
+                               <div class="time-line-username">
+                                  Tim Robertson
+                               </div> 
+                               <div class="time-line-tac-copy">
+                                   When will you be in town again? That was such a blast last week! 
+                               </div>
+                                    <div class="tl-date">
+                                        Saturday 11/8/14
+                                    </div>
+                            </div>
+                        </li>
+                        <li class="side-slide-item all-timeline" style="color:#27a6bd;">
+                           <div class="time-line-tac">
+                               <img class="time-line-img" src="img/taco.jpg"/>
+                               <div class="time-line-username">
+                                  Krissy Terklovk
+                               </div> 
+                               <div class="time-line-tac-copy">
+                                   Yummy, Taco Tuesday, how about Taco Friday?
+                               </div>
+                                    <div class="tl-date">
+                                        Saturday 11/8/14
+                                    </div>
+                            </div>
+                        </li>
+                        <li class="side-slide-item this-timeline" style="color:#662d91;">
+                           <div class="time-line-tac">
+                               <div class="time-line-username">
+                                  Heather Schmether
+                               </div> 
+                               <div class="time-line-tac-copy">
+                                   You are so awesome!
+                               </div>
+                                    <div class="tl-date">
+                                        Saturday 11/8/14
+                                    </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="side-slide-item-list-bottom-pad"></div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="boards" class="side-section">
+        <div class="slide-section-header">
+            	<div class="slide-in-arrow">
+                    <a class="slide-close-link" href="#">
+                        <img src="img/slide-in-arrow.png"/>
+                    </a>   
+                </div>
+                <!--<div class="selector-text-this-board">Guest On</div>
+                <div class="selector-text-my-boards">Hosting</div>-->
+                <div class="slideout-stacked-title">Boards</div>
+                <div class="selector-dd-container">
+					<div id="dd" class="dd selector-dd" tabindex="1">
+						<span>host</span>
+                        <img class="dd-mini-menu" src="img/mini-menu-btn.png"/>
+                        <ul class="dropdown">
+							<li><a href="#" class="">guest</a></li>
+							<li><a href="#" class="">host</a></li>
+						</ul>
+					</div>
+				 </div>
+            
+                <div class="add-btn">
+                    <a class="add-link open-add-board" href="#">
+                        <img src="img/plus-board-icon.png"/>
+                    </a>   
+                </div>
+            </div><!--slide section header-->
+            
+            <div class="slide-section-friend-container">
+            	<div class="slide-section-content-scroll-box">
+                    <ul class="side-slide-item-list boards-slide-list">
+                        <li class="side-slide-item">
+                            <div class="board-title" style="color:#662d91;">
+                                Jess &amp; Mike's Wedding
+                            </div>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="board-host">
+                                host: Jessica Walters
+                            </div>
+                            <div class="board-number-of-guests">
+                                guests: 37
+                            </div>     
+                        </li>
+                        <li class="side-slide-item">
+                            <div class="board-title" style="color:#009cff;">
+                                Cubs game with the girls
+                            </div>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="board-host">
+                                host: Sarah Jones
+                            </div>
+                            <div class="board-number-of-guests">
+                                guests: 7
+                            </div>     
+                        </li>
+                        <li class="side-slide-item">
+                            <div class="board-title" style="color:#1cbbb4;">
+                                Mom's Surprise Party
+                            </div>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="board-host">
+                                host: Ally Peterson
+                            </div>
+                            <div class="board-number-of-guests">
+                                guests: 32
+                            </div>     
+                        </li>
+                        <li class="side-slide-item">
+                            <div class="board-title" style="color:#f26522;">
+                                David's Graduation
+                            </div>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="board-host">
+                                host: Mike Masterson
+                            </div>
+                            <div class="board-number-of-guests">
+                                guests: 22
+                            </div>     
+                        </li>
+                        <li class="side-slide-item">
+                            <div class="board-title" style="color:#cc0000;">
+                                Which car should I buy?
+                            </div>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="board-host">
+                                host: Addie Kreslo
+                            </div>
+                            <div class="board-number-of-guests">
+                                guests: 28
+                            </div>     
+                        </li>
+                        <li class="side-slide-item">
+                            <div class="board-title" style="color:#007dc3;">
+                                Grandma's 75th Birthday
+                            </div>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="board-host">
+                                host: Kelvin Johnson
+                            </div>
+                            <div class="board-number-of-guests">
+                                guests: 40
+                            </div>     
+                        </li>
+                        <li class="side-slide-item">
+                            <div class="board-title" style="color:#ec008c;">
+                                Keaton's Prom Dress?
+                            </div>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="board-host">
+                                host: Keaton O'Kelly
+                            </div>
+                            <div class="board-number-of-guests">
+                                guests: 67
+                            </div>     
+                        </li>
+                        <li class="side-slide-item">
+                            <div class="board-title" style="color:#f7941d;">
+                                Meeting Baby Emmy
+                            </div>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="board-host">
+                                host: Brea James
+                            </div>
+                            <div class="board-number-of-guests">
+                                guests: 14
+                            </div>     
+                        </li>
+                        <li class="side-slide-item">
+                            <div class="board-title" style="color:#2e3192;">
+                                My New Condo
+                            </div>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="board-host">
+                                host: Dennis Michaels
+                            </div>
+                            <div class="board-number-of-guests">
+                                guests: 18
+                            </div>     
+                        </li>
+                        <li class="side-slide-item">
+                            <div class="board-title" style="color:#ec008c;">
+                                What do you think of these Kitchen Designs?
+                            </div>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="board-host">
+                                host: Kristie Wells
+                            </div>
+                            <div class="board-number-of-guests">
+                                guests: 33
+                            </div>     
+                        </li>
+                        <li class="side-slide-item">
+                            <div class="board-title" style="color:#662d91;">
+                                Jess &amp; Mike's Wedding
+                            </div>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="board-host">
+                                host: Jessica Walters
+                            </div>
+                            <div class="board-number-of-guests">
+                                guests: 37
+                            </div>     
+                        </li>
+                        <li class="side-slide-item">
+                            <div class="board-title" style="color:#009cff;">
+                                Cubs game with the girls
+                            </div>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="board-host">
+                                host: Sarah Jones
+                            </div>
+                            <div class="board-number-of-guests">
+                                guests: 7
+                            </div>     
+                        </li>
+                        <li class="side-slide-item">
+                            <div class="board-title" style="color:#1cbbb4;">
+                                Mom's Surprise Party
+                            </div>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="board-host">
+                                host: Ally Peterson
+                            </div>
+                            <div class="board-number-of-guests">
+                                guests: 32
+                            </div>     
+                        </li>
+                    </ul>
+                    <div class="side-slide-item-list-bottom-pad"></div>
+            	</div>
+            </div>
+        </section>
+        
+<!-- START SIDE SLIDE Add Board -->
+        <section id="add-board" class="side-section">
+        	<div class="slide-section-header">
+            	<div class="close-add-btn">
+                    <a class="add-link close-add-board" href="#">
+                        <img src="img/back2-friend-icon.png"/>
+                    </a>   
+                </div>
+                
+                <div class="sub-slide-menu-title">
+                    Create a Board
+                </div>
+           </div><!--slide section header-->
+            
+            <div class="create-board-btn-container">
+                <div class="create-new-board-btn">Create Board</div>
+            </div>
+            
+           <div class="slide-section-friend-container add-board-list">
+            	<div class="slide-section-content-scroll-box">
+                    <div class="add-board-name-board">
+                            <input placeholder="name your new board" class="add-friend-search-field"/>
+                    </div>
+                    
+                    
+                    <div class="add-board-pub-prive-contianer private-select-box">
+                      <input type="radio" id="radioPrivate" name="radio" checked/>
+                      <label for="radioPrivate"><span></span>
+                          <font class="add-board-pp-text">Private</font>
+                      </label>
+                    </div>
+
+                    <div class="add-board-pub-prive-contianer public-select-box">
+                      <input type="radio" id="radioPublic" name="radio" />
+                      <label for="radioPublic"><span></span>
+                          <font class="add-board-pp-text">Public</font>
+                      </label>
+                    </div>
+                    
+                    
+                    <div class="add-board-add-friend-btn">Add Friends</div>
+                    <div class="add-board-add-group-btn">Add Groups</div>
+                    
+                    <ul class="side-slide-item-list add-board-add-friend-list">
+                        <li class="side-slide-item rolodex">
+                            <div class="friend-img-box">
+                                <img src="img/Duck-Dodgers.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#27a6bd;">
+                            	Duck Dodgers
+                            </p>
+                            <div class="plus-btn">
+                                <a class="plus-link" href="#">
+                                    <img class="plus-link-img" src="img/plus-white-icon.png"/>
+                                </a> 
+                            </div>
+                        </li>
+                        <li class="side-slide-item rolodex">
+                            <div class="friend-img-box">
+                                <img src="img/Walter-Matthau.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#39b54a;">
+                            	Walter Matthau
+                            </p>
+                            <div class="plus-btn">
+                                <a class="plus-link" href="#">
+                                    <img class="plus-link-img" src="img/plus-white-icon.png"/>
+                                </a> 
+                            </div>
+                        </li>
+                        <li class="side-slide-item rolodex">
+                            <div class="friend-img-box">
+                                <img src="img/Lois-Griffin.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#ec008c;">
+                            	Lois Griffin
+                            </p>
+                            <div class="plus-btn">
+                                <a class="plus-link" href="#">
+                                    <img class="plus-link-img" src="img/plus-white-icon.png"/>
+                                </a> 
+                            </div>
+                        </li>
+                        <li class="side-slide-item rolodex">
+                            <div class="friend-img-box">
+                                <img src="img/Kelly-Kapowski.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#00aeef;">
+                            	Kelly Kapowski
+                            </p>
+                            <div class="plus-btn">
+                                <a class="plus-link" href="#">
+                                    <img class="plus-link-img" src="img/plus-white-icon.png"/>
+                                </a> 
+                            </div>
+                        </li>
+                        <li class="side-slide-item rolodex">
+                            <div class="friend-img-box">
+                                <img src="img/Stephen-Colbert.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#0054a6;">
+                            	Stephen Colbert
+                            </p>
+                            <div class="plus-btn">
+                                <a class="plus-link" href="#">
+                                    <img class="plus-link-img" src="img/plus-white-icon.png"/>
+                                </a> 
+                            </div>
+                        </li>
+                        <li class="side-slide-item rolodex">
+                            <div class="friend-img-box">
+                                <img src="img/Mike-Smith.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#39b54a;">
+                            	Mike Smith
+                            </p>
+                            <div class="plus-btn">
+                                <a class="plus-link" href="#">
+                                    <img class="plus-link-img" src="img/plus-white-icon.png"/>
+                                </a> 
+                            </div>
+                        </li>
+                        <li class="side-slide-item rolodex">
+                            <div class="friend-img-box">
+                                <img src="img/Sally-Thomas.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#f26522 ;">
+                            	Sally Thomas
+                            </p>
+                            <div class="plus-btn">
+                                <a class="plus-link" href="#">
+                                    <img class="plus-link-img" src="img/plus-white-icon.png"/>
+                                </a> 
+                            </div>
+                        </li>
+                        <li class="side-slide-item rolodex">
+                            <div class="friend-img-box">
+                                <img src="img/Danna-Mitchell.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#92278f;">
+                            	Danna Mitchell
+                            </p>
+                            <div class="plus-btn">
+                                <a class="plus-link" href="#">
+                                    <img class="plus-link-img" src="img/plus-white-icon.png"/>
+                                </a> 
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="side-slide-item-list add-board-add-group-list">
+                        <li class="side-slide-item rolodex">
+                            <div class="friend-img-box">
+                                <img src="img/group-holder-icon.png" style="background-color:#27a6bd;"/>
+                            </div>
+                            <p class="friend-name" style="color:#27a6bd;">
+                            	Family
+                            </p>
+                            <div class="plus-btn">
+                                <a class="plus-link" href="#">
+                                    <img class="plus-link-img" src="img/plus-white-icon.png"/>
+                                </a> 
+                            </div>
+                        </li>
+                        <li class="side-slide-item rolodex">
+                            <div class="friend-img-box">
+                                <img src="img/group-holder-icon.png" style="background-color:#27a6bd;"/>
+                            </div>
+                            <p class="friend-name" style="color:#27a6bd;">
+                            	College
+                            </p>
+                            <div class="plus-btn">
+                                <a class="plus-link" href="#">
+                                    <img class="plus-link-img" src="img/plus-white-icon.png"/>
+                                </a> 
+                            </div>
+                        </li>
+                        <li class="side-slide-item rolodex">
+                            <div class="friend-img-box">
+                                <img src="img/group-holder-icon.png" style="background-color:#27a6bd;"/>
+                            </div>
+                            <p class="friend-name" style="color:#27a6bd;">
+                            	Basketball
+                            </p>
+                            <div class="plus-btn">
+                                <a class="plus-link" href="#">
+                                    <img class="plus-link-img" src="img/plus-white-icon.png"/>
+                                </a> 
+                            </div>
+                        </li>
+                        <li class="side-slide-item rolodex">
+                            <div class="friend-img-box">
+                                <img src="img/group-holder-icon.png" style="background-color:#27a6bd;"/>
+                            </div>
+                            <p class="friend-name" style="color:#27a6bd;">
+                            	Maryland
+                            </p>
+                            <div class="plus-btn">
+                                <a class="plus-link" href="#">
+                                    <img class="plus-link-img" src="img/plus-white-icon.png"/>
+                                </a> 
+                            </div>
+                        </li>
+                        <li class="side-slide-item rolodex">
+                            <div class="friend-img-box">
+                                <img src="img/group-holder-icon.png" style="background-color:#27a6bd;"/>
+                            </div>
+                            <p class="friend-name" style="color:#27a6bd;">
+                            	Neighbors
+                            </p>
+                            <div class="plus-btn">
+                                <a class="plus-link" href="#">
+                                    <img class="plus-link-img" src="img/plus-white-icon.png"/>
+                                </a> 
+                            </div>
+                        </li>
+                        <li class="side-slide-item rolodex">
+                            <div class="friend-img-box">
+                                <img src="img/group-holder-icon.png" style="background-color:#27a6bd;"/>
+                            </div>
+                            <p class="friend-name" style="color:#27a6bd;">
+                            	Trip to France
+                            </p>
+                            <div class="plus-btn">
+                                <a class="plus-link" href="#">
+                                    <img class="plus-link-img" src="img/plus-white-icon.png"/>
+                                </a> 
+                            </div>
+                        </li>
+                        <li class="side-slide-item rolodex">
+                            <div class="friend-img-box">
+                                <img src="img/group-holder-icon.png" style="background-color:#27a6bd;"/>
+                            </div>
+                            <p class="friend-name" style="color:#27a6bd ;">
+                            	Grad School
+                            </p>
+                            <div class="plus-btn">
+                                <a class="plus-link" href="#">
+                                    <img class="plus-link-img" src="img/plus-white-icon.png"/>
+                                </a> 
+                            </div>
+                        </li>
+                        <li class="side-slide-item rolodex">
+                            <div class="friend-img-box">
+                                <img src="img/group-holder-icon.png" style="background-color:#27a6bd;"/>
+                            </div>
+                            <p class="friend-name" style="color:#27a6bd;">
+                            	1221 Roommates
+                            </p>
+                            <div class="plus-btn">
+                                <a class="plus-link" href="#">
+                                    <img class="plus-link-img" src="img/plus-white-icon.png"/>
+                                </a> 
+                            </div>
+                        </li>
+                        
+                        <li class="side-slide-item rolodex">
+                            <div class="friend-img-box">
+                                <img src="img/group-holder-icon.png" style="background-color:#27a6bd;"/>
+                            </div>
+                            <p class="friend-name" style="color:#27a6bd;">
+                            	Yahoo League
+                            </p>
+                            <div class="plus-btn">
+                                <a class="plus-link" href="#">
+                                    <img class="plus-link-img" src="img/plus-white-icon.png"/>
+                                </a> 
+                            </div>
+                        </li>
+                        
+                    </ul>
+                    <div class="side-slide-item-list-bottom-pad"></div>
+                    
+                    </div>
+            	</div>
+        </section>
+<!-- END SIDE SLIDE Add Board -->
+
+
+        <section id="search" class="side-section">
+            <div class="slide-section-header">
+            	<div class="slide-in-arrow">
+                    <a class="slide-close-link" href="#">
+                        <img src="img/slide-in-arrow.png"/>
+                    </a>   
+                </div>
+                <!--<div class="selector-text-this-board">Guest On</div>
+                <div class="selector-text-my-boards">Hosting</div>-->
+            
+                <div class="selector-dd-container">
+					<div id="dd" class="dd selector-dd" tabindex="1">
+						<span>This Boards</span>
+						<ul class="dropdown">
+							<li><a href="#" class="">This Board</a></li>
+							<li><a href="#" class="">My Boards</a></li>
+                            <li><a href="#" class="">Global</a></li>
+						</ul>
+					</div>
+				 </div>
+            
+                <!--<div class="add-btn">
+                    <a class="add-link" href="#">
+                        <img src="img/filter-icon.png"/>
+                    </a>   
+                </div>-->
+                
+            </div><!--slide section header-->
+            
+            <div class="slide-section-friend-container">
+            	<div class="slide-section-content-scroll-box">
+                    <ul class="side-slide-item-list boards-slide-list">
+                        <li class="side-slide-item">
+                            <div class="friend-img-box">
+                                <img src="img/hipster-chick.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#00a651;">
+                            	Average Hipster Chick
+                            </p>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="friends-tacs-line">
+                            	tacs : 9247 / 20427<span>in<sup>2</sup></span>
+                            </div>
+                            <div class="friends-tacd-line">
+                            	tacd : 50873 / 181627<span>in<sup>2</sup></span>       
+                            </div>
+                            <div class="friend-menu-container">
+                                <div class="friends-youve-tacd-line">
+                                    You tacd <span class="ellipse">Average Hipster Chick</span> 12 times (32<span>in<sup>2</sup></span>)
+                                </div>
+                                <div class="friends-tacd-you-line">
+                                    <span class="ellipse">Average Hipster Chick</span> tacd you 9 times (29<span>in<sup>2</sup></span>)
+                                </div>
+                                <div class="friend-menu-nav-container">
+                                    <ul class="friend-menu-nav">
+                                        <li><a href="#"><img src="img/time-line-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/map-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/home-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/remove-icon-wht.png"/></a></li>
+                                    </ul>                     
+                                </div>
+                            </div>
+                        </li>
+                        <li class="side-slide-item">
+                            <div class="board-title" style="color:#662d91;">
+                                Jess &amp; Mike's Wedding
+                            </div>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="board-host">
+                                host: Jessica Walters
+                            </div>
+                            <div class="board-number-of-guests">
+                                guests: 37
+                            </div>     
+                        </li>
+                        <li class="side-slide-item" style="color:#01b115; height:auto;">
+                           <div class="time-line-tac">
+                               <img class="time-line-img" src="img/smiley.jpg"/>
+                               <div class="time-line-username">
+                                  Dave Hemla
+                               </div> 
+                               <div class="time-line-tac-copy">
+                                   You're my girl and all but you wont catch me shopping all day...well may for you. 
+                               </div>
+                                    <div class="tl-date">
+                                        Monday 11/10/14
+                                    </div>
+                            </div>
+                        </li>
+                         <li class="side-slide-item timeline-1" style="color:#27a6bd; height:auto;">
+                           <div class="time-line-tac">
+                               <img class="time-line-img" src="img/girls-shopping.jpg"/>
+                               <div class="time-line-username">
+                                  Allison Smith
+                               </div> 
+                               <div class="time-line-tac-copy">
+                                   Yesterday was so much fun. Lets do that agian. Good times girlfriend!
+                               </div>
+                                    <div class="tl-date">
+                                        Monday 11/10/14
+                                    </div>
+                            </div>
+                        </li>
+                        <li class="side-slide-item">
+                            <div class="board-title" style="color:#ec008c;">
+                                What do you think of these Kitchen Designs?
+                            </div>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="board-host">
+                                host: Kristie Wells
+                            </div>
+                            <div class="board-number-of-guests">
+                                guests: 33
+                            </div>     
+                        </li>
+                        <li class="side-slide-item" style="color:#009cff;">
+                           <div class="time-line-tac">
+                               <div class="time-line-username">
+                                  Jessica McBell
+                               </div> 
+                               <div class="time-line-tac-copy">
+                                   I love those girls. Lets all do brunch soon.
+                               </div>
+                                    <div class="tl-date">
+                                        Monday 11/10/14
+                                    </div>
+                            </div>
+                        </li>
+                        <li class="side-slide-item">
+                            <div class="friend-img-box">
+                                <img src="img/chris-sacca.jpg"/>
+                            </div>
+                            <p class="friend-name" style="color:#00aeef;">
+                            	Chris Sacca
+                            </p>
+                            <a href="#" class="friend-menu-btn">
+                                <img src="img/slide-item-menu-btn.png"/>
+                            </a>
+                            <a href="#" class="friend-jump-btn" title="jump to this board">
+                                <img src="img/jump-boards.png"/>
+                            </a>
+                            <div class="friends-tacs-line">
+                            	tacs : 1117 / 2527<span>in<sup>2</sup></span>
+                            </div>
+                            <div class="friends-tacd-line">
+                            	tacd : 773 / 1427<span>in<sup>2</sup></span>       
+                            </div>
+                            <div class="friend-menu-container">
+                                <div class="friends-youve-tacd-line">
+                                    You tacd <span class="ellipse">Chris Sacca</span> 12 times (32<span>in<sup>2</sup></span>)
+                                </div>
+                                <div class="friends-tacd-you-line">
+                                    <span class="ellipse">Chris Sacca</span> tacd you 9 times (29<span>in<sup>2</sup></span>)
+                                </div>
+                                <div class="friend-menu-nav-container">
+                                    <ul class="friend-menu-nav">
+                                        <li><a href="#"><img src="img/time-line-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/map-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/home-icon-wht.png"/></a></li>
+                                        <li><a href="#"><img src="img/remove-icon-wht.png"/></a></li>
+                                    </ul>                     
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="side-slide-item-list-bottom-pad"></div>
+            	</div>
+            </div>
+        </section>
+
+
+<!--START ME Section-->
+<section id="me" class="side-section">
+            <div class="slide-section-header">
+            	<div class="slide-in-arrow">
+                    <a class="slide-close-link" href="#">
+                        <img src="img/slide-in-arrow.png"/>
+                    </a>   
+                </div>
+                
+               <div class="sub-slide-menu-title">
+                    Me
+                </div>
+            
+                <div class="add-btn">
+                    <a class="add-link" href="#">
+                        <img src="img/notifications-icon.png"/>
+                    </a>
+                    <div class="notification-counter">8</div>
+                </div>
+            </div><!--slide section header-->
+            
+            <div class="slide-section-friend-container">
+            	<div class="slide-section-content-scroll-box">
+                    <div class="me-user-name" style="color:#ed145b;">Sally Schmally</div>
+                    <div class="me-change-signature">change signature</div>
+                    <div class="account-info-container">
+                        <div class="me-profile-image">
+                            <img src="img/Sally-Thomas.jpg"/>
+                        </div>
+                        <div class="account-credentials">
+                            <div class="me-email">
+                                sally.schmally@gmail.com
+                            </div>
+                            <div class="me-password">
+                                ********
+                            </div>
+                            <div class="me-change-account-info">
+                                <a href="#">change</a>
+                            </div>
+                        </div>
+                     </div>
+                    <div class="me-stat-container">
+                        <p>Lifetime Stats</p>
+                        <ul>
+                            <li>tacs made : <span>1,267</li>	
+                            <li>times tacd : <span>463</span></li>
+                            <li>boards hosting : <span>17</span></li>
+                            <li>member since : <span>11.8.2115</span></li>
+                            <li>images/photos tacd : <span>67</span></li>
+                            <li>drawings made : <span>24</span></li>
+                        </ul>
+                    </div>
+                    <div class="side-slide-item-list-bottom-pad"></div>
+            	</div>
+            </div>
+        </section>
+    <!--END ME Section-->
+
+
+	</main>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script>
+$('.me-btn').click(function() {
+	$(".side-section").animate({
+		  right: "-340px"
+		}, 500, function() {
+	 });
+     $("#me").animate({
+		  right: "0px"
+		}, 500, function() {
+	 });
+    $(".search-container-mobile").slideUp();
+});        
+$('.peeps-btn').click(function() {
+	$(".side-section").animate({
+		  right: "-340px"
+		}, 500, function() {
+	 });
+     $("#friends").animate({
+		  right: "0px"
+		}, 500, function() {
+	 });
+    $(".search-container-mobile").slideUp();
+});
+$('.open-add-friend').click(function() {
+	$("#friends").animate({
+		  right: "+=320px"
+		}, 550, function() {
+	 });
+    $("#friends div").animate({
+		  opacity: ".55"
+		}, 500, function() {
+	 });
+    $("#friends").css("backgroundColor", "#ececec");
+    $("#add-friends").animate({
+		  right: "+=340px"
+		}, 500, function() {
+	 });
+    $(".search-container-mobile").slideUp();
+    $(".open-add-friend").fadeOut(500);
+});
+        
+$('.open-sacca-timeline').click(function() {
+	$("#friends").animate({
+		  right: "+=320px"
+		}, 550, function() {
+	 });
+    $("#friends div").animate({
+		  opacity: ".55"
+		}, 500, function() {
+	 });
+    $("#friends").css("backgroundColor", "#ececec");
+    $("#friends-timeline").animate({
+		  right: "+=340px"
+		}, 500, function() {
+	 });
+    $(".search-container-mobile").slideUp();
+    $(".open-add-friend").fadeOut(500);
+}); 
+$('.open-sacca-boards').click(function() {
+	$("#friends").animate({
+		  right: "+=320px"
+		}, 550, function() {
+	 });
+    $("#friends div").animate({
+		  opacity: ".55"
+		}, 500, function() {
+	 });
+    $("#friends").css("backgroundColor", "#ececec");
+    $("#friends-board").animate({
+		  right: "+=340px"
+		}, 500, function() {
+	 });
+    $(".search-container-mobile").slideUp();
+    $(".open-add-friend").fadeOut(500);
+}); 
+    
+$('#friends, .close-add-friend, .close-friend-timeline, .close-friend-board').click(function() {   
+    if($('#friends').css('right') > '10px') {
+      $("#friends").animate({
+		  right: "0px"
+		}, 500, function() {
+	 });
+    $("#add-friends, #friends-timeline, #friends-board").animate({
+		  right: "-340px"
+		}, 525, function() {
+	 });
+     $("#friends div").animate({
+		  opacity: "1"
+		}, 500, function() {
+	 });
+     $("#friends").css("backgroundColor", "#cccccc");
+     $(".open-add-friend").fadeIn(500);
+     }
+});        
+    
+$('.time-line-btn').click(function() {
+     $(".side-section").animate({
+		  right: "-340px"
+		}, 500, function() {
+	 });
+     $("#time-line").animate({
+		  right: "0px"
+		}, 500, function() {
+	 });
+    $(".search-container-mobile").slideUp();
+});
+
+$('.boards-btn').click(function() {
+	$(".side-section").animate({
+		  right: "-340px"
+		}, 500, function() {
+	 });
+     $("#boards").animate({
+		  right: "0px"
+		}, 500, function() {
+	 });
+    $(".search-container-mobile").slideUp();
+});	 
+$('.open-add-board').click(function() {
+	$("#boards").animate({
+		  right: "+=320px"
+		}, 550, function() {
+	 });
+    $("#boards div").animate({
+		  opacity: ".55"
+		}, 500, function() {
+	 });
+    $("#boards").css("backgroundColor", "#ececec");
+    $("#add-board").animate({
+		  right: "+=340px"
+		}, 500, function() {
+	 });
+    $(".search-container-mobile").slideUp();
+    $(".open-add-board").fadeOut(500);
+});        
+$('#boards, .close-add-board').click(function() {   
+    if($('#boards').css('right') > '10px') {
+      $("#boards").animate({
+		  right: "0px"
+		}, 500, function() {
+	 });
+    $("#add-board").animate({
+		  right: "-340px"
+		}, 525, function() {
+	 });
+     $("#boards div").animate({
+		  opacity: "1"
+		}, 500, function() {
+	 });
+     $("#boards").css("backgroundColor", "#cccccc");
+     $(".open-add-board").fadeIn(500);
+     }
+}); 
+$('.add-board-add-friend-btn').click(function() { 
+    $('.add-board-add-group-list').slideUp(500);
+    $('.add-board-add-friend-list').slideDown(500);
+});
+$('.add-board-add-group-btn').click(function() { 
+    $('.add-board-add-friend-list').slideUp(500);
+    $('.add-board-add-group-list').slideDown(500);
+});
+    
+    
+
+  $('.search-field').keyup(function () {
+    // console.log(this.value);
+    if(this.value.length > 2 && this.value.length < 4) {  
+      $(".side-section").animate({
+		  right: "-340px"
+		}, 500, function() {
+	 });
+     $("#search").animate({
+		  right: "0px"
+		}, 500, function() {
+	 });
+    }
+    if(this.value.length < 3) {
+          $("#search").animate({
+		  right: "-340px"
+		}, 500, function() {
+	 });
+     }
+   });
+    
+    $('.add-friend-search-field').keyup(function () {
+    // console.log(this.value);
+    if(this.value.length > 2 && this.value.length < 4) {  
+      $(".add-friend-list").fadeIn(500);
+    }
+    if(this.value.length < 3) {
+      $(".add-friend-list").fadeOut(500);
+    }
+   });
+    
+    
+/*$('.search-field').click(function() {
+	$(".side-section").animate({
+		  right: "-340px"
+		}, 500, function() {
+	 });
+     $("#search").animate({
+		  right: "0px"
+		}, 500, function() {
+	 });
+});*/
+    
+/* Friend Menu Button Open Functions */    
+$(document).ready(function() {
+	$(".side-slide-item .friend-menu-btn").click(function() {
+        /*$("ul.side-slide-item-list li").animate({height: "90px"}, 500, function(){});*/
+        if($(this).closest("ul.side-slide-item-list li").height() !=90)
+          $(this).closest("ul.side-slide-item-list li").animate({height: 90}, 500);
+        else
+            $(this).closest("ul.side-slide-item-list li").animate({height: 230}, 500);
+    });
+});
+    
+
+$('.slide-close-link').click(function() {
+	$(".side-section").animate({
+		  right: "-340px"
+		}, 500, function() {
+	 });
+    $(".search-container-mobile").slideUp();
+    $('.board').animate({
+		  opacity: "1.0"
+		}, 500, function() {
+	 });
+    $(".open-add-friend").fadeIn(500);
+});	 
+    
+
+$('.search-btn').click(function() {
+	$(".search-container-mobile").slideToggle()
+    $(".side-section").animate({
+		  right: "-340px"
+		}, 500, function() {
+	 });
+	 });
+$('.cd-nav-trigger').click(function() {
+	$(".search-container-mobile").hide()
+    $(".side-section").animate({
+		  right: "-340px"
+		}, 500, function() {
+	 });
+    $('.board').animate({
+		  opacity: "1.0"
+		}, 500, function() {
+	 });
+});
+        
+$('.navitem').click(function() {
+	$('.board').animate({
+		  opacity: ".20"
+		}, 500, function() {
+	 });
+    $(".open-add-friend").fadeIn(500);
+    $(".open-add-board").fadeIn(500);
+});
+ 
+$(".friend-this-btn").click(function() {
+    $(".friend-this").fadeOut(1500);
+});
+$(".friend-my-btn").click(function() {
+    $(".friend-this").fadeIn(1500);
+});
+    
+$(".timeline-all-btn").click(function() {
+    $(".all-timeline").fadeOut(1500);
+});
+$(".timeline-my-btn").click(function() {
+    $(".all-timeline").fadeIn(1500);
+});    
+
+$('.slide-close-link, .navitem').click(function() {
+    $("#friends div, #boards div").animate({
+		  opacity: "1"
+		}, 500, function() {
+	 });
+    $("#friends").css("backgroundColor", "#cccccc");
+});
+     
+$(".time-line-img").attr("align","right");
+  
+$(document).ready(function() {
+	$(".plus-btn").click(function() {
+        $(this).find( ".plus-link-img" ).toggle();
+    });
+   });
+
+    
+/* Prevent auto-zoom on text input fields */
+var $viewportMeta = $('meta[name="viewport"]');
+$('input, select, textarea').bind('focus blur', function(event) {
+$viewportMeta.attr('content', 'width=device-width,initial-scale=1,maximum-scale=' +        (event.type == 'blur' ? 10 : 1));
+}); 
+</script>
+
+<!-- Start This Board, My Board, Host, Guest Selector Dropdown -->
+<script type="text/javascript">
+			function DropDown(el) {
+				this.dd = el;
+				this.placeholder = this.dd.children('span');
+				this.opts = this.dd.find('ul.dropdown > li');
+				this.val = '';
+				this.index = -1;
+				this.initEvents();
+			}
+			DropDown.prototype = {
+				initEvents : function() {
+					var obj = this;
+					obj.dd.on('click', function(event){
+						$(this).toggleClass('active');
+						return false;
+					});
+					obj.opts.on('click',function(){
+						var opt = $(this);
+						obj.val = opt.text();
+						obj.index = opt.index();
+						obj.placeholder.text(obj.val);
+					});
+				},
+				getValue : function() {
+					return this.val;
+				},
+				getIndex : function() {
+					return this.index;
+				}
+			}
+			$(function() {
+				var dd = new DropDown( $('.dd') );
+				$(document).click(function() {
+					// all dropdowns
+					$('.selector-dd').removeClass('active');
+				});
+			});
+		</script>
+
+</body>
+</html>
