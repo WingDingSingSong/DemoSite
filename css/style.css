@@ -776,12 +776,22 @@ margin-top:6px;
     line-height: 18px;
 }
 .me-change-account-info{
-    margin: 14px 0;
     font-size: 14px;
+	position:absolute;
+	top:184px;
+	left:100px;
 }
 .me-change-account-info a:link, .me-change-account-info a:hover, .me-change-account-info a:visited, .me-change-account-info a:active{
     color:#1cbbb4;
-;
+}
+.me-log-out{
+    font-size: 14px;
+	position:absolute;
+	top:184px;
+	right:24px;
+}
+.me-log-out a:link, .me-log-out a:hover, .me-log-out a:visited, .me-log-out a:active{
+    color:#1cbbb4;
 }
 .me-stat-container{
     width: 100%;
