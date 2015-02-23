@@ -694,32 +694,49 @@ margin-top:6px;
     float: left;
     margin: 5px 0 0 1px;
 }
-.color-locked{
-    background-image: url(../img/color-lock.png);
-    background-repeat: no-repeat;
-    background-position: bottom right;
-    float: right;
-    height: 25px;
-    width: 25px;
-    margin: -20px -11px 0 0;
+.color-cost-dollar{
+    display: inline;
+    font-weight: 900;
+    font-size: 29px;
+    color: #fff;
+    margin: 0px 8px;
+}
+.font-cost-dollar{
+    display: inline-block;
+    font-weight: 900;
+    font-size: 24px;
+    position: relative;
+    top:-5px;
+    width: 12px;
+}
+ul.font-selection{
+  width: 100%;  
+}
+ul.font-selection li{
+  width: 300px; 
+    position: relative;
+}
+.font-choice-sample{
+    width: 300px;
+    display: inline-block;
+    margin: 0px 0 0 8px;
+    position: absolute;
+    font-size: 18px;
 }
 .all-color-selection-container input[type="radio"] + label span, .all-color-selection-container input[type="radio"]:checked + label span{
     margin:-24px 0 0 23px;
 }
-
-.temp-signature-radio-column{
+.signature-radio-column{
     position: absolute;
     left: 10px;
     top: 23px;
     width: 20px;
     height: 500px;
 }
-.temp-signature-fonts-column{
-    position: absolute;
-    top:12px;
-    left: 36px;
-    width: 280px;
+.signature-radio-column ul{
+    margin-bottom: 126px;
 }
+
 .all-font-selection-container input[type="radio"] + label span, .all-font-selection-container input[type="radio"]:checked + label span{
     margin-bottom:21px;
 }
@@ -788,7 +805,7 @@ margin-top:6px;
     font-size: 14px;
 	position:absolute;
 	top:184px;
-	right:24px;
+	right:50px;
 }
 .me-log-out a:link, .me-log-out a:hover, .me-log-out a:visited, .me-log-out a:active{
     color:#1cbbb4;
@@ -1215,9 +1232,9 @@ a.tooltips {
 }
 a.tooltips span {
   position: absolute;
-  width:90px;
+  width:98px;
   color: #FFFFFF;
-  font-size: 18px;
+  font-size: 17px;
   background: #707070;
   height: 40px;
   line-height: 40px;
@@ -1226,7 +1243,7 @@ a.tooltips span {
   border-radius: 6px;
   top: 40px;
   left: 50%;
-  margin-left: -45px;
+  margin-left: -49px;
   opacity:0;
   transition:visibility 0s linear 0.33s, opacity 0.33s linear, top 0.33s linear;
 }
@@ -1244,10 +1261,10 @@ a.tooltips span:after {
 a:hover.tooltips span {
   visibility: visible;
   transition-delay:1.05s;
-  opacity: 0.8;
+  opacity: 1.0;
   top: 50px;
   left: 50%;
-  margin-left: -45px;
+  margin-left: -49px;
   z-index: 999;
 }
 
