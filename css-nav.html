@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="js/modernizr.js"></script><!-- Modernizr -->
+  	<link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <title>tacBOARD</title>
+<style>
+*{
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;  
+}
+body{
+	overflow:hidden;
+	margin:0;
+	padding:0;
+}
+.top-bar{
+	width:100%;
+	height:40px;
+	background-color:#E6E6E6;
+	position:fixed;
+	top:100px;
+	left:0px;
+	z-index:100;
+	}
+.main-nav-contianer{
+	position:absolute;
+	width:500px;
+	text-align:left;
+	right:0px;
+	height:30px;
+	top:5px;
+}
+
+.ss-menu-container{
+	position: absolute;
+	top: 0;
+	right: -320px;
+	width: 320px;
+	height: 100%;
+	transition: right 800ms;
+	font-size:24px;
+	padding:12px;
+}
+.ss-people{
+	background-color:blue;
+}
+.ss-boards{
+	background-color:red;
+}
+.ss-timeline{
+	background-color:green;
+}
+.ss-search{
+	background-color:orange;
+}
+.ss-my-account{
+	background-color:purple;
+}
+.ss-friend-timeline{
+	background-color:pink;
+}
+.ss-friend-boards{
+	background-color:yellow;
+}
+.ss-friend-invite{
+	background-color:brown;
+}
+.ss-friend-create-group{
+	background-color:grey;
+}
+.ss-boards-create-board{
+	background-color:teal;
+}
+.ss-my-account-notification{
+	background-color:#666;
+}
+.ss-my-account-change-signature{
+	background-color:#960;
+}
+
+.toggleRadio {
+    position: relative;
+    visibility: hidden;
+}
+
+.toggle:checked ~ .allNav {right: -320px;}
+
+.togglePeople:checked ~ .ss-people {right: 0px;} 
+.toggleBoards:checked ~ .ss-boards {right: 0px;}
+.toggleTimeline:checked ~ .ss-timeline {right: 0px;} 
+.toggleSearch:checked ~ .ss-search {right: 0px;} 
+.toggleMyAccount:checked ~ .ss-my-account {right: 0px;} 
+
+.toggleFriendTimeline:checked ~ .ss-friend-timeline {right: 0px;}
+.toggleFriendTimeline:checked ~ .ss-people {right: 320px;} 
+
+.toggleFriendBoards:checked ~ .ss-friend-boards {right: 0px;}
+.toggleFriendBoards:checked ~ .ss-people {right: 320px;} 
+
+.toggleFriendInvite:checked ~ .ss-friend-invite {right: 0px;}
+.toggleFriendInvite:checked ~ .ss-people {right: 320px;} 
+
+.toggleFriendCreateGroup:checked ~ .ss-friend-create-group {right: 0px;}
+.toggleFriendCreateGroup:checked ~ .ss-people {right: 320px;} 
+
+.toggleBoardsCreateBoard:checked ~ .ss-boards-create-board {right: 0px;}
+.toggleBoardsCreateBoard:checked ~ .ss-boards {right: 320px;} 
+
+.toggleMyAccountNotifications:checked ~ .ss-my-account-notification {right: 0px;}
+.toggleMyAccountNotifications:checked ~ .ss-my-account {right: 320px;}
+
+.toggleMyAccountChangeSignature:checked ~ .ss-my-account-change-signature {right: 0px;} 
+.toggleMyAccountChangeSignature:checked ~ .ss-my-account {right: 320px;}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div id="cd-logo">
+        <a href="#0">
+            <img src="img/logo.png" alt="Logo">
+        </a>
+    </div>
+    
+    <div class="this-board-title">My Homeboard</div>
+	</header>
+	<div id="cd-nav">
+		<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+		<nav id="cd-main-nav">
+			<ul>
+				<li class="nvbtn navitem tac-btn">
+                    <a href="#" class="tooltips">
+                        <img src="img/tac-icon.png"/>
+                        <span>Tac</span>
+                    </a>
+                </li>
+				<li class="nvbtn navitem">
+                    <a href="#" class="peeps-btn tooltips">
+                    	<label for='togglePeople'>
+                        	<img src="img/peeps-icon.png"/>
+                        </label>
+                        <span>People</span>
+                    </a>
+                </li>
+				<li class="nvbtn navitem time-line-btn">
+                    <a href="#" class="tooltips">
+                    	<label for='toggleTimeline'>
+	                        <img src="img/time-line-icon.png"/>
+                        </label>
+                        <span>Timeline</span>
+                    </a>
+                </li>
+				<li class="nvbtn navitem boards-btn">
+                    <a href="#" class="tooltips">
+                    	<label for='toggleBoards'>
+	                        <img src="img/boards-icon.png"/>
+                        </label>
+                        <span>Boards</span>
+                    </a>
+                </li>
+                <li class="nvbtn navitem search-btn">
+                    <a href="#" class="tooltips">
+	                        <img src="img/search-icon.png"/>
+                    </a>
+                </li>
+                <li class="navitem search-field-nav">
+                    <div class="search-box"/>
+                        <input placeholder="search" class="search-field"/>
+                    </div>
+                </li>
+                <li class="nvbtn navitem me-btn">
+                    <a href="#" class="tooltips">
+                    	<label for='toggleMyAccount'>
+	                        <img src="img/settings-icon.png"/>
+                        </label>
+                        <span>My Account</span>
+                    </a>
+                </li>
+				<!--<li class="nvbtn navitem home-btn">
+                    <a href="#"><img src="img/home-icon.png"/></a>
+                </li>-->
+			</ul>
+            <div class="search-container-mobile">
+                 <input placeholder="search this board" class="search-field"/>
+            </div>
+		</nav>
+	</div>
+
+
+<input type='radio' id='toggle' class='toggle toggleRadio' name="main-nav" checked/>
+<input type='radio' id='togglePeople' class='togglePeople toggleRadio' name="main-nav" />
+<input type='radio' id='toggleBoards' class='toggleBoards toggleRadio' name="main-nav" />
+<input type='radio' id='toggleTimeline' class='toggleTimeline toggleRadio' name="main-nav" />
+<input type='radio' id='toggleSearch' class='toggleSearch toggleRadio' name="main-nav" />
+<input type='radio' id='toggleMyAccount' class='toggleMyAccount toggleRadio' name="main-nav" />
+
+<input type='radio' id='toggleFriendTimeline' class='toggleFriendTimeline toggleRadio' name="main-nav" />
+<input type='radio' id='toggleFriendBoards' class='toggleFriendBoards toggleRadio' name="main-nav" />
+
+<input type='radio' id='toggleFriendInvite' class='toggleFriendInvite toggleRadio' name="main-nav" />
+<input type='radio' id='toggleFriendCreateGroup' class='toggleFriendCreateGroup toggleRadio' name="main-nav" />
+
+<input type='radio' id='toggleBoardsCreateBoard' class='toggleBoardsCreateBoard toggleRadio' name="main-nav" />
+
+<input type='radio' id='toggleMyAccountNotifications' class='toggleMyAccountNotifications toggleRadio' name="main-nav" />
+<input type='radio' id='toggleMyAccountChangeSignature' class='toggleMyAccountChangeSignature toggleRadio' name="main-nav" />
+
+<div id='ss-people' class='ss-people allNav ss-menu-container'>
+	<br /><br /><br />People<br><br />
+    <label for='toggle'>Close &#10006;</label>
+    <br /><br /><br />
+    <label for='toggleFriendTimeline'>
+        View Friend's Timeline &#8614; 
+    </label><br /><br />
+    <label for='toggleFriendBoards'>
+        View Friend's Boards &#8614;
+    </label><br /><br />
+    <label for='toggleFriendInvite'>
+        Invite New Friends &#8614;
+    </label><br /><br />
+    <label for='toggleFriendCreateGroup'>
+        Create New Groups &#8614;
+    </label>
+</div>
+    <div id='ss-friend-timeline' class='ss-friend-timeline ss-menu-container'>
+        <br /><br /><br />Friend's Timeline<br><br />
+        <label for='togglePeople'>Close &#8677;</label>
+    </div>
+    <div id='ss-friend-boards' class='ss-friend-boards ss-menu-container'>
+        <br /><br /><br />Friend's Boards<br><br />
+        <label for='togglePeople'>Close &#8677;</label>
+    </div>
+    
+    <div id='ss-friend-invite' class='ss-friend-invite ss-menu-container'>
+        <br /><br /><br />Invite New Friends<br><br />
+        <label for='togglePeople'>Close &#8677;</label>
+    </div>
+    <div id='ss-friend-create-group' class='ss-friend-create-group ss-menu-container'>
+        <br /><br /><br />Create New Group<br><br />
+        <label for='togglePeople'>Close &#8677;</label>
+    </div>
+
+<div id='ss-boards' class='ss-boards allNav ss-menu-container'>
+	<br /><br /><br />Boards<br><br />
+    <label for='toggle'>Close &#10006;</label><br /><br /><br />
+    <label for='toggleBoardsCreateBoard'>
+        Create New Board &#8614;
+    </label>
+</div>
+    <div id='ss-boards-create-board' class='ss-boards-create-board ss-menu-container'>
+        <br /><br /><br />Create New Board<br><br />
+        <label for='toggleBoards'>Close &#8677;</label>
+    </div>
+
+<div id='ss-timeline' class='ss-timeline allNav ss-menu-container'>
+	<br /><br /><br />Timeline<br><br />
+    <label for='toggle'>Close &#10006;</label>
+</div>
+
+<div id='ss-search' class='ss-search allNav ss-menu-container'>
+	<br /><br /><br />Search<br><br />
+    <label for='toggle'>Close &#10006;</label>
+</div>
+
+<div id='ss-my-account' class='ss-my-account allNav ss-menu-container'>
+	<br /><br /><br />My Account<br><br />
+    <label for='toggle'>Close &#10006;</label><br /><br />
+    <label for='toggleMyAccountNotifications'>
+        Notifications &#8614;
+    </label><br /><br />
+    <label for='toggleMyAccountChangeSignature'>
+        Change Signature &#8614;
+    </label>
+</div>
+    <div id='ss-my-account-notification' class='ss-my-account-notification ss-menu-container'>
+        <br /><br /><br />Notifications<br><br />
+        <label for='toggleMyAccount'>Close &#8677;</label>
+    </div>
+    <div id='ss-my-account-change-signature' class='ss-my-account-change-signature ss-menu-container'>
+        <br /><br /><br />Change Signature<br><br />
+        <label for='toggleMyAccount'>Close &#8677;</label>
+    </div>
+
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>
+</html>
