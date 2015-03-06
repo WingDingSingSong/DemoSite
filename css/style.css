@@ -78,34 +78,43 @@ Modal Info
 }
 
 /* START Check Box */
-.checkbox {
-		display: inline-block;
-		cursor: pointer;
-        margin-right:12px; 
-        line-height:18px;
-	}
-	input[type=checkbox] {
-		display:none; 
-	}
-	.checkbox:before {
-		content: "";
-		display: inline-block;
-		width: 18px;
-		height: 18px;
-		vertical-align:middle;
-		background-color: #ffffff;
-		color: #cccccc;
-		text-align: center;
-		/*box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8); */
-		border-radius: 3px;
-        border: 1px solid #cccccc;
-	}
-	input[type=checkbox]:checked + .checkbox:before {
-		content: "\2713";
-		/*text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);*/
-		font-size: 17px;
-        font-weight: 900;
-    }
+input[type=checkbox] {
+  display: none;
+}
+input[type=checkbox] + label {
+  background-color:#ebebeb;
+  height: 21px;
+  width: 21px;
+  font-size:18px;
+  display: block;
+  position: relative;
+  transition: all 0.4s;
+  border: solid 5px #ebebeb;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input[type=checkbox] + label:hover {
+  border: solid 2px #00bdb5;
+}
+input[type=checkbox]:checked + label {
+  background-color:#00bdb5;
+  border: solid 2px #00bdb5;
+}
+input[type=checkbox]:checked + label:after {
+  content: 'X'; 
+  color: #ffffff;
+  position:absolute;
+  font-weight:100;
+  font-size:14px;
+  top:1px;
+  left:4px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
 /* End Check Box */
 
 
@@ -178,7 +187,7 @@ Board
 /*-------------------------------
 Slide Out Side Menus
 -------------------------------*/
-  #friends, #add-friends, #friends-timeline, #friends-board, #time-line, #search, #boards, #add-board, #me, #me-change-signature{
+  #friends, #add-friends, #friends-timeline, #friends-board, #time-line, #search, #boards, #add-board, #me, #me-change-signature, #me-notification{
 	  right:-100%;
 	  height:100%;
 	  width:320px;
@@ -564,7 +573,7 @@ Slide Out Side Menus
     z-index: 999;
 }
 
-  .modal-message-box{
+.modal-message-box{
       width: 80%;
       height: 80%;
       position: fixed;
@@ -574,17 +583,18 @@ Slide Out Side Menus
       text-align: center;
       display: none;
   }
-    .modal-message-box p{
-        font-size:24px;
-    }
-  .booya{
+.modal-message-box p{
+    font-size:24px;
+}
+.booya{
       font-family: 'Architects Daughter', "Comic Sans MS", cursive;
       font-size: 64px;
       color: #1cbbb4;
       margin: 10% 10% 25px;
 }
-   .bodal-bt-container{
-       margin: 50px auto;
+.bodal-bt-container{
+       margin: 30px;
+       display: inline-block;
     }
 a.modal-btn:link, a.modal-btn:active, a.modal-btn:visited, a.modal-btn:hover{
     margin: 6px auto;
@@ -600,7 +610,10 @@ a.modal-btn:link, a.modal-btn:active, a.modal-btn:visited, a.modal-btn:hover{
     height: 36px;   
     cursor: pointer;
 }
-  .create-board-btn-container{
+a.btn-grey:link, a.btn-grey:active, a.btn-grey:visited, a.btn-grey:hover{
+    background-color: #cccccc;
+}
+.create-board-btn-container{
     position:absolute;
     bottom: 88px;
     height: 48px;
@@ -610,7 +623,8 @@ a.modal-btn:link, a.modal-btn:active, a.modal-btn:visited, a.modal-btn:hover{
     border-top: 1px solid #ffffff;
     z-index: 999;
 }
-/* Me Section */
+
+/* ------------- Me Section ---------- */
 #me .add-btn img {
 margin-top:6px;
 }
@@ -626,6 +640,99 @@ margin-top:6px;
     font-family: 'Architects Daughter', "Comic Sans MS", cursive;
     width: 100%;
     text-align: left;
+}
+.me-tac-coin-contianer{
+    float: right;
+    width: 33%;
+    text-align: left;
+    height: 35px;
+    margin: 12px 0 0 0;
+    position: relative;
+}
+.coin-count-number{
+    font-size: 16px;
+    color: #bcbcbc;
+    position: absolute;
+    top: 6px;
+    left: 34px;
+}
+.account-info-container{
+    width: 100%;
+    height: auto;
+    padding: 12px;
+    clear: both;
+    margin: 22px 0px;
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+    overflow: auto;
+}
+.me-profile-image{
+    float: left;
+    height: 75px;
+    width: 75px;
+    margin: 0 12px 0 0;
+    overflow: hidden;
+    text-align: center;
+}
+.me-profile-image img{
+    height: 75px;
+    width: 75px;
+}
+.account-credentials{
+    height: 75px;
+    float: left;
+}
+.me-email, .me-password{
+    font-size: 14px;
+    color: #bcbcbc;
+    margin: 2px 0;
+    clear: both;
+    line-height: 18px;
+}
+.me-change-account-info{
+    font-size: 14px;
+	position:absolute;
+	top:184px;
+	left:100px;
+}
+.me-change-account-info a:link, .me-change-account-info a:hover, .me-change-account-info a:visited, .me-change-account-info a:active{
+    color:#1cbbb4;
+}
+.me-log-out{
+    font-size: 14px;
+	position:absolute;
+	top:184px;
+	right:50px;
+}
+.me-log-out a:link, .me-log-out a:hover, .me-log-out a:visited, .me-log-out a:active{
+    color:#1cbbb4;
+}
+.me-stat-container{
+    width: 100%;
+    padding: 0 12px;
+    font-size: 14px;
+    color: #bcbcbc;
+    margin: 0px;
+}
+.me-stat-container p{
+    text-transform: uppercase;
+    margin: 0 0 4px 0 ;
+}
+.me-stat-container ul{
+    list-style: none;
+    line-height: 24px;
+}
+.me-stat-container ul li span{
+}
+
+/* -----------------------------*/
+/* ---- START Notifications ----*/
+/* -----------------------------*/
+#me-notification .slide-section-content-scroll-box{
+    background-color: #ffffff;
+}
+.notification-by-type-container, .notification-settings {
+    display: none;
 }
 .notification-counter{
     height: 16px;
@@ -643,6 +750,152 @@ margin-top:6px;
     left: -2px;
     z-index: 99;
 }
+ul.notifications-list{
+	list-style:none;
+	width:100%;
+	position:relative;
+}
+ul.notifications-list li{
+	border-bottom:1px solid #ececec;
+	position:relative;
+	padding:10px 8px 10px 16px;
+	margin:3px 0px;
+	border-left-width:2px;
+	border-left-style:solid;
+}
+ul.notifications-list li h3{
+	font-size:17px;
+	color:#999999;
+	font-weight:normal;
+	margin:0px 0 6px 0;
+    font-family: "Source Sans Pro", sans-serif;
+}
+ul.notifications-list li p{
+	font-size:15px;
+	color:#bcbcbc;
+	margin:5px 0 0 0;
+    font-family: "Source Sans Pro", sans-serif;
+}
+.indicator-invite{border-left-color: #00CC33 !important; }
+.indicator-new-tac-host{border-left-color: #00bff3  !important;}
+.indicator-new-guest-host{border-left-color: #63C !important;}
+.indicator-new-tac-guest{border-left-color: #F90 !important;}
+.indicator-new-guest-guest{border-left-color: #C00 !important;}
+.notification-date{
+    width: 125px;
+    float: left;
+    display: block;
+    font-size: 14px;
+    margin: 12px 0 0 0;
+    font-family: "Source Sans Pro", sans-serif;
+    color: #bcbcbc;
+}
+.notification-btn-pos{
+	display:inline-block;
+	margin:6px 0 0 0px;
+	width:80px;
+	text-align:center;
+	padding:4px;
+	background-color:#ffffff;
+	color:#00bdb5;
+    font-family: "Source Sans Pro", sans-serif;
+	border:solid 1px #00bdb5;
+	font-weight:normal;
+	cursor:pointer;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  border-radius: 14px;
+}
+.notification-btn-pos:hover{
+	background:#00bdb5;
+	color:#ffffff;
+}
+.notification-btn-neg{
+	display:inline-block;
+	margin:6px 15px 0 42px;
+	width:22px;
+	text-align:center;
+	padding:4px;
+    font-family: "Source Sans Pro", sans-serif;
+	background-color:#ffffff;
+	color:#F93;
+	border:solid 1px #F93;
+	font-size:13px;
+	font-weight:normal;
+	cursor:pointer;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  border-radius: 14px;
+}
+.notification-btn-neg:hover{
+	background:#f93;
+	color:#ffffff;
+}
+.notification-type-header{
+    width: 100%;
+    text-align: left;
+    color: #cccccc;
+    font-size: 18px;
+    padding: 20px 0 6px 12px;
+    text-transform: uppercase;
+    background-color: #ffffff;
+}
+div.indicator-invite{border-left:solid 2px #00CC33; color:#00CC33;}
+div.indicator-new-tac-host{border-left:solid 2px #00bff3; color:#00bff3;}
+div.indicator-new-guest-host{border-left:solid 2px #63C; color:#63C;}
+div.indicator-new-tac-guest{border-left:solid 2px #F90; color: #F90;}
+div.indicator-new-guest-guest{border-left:solid 2px #C00; color: #C00;}
+
+h2.notifications-settings-header{
+  font-size: 18px;
+  padding: 6px 10px 13px 11px;
+  border-bottom: 1px solid #ececec;
+  margin: 2px 0;
+  line-height: 21px;
+}
+.notification-settings-item{
+	padding:20px 0 20px 20px;
+	border-bottom:1px solid #ececec;
+    margin: 2px 0;
+}
+.notification-settings-item label{
+	color: #ccc;
+}
+h3.notification-settings{
+	font-size:17px;
+	color:#999999;
+	font-weight:normal;
+	margin:0px 0 8px 0;
+    font-family: "Source Sans Pro", sans-serif;
+}
+.notification-settings-option{
+	display:inline-block;
+	width:32%;
+	text-align:left;
+	height:22px;
+	position:relative;
+}
+.not-set-left{
+	display:inline-block;
+	width:24px;
+}
+.not-set-right{
+	display:inline-block;
+	width:auto;
+	height:22px;
+	position:absolute;
+	top:1px;
+	left:30px;
+}
+/* -----------------------------*/
+/* ------ END Notifications ----*/
+/* -----------------------------*/
+
+
+
+/* -----------------------------*/
+/* --- START Change Signature --*/
+/* -----------------------------*/
 .me-change-signature-btn{
     float: left;
     padding:8px 10px 10px;
@@ -744,90 +997,11 @@ ul.font-selection li{
 .font-locked-radi0{
     margin:-8px 0 20px -3px;
 }
-.me-tac-coin-contianer{
-    float: right;
-    width: 33%;
-    text-align: left;
-    height: 35px;
-    margin: 12px 0 0 0;
-    position: relative;
-}
-.coin-count-number{
-    font-size: 16px;
-    color: #bcbcbc;
-    position: absolute;
-    top: 6px;
-    left: 34px;
-}
-.account-info-container{
-    width: 100%;
-    height: auto;
-    padding: 12px;
-    clear: both;
-    margin: 22px 0px;
-    border-top: 1px solid #ededed;
-    border-bottom: 1px solid #ededed;
-    overflow: auto;
-}
-.me-profile-image{
-    float: left;
-    height: 75px;
-    width: 75px;
-    margin: 0 12px 0 0;
-    overflow: hidden;
-    text-align: center;
-}
-.me-profile-image img{
-    height: 75px;
-    width: 75px;
-}
-.account-credentials{
-    height: 75px;
-    float: left;
-}
-.me-email, .me-password{
-    font-size: 14px;
-    color: #bcbcbc;
-    margin: 2px 0;
-    clear: both;
-    line-height: 18px;
-}
-.me-change-account-info{
-    font-size: 14px;
-	position:absolute;
-	top:184px;
-	left:100px;
-}
-.me-change-account-info a:link, .me-change-account-info a:hover, .me-change-account-info a:visited, .me-change-account-info a:active{
-    color:#1cbbb4;
-}
-.me-log-out{
-    font-size: 14px;
-	position:absolute;
-	top:184px;
-	right:50px;
-}
-.me-log-out a:link, .me-log-out a:hover, .me-log-out a:visited, .me-log-out a:active{
-    color:#1cbbb4;
-}
-.me-stat-container{
-    width: 100%;
-    padding: 0 12px;
-    font-size: 14px;
-    color: #bcbcbc;
-    margin: 0px;
-}
-.me-stat-container p{
-    text-transform: uppercase;
-    margin: 0 0 4px 0 ;
-}
-.me-stat-container ul{
-    list-style: none;
-    line-height: 24px;
-}
-.me-stat-container ul li span{
-}
-/* END ME */
+/* -----------------------------*/
+/* ---- END Change Signature ---*/
+/* -----------------------------*/
+
+/* ------------ END ME ------------ */
 
   .slide-section-content-scroll-box{
 	  height: 100%;
@@ -1003,7 +1177,7 @@ a.friend-invite-request-btn:hover {
 	left:8px;
 	color:#bcbcbc;
 }
-.friends-menu-time-line-check-contianer span{
+.friends-menu-check-right span{
     display: inline-block;
     max-width: 110px;
     width: auto;
@@ -1019,6 +1193,17 @@ a.friend-invite-request-btn:hover {
 	top:50px;
 	left:8px;
 	color:#bcbcbc;
+}
+.friends-menu-check-left{
+    display: inline-block;
+    width: 24px;
+}
+.friends-menu-check-right{
+    display: inline-block;
+    width: 300px;;
+    position:absolute;
+    top:2px;
+    left:25px;
 }
         
 .friend-menu-nav-container{
@@ -1687,9 +1872,7 @@ END Selector Dropdown Styling
       width: 72%;
       text-align: center;
   }
-  .booya{
-      font-size: 42px;
-    }  
+ 
 #cd-nav ul.is-visible {
       width:100%;
       max-width:100%;
@@ -1789,6 +1972,75 @@ END Selector Dropdown Styling
     .selector-dd .dropdown li a {
         padding: 20px 10px;
     }
+
+.modal-message-box{
+      width: 90%;
+      height: 90%;
+      position: fixed;
+      top: 5%;
+      left:5%;
+      background: #ffffff;
+      text-align: center;
+      display: none;
+    }
+.modal-message-box p{
+    font-size:22px;
+    margin-bottom: 5%;
+}
+.booya{
+      font-family: 'Architects Daughter', "Comic Sans MS", cursive;
+      font-size: 42px;
+      color: #1cbbb4;
+      margin: 10% 10%;
+}
+.bodal-bt-container{
+       margin: 8%;
+       display: inline-block;
+    }
+a.modal-btn:link, a.modal-btn:active, a.modal-btn:visited, a.modal-btn:hover{
+    margin: 6px auto;
+    text-align: center;
+    color: #ffffff;
+    width: 180px;
+    background-color: #1cbbb4;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 22px;
+    padding: 4px 10px;
+    height: 32px;   
+    cursor: pointer;
+}
+a.btn-grey:link, a.btn-grey:active, a.btn-grey:visited, a.btn-grey:hover{
+    background-color: #cccccc;
+}
+    
+    
+.create-board-btn-container{
+    position:absolute;
+    bottom: 88px;
+    height: 48px;
+    width: 100%;
+    background-color: #cccccc;
+    text-align: center;
+    border-top: 1px solid #ffffff;
+    z-index: 999;
+}
+  
+.signature-radio-column ul{
+    margin-bottom: 186px;
+}  
+.update-signature-btn-container{
+    position:absolute;
+    bottom: 136px;
+    height: 48px;
+    width: 100%;
+    background-color: #cccccc;
+    text-align: center;
+    border-top: 1px solid #ffffff;
+    z-index: 999;
+}
+
     
 }
 
@@ -1859,6 +2111,58 @@ END Selector Dropdown Styling
         padding: 20px 10px;
     }
 
+.modal-message-box{
+      width: 80%;
+      height: 80%;
+      position: fixed;
+      top: 10%;
+      left:10%;
+      background: #ffffff;
+      text-align: center;
+      display: none;
+  }
+.modal-message-box p{
+    font-size:24px;
+    margin-bottom: 5%;
+}
+.booya{
+      font-family: 'Architects Daughter', "Comic Sans MS", cursive;
+      font-size: 64px;
+      color: #1cbbb4;
+      margin: 10% 10% 5%;
+}
+.bodal-bt-container{
+   margin: 5%;
+   display: inline-block;
+}
+a.modal-btn:link, a.modal-btn:active, a.modal-btn:visited, a.modal-btn:hover{
+    margin: 6px auto;
+    text-align: center;
+    color: #ffffff;
+    width: 180px;
+    background-color: #1cbbb4;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 25px;
+    padding: 4px 10px;
+    height: 36px;   
+    cursor: pointer;
+}
+a.btn-grey:link, a.btn-grey:active, a.btn-grey:visited, a.btn-grey:hover{
+    background-color: #cccccc;
+}
+.create-board-btn-container{
+    position:absolute;
+    bottom: 88px;
+    height: 48px;
+    width: 100%;
+    background-color: #cccccc;
+    text-align: center;
+    border-top: 1px solid #ffffff;
+    z-index: 999;
+}
+    
 .create-board-btn-container, .request-friend-btn-container, .create-group-btn-container{
     position:absolute;
     bottom: 88px;
@@ -1869,9 +2173,21 @@ END Selector Dropdown Styling
     border-top: 1px solid #ffffff;
     z-index: 999;
     }
-    .booya{
-      font-size: 64px;
-    }
+
+.signature-radio-column ul{
+    margin-bottom: 186px;
+}   
+.update-signature-btn-container{
+    position:absolute;
+    bottom: 136px;
+    height: 48px;
+    width: 100%;
+    background-color: #cccccc;
+    text-align: center;
+    border-top: 1px solid #ffffff;
+    z-index: 999;
+}
+
 }
 
 
@@ -1904,9 +2220,57 @@ END Selector Dropdown Styling
    #cd-nav ul li.search-field-nav{
         display: inline-block;
     }
-  .booya{
+.modal-message-box{
+      width: 80%;
+      height: 80%;
+      position: fixed;
+      top: 10%;
+      left:10%;
+      background: #ffffff;
+      text-align: center;
+      display: none;
+  }
+.modal-message-box p{
+    font-size:24px;
+    margin-bottom: 20px;
+}
+.booya{
+      font-family: 'Architects Daughter', "Comic Sans MS", cursive;
       font-size: 64px;
+      color: #1cbbb4;
+      margin: 10% 10% 25px;
+}
+.bodal-bt-container{
+       margin: 30px;
+       display: inline-block;
     }
+a.modal-btn:link, a.modal-btn:active, a.modal-btn:visited, a.modal-btn:hover{
+    margin: 6px auto;
+    text-align: center;
+    color: #ffffff;
+    width: 180px;
+    background-color: #1cbbb4;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 25px;
+    padding: 4px 10px;
+    height: 36px;   
+    cursor: pointer;
+}
+a.btn-grey:link, a.btn-grey:active, a.btn-grey:visited, a.btn-grey:hover{
+    background-color: #cccccc;
+}
+.create-board-btn-container{
+    position:absolute;
+    bottom: 88px;
+    height: 48px;
+    width: 100%;
+    background-color: #cccccc;
+    text-align: center;
+    border-top: 1px solid #ffffff;
+    z-index: 999;
+}
  .create-board-btn-container, .request-friend-btn-container, .create-group-btn-container{
     position:absolute;
     bottom: 40px;
@@ -1994,6 +2358,20 @@ END Selector Dropdown Styling
 	text-align:center;
 	font-size:12px;
 }
+.signature-radio-column ul{
+    margin-bottom: 126px;
+}  
+.update-signature-btn-container{
+    position:absolute;
+    bottom: 86px;
+    height: 48px;
+    width: 100%;
+    background-color: #cccccc;
+    text-align: center;
+    border-top: 1px solid #ffffff;
+    z-index: 999;
+}
+
   .search-container-mobile{ /* hide Mobile search box */
         display: none !important;
     }
