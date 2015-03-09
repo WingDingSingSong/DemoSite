@@ -3,19 +3,26 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+	<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
-     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script src="js/modernizr.js"></script> <!-- Modernizr -->
-  	<link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="js/modernizr.js"></script><!-- Modernizr -->
+  	<link href="http://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
     <title>tacBOARD</title>
+
 </head>
+
 <body>
-	<header>
-		<div id="cd-logo"><a href="#0"><img src="img/logo.png" alt="Logo"></a></div>
-        
-        <div class="this-board-title">Jenny Smith's Homeboard</div>
+
+<header>
+    <div id="cd-logo">
+        <a href="#0">
+            <img src="img/logo.png" alt="Logo">
+        </a>
+    </div>
+    
+    <div class="this-board-title">My Homeboard</div>
 	</header>
 	<div id="cd-nav">
 		<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
@@ -23,31 +30,37 @@
 			<ul>
 				<li class="nvbtn navitem tac-btn">
                     <a href="#" class="tooltips">
-                        <img src="img/tac-icon.png"/>
+                        <img class="peeps-nav-img" src="img/tac-icon.png"/>
                         <span>Tac</span>
                     </a>
                 </li>
 				<li class="nvbtn navitem">
                     <a href="#" class="peeps-btn tooltips">
-                        <img src="img/peeps-icon.png"/>
+                    	<label for="togglePeople">
+                        	<img src="img/peeps-icon.png"/>
+                        </label>
                         <span>People</span>
                     </a>
                 </li>
 				<li class="nvbtn navitem time-line-btn">
                     <a href="#" class="tooltips">
-                        <img src="img/time-line-icon.png"/>
+                    	<label for="toggleTimeline">
+	                        <img src="img/time-line-icon.png"/>
+                        </label>
                         <span>Timeline</span>
                     </a>
                 </li>
 				<li class="nvbtn navitem boards-btn">
                     <a href="#" class="tooltips">
-                        <img src="img/boards-icon.png"/>
+                    	<label for="toggleBoards">
+	                        <img src="img/boards-icon.png"/>
+                        </label>
                         <span>Boards</span>
                     </a>
                 </li>
                 <li class="nvbtn navitem search-btn">
                     <a href="#" class="tooltips">
-                        <img src="img/search-icon.png"/>
+	                        <img src="img/search-icon.png"/>
                     </a>
                 </li>
                 <li class="navitem search-field-nav">
@@ -57,37 +70,48 @@
                 </li>
                 <li class="nvbtn navitem me-btn">
                     <a href="#" class="tooltips">
-                        <img src="img/settings-icon.png"/>
+                    	<label for="toggleMyAccount">
+	                        <img src="img/settings-icon.png"/>
+                        </label>
                         <span>My Account</span>
                     </a>
                 </li>
-				<!--<li class="nvbtn navitem home-btn">
-                    <a href="#"><img src="img/home-icon.png"/></a>
-                </li>-->
 			</ul>
             <div class="search-container-mobile">
                  <input placeholder="search this board" class="search-field"/>
             </div>
 		</nav>
 	</div>
-    
-	<main>
-        <div class="board-container">
-            <div class="board">
-                <img class="example-content" src="img/bg-example.jpg" width="2600" height="2200"/>
-            </div>
-        </div>
-                
-<!-- START SIDE SLIDE FRIENDS -->
-        <section id="friends" class="side-section">
-        	<div class="slide-section-header">
-            	<div class="slide-in-arrow">
-                    <a class="slide-close-link" href="#">
+
+
+<input type="radio" id="toggle" class="toggle toggleRadio" name="main-nav" checked/>
+<input type="radio" id="togglePeople" class="togglePeople toggleRadio" name="main-nav" />
+<input type="radio" id="toggleBoards" class="toggleBoards toggleRadio" name="main-nav" />
+<input type="radio" id="toggleTimeline" class="toggleTimeline toggleRadio" name="main-nav" />
+<input type="radio" id="toggleSearch" class="toggleSearch toggleRadio" name="main-nav" />
+<input type="radio" id="toggleMyAccount" class="toggleMyAccount toggleRadio" name="main-nav" />
+
+<input type="radio" id="toggleFriendTimeline" class="toggleFriendTimeline toggleRadio" name="main-nav" />
+<input type="radio" id="toggleFriendBoards" class="toggleFriendBoards toggleRadio" name="main-nav" />
+
+<input type="radio" id="toggleFriendInvite" class="toggleFriendInvite toggleRadio" name="main-nav" />
+<input type="radio" id="toggleFriendCreateGroup" class="toggleFriendCreateGroup toggleRadio" name="main-nav" />
+
+<input type="radio" id="toggleBoardsCreateBoard" class="toggleBoardsCreateBoard toggleRadio" name="main-nav" />
+
+<input type="radio" id="toggleMyAccountNotifications" class="toggleMyAccountNotifications toggleRadio" name="main-nav" />
+<input type="radio" id="toggleMyAccountChangeSignature" class="toggleMyAccountChangeSignature toggleRadio" name="main-nav" />
+
+<!-- START SLIDEOUT MENU : People -->
+    <section id="friends" class="ss-people allNav ss-menu-container">
+        <div class="slide-section-header">
+            <div class="slide-in-arrow">
+                <label for="toggle">
+                    <span class="slide-close-link" href="#">
                         <img src="img/slide-in-arrow.png"/>
-                    </a>   
-                </div>
-                <!--<div class="selector-text-this-board friend-not-this-btn">This Board</div>
-                <div class="selector-text-my-boards friend-my-btn">My Boards</div>-->
+                    </span>   
+               </label>     
+            </div>
                 
                 <div class="slideout-stacked-title">
                     <div class="slide-sec-title-text">
@@ -105,7 +129,7 @@
                                 <li><a href="#" class="friend-this-btn">This Board</a></li>
                                 <li><a href="#" class="friend-not-this-btn">My Friends</a></li>
                                 <li><a href="#" class="groups-my-btn">My Groups</a></li>
-                                <li><a href="#" class="open-add-friend">New Friends &amp; Groups</a></li>
+                                <li><a href="#" class="open-add-friend">New Friends &amp; Groups</a></li></label>
                             </ul>
                         </div>
                      </div>
@@ -123,6 +147,11 @@
                             $(".people-slide-section-sub-cat-title").html("My Groups");
                         });
                        });
+                    /* Makes New Friends menu slide out */
+                    $( ".open-add-friend" ).click(function() {
+                      $(".toggleFriendInvite").click();/* Clicks radio button to open slide out */
+                        $(".open-add-friend").click();/* Closes dropdown menu */
+                    });
                 </script>
                 
             </div><!--slide section header-->
@@ -210,11 +239,19 @@
                                 </div>
                                 <div class="friend-menu-nav-container">
                                     <ul class="friend-menu-nav">
-                                        <li class="open-sacca-timeline"><a href="#"><img src="img/time-line-icon-wht.png"/></a></li>
-                                        <li class="open-sacca-boards"><a href="#"><img src="img/boards-icon-wht.png"/></a></li>
+                                        <li class="open-sacca-timeline"><a href="#">
+                                            <label for="toggleFriendTimeline">
+                                                <img src="img/time-line-icon-wht.png"/>
+                                            </label>
+                                        </a></li>
+                                        <li class="open-sacca-boards"><a href="#">
+                                            <label for="toggleFriendBoards">
+                                                <img src="img/boards-icon-wht.png"/>
+                                            </label>
+                                        </a></li>
                                         <li><a href="#"><img src="img/home-icon-wht.png"/></a></li>
                                         <li class="remove-friend"><a href="#"><img src="img/remove-icon-wht.png"/></a></li>
-                                         <li class="friend-menu-last "><a href="#"><img src="img/plus-white-icon.png"/></a></li>
+                                        <li class="friend-menu-last "><a href="#"><img src="img/plus-white-icon.png"/></a></li>
                                     </ul>    
                                     <div class="friends-menu-time-line-check-contianer">
                                         <form>
@@ -915,16 +952,18 @@
                     <div class="side-slide-item-list-bottom-pad"></div>
             	</div>
             </div>
-        </section>
- <!-- END SIDE SLIDE FRIENDS -->
+    </section>
+<!-- END  -->
 
- <!-- START SIDE SLIDE ADD FRIEND -->
-        <section id="add-friends" class="side-section">
-        	<div class="slide-section-header">
+<!-- START SLIDEOUT MENU : Invite Friends -->    
+    <Section id="add-friends" class="ss-friend-invite ss-menu-container">
+        <div class="slide-section-header">
             	<div class="close-add-btn">
-                    <a class="add-link close-add-friend" href="#">
-                        <img src="img/slide-in-arrow.png"/>
-                    </a>   
+                    <label for="togglePeople">
+                        <span class="add-link close-add-friend" href="#">
+                            <img src="img/slide-in-arrow.png"/>
+                        </span>   
+                    </label>
                 </div>
                 
                 <div class="sub-slide-menu-title">
@@ -1214,18 +1253,26 @@
                     <div class="side-slide-item-list-bottom-pad"></div>
             	</div>
             </div>
-        </section>
-<!-- END SIDE SLIDE ADD FRIEND -->
+    </section>
+<!-- END  -->
 
+<!-- START SLIDEOUT MENU : Create Groups --> 
+    <section id="add-group" class="ss-friend-create-group ss-menu-container">
+        <br /><br /><br />Create New Group<br><br />
+        <label for="togglePeople">Close &#8677;</label>
+    </section>
+<!-- END  -->
 
-<!-- START SIDE SLIDE Friend Timeline -->
-        <section id="friends-timeline" class="side-section">
-        	<div class="slide-section-header">
+<!-- START SLIDEOUT MENU : Friend's Timeline-->
+    <section id="friends-timeline" class="ss-friend-timeline ss-menu-container">
+        <div class="slide-section-header">
                 <div class="sub-slide-menu-title"><span class="timeline-name">Chris Sacca's</span> <span>Timeline</span></div>
             	<div class="close-add-btn">
-                    <a class="add-link close-friend-timeline" href="#">
-                        <img src="img/slide-in-arrow.png"/>
-                    </a>   
+                    <label for="togglePeople">
+                        <span class="add-link close-add-friend" href="#">
+                            <img src="img/slide-in-arrow.png"/>
+                        </span>   
+                    </label>  
                 </div>
            </div><!--slide section header-->
            <div class="slide-section-friend-container friend-timeline">
@@ -1364,18 +1411,19 @@
                     <div class="side-slide-item-list-bottom-pad"></div>
             	</div>
             </div>
-        </section>
-<!-- END SIDE SLIDE friend timeline -->
+    </section>
+<!-- END  -->
 
-
-<!-- START SIDE SLIDE Friend boards -->
-        <section id="friends-board" class="side-section">
-        	<div class="slide-section-header">
+<!-- START SLIDEOUT MENU : Friend's boards -->    
+    <section id="friends-board" class="ss-friend-boards ss-menu-container">
+        <div class="slide-section-header">
                 <div class="sub-slide-menu-title"><span class="timeline-name">Chris Sacca's</span> <span>Boards</span></div>
             	<div class="close-add-btn">
-                    <a class="add-link close-friend-timeline" href="#">
-                        <img src="img/slide-in-arrow.png"/>
-                    </a>   
+                    <label for="togglePeople">
+                        <span class="add-link close-add-friend" href="#">
+                            <img src="img/slide-in-arrow.png"/>
+                        </span>   
+                    </label>   
                 </div>
            </div><!--slide section header-->
            <div class="slide-section-friend-container">
@@ -1455,18 +1503,21 @@
                     <div class="side-slide-item-list-bottom-pad"></div>
             	</div>
             </div>
-        </section>
-<!-- END SIDE SLIDE friend boards -->
+    </section>
+<!-- END  -->
 
 
-<!-- START SIDE SLIDE TIMELINE -->
-        <section id="time-line" class="side-section">
+
+<!-- START SLIDEOUT MENU : Timeline --> 
+    <section id="time-line" class="ss-timeline allNav ss-menu-container">
         <div class="slide-section-header">
-            	<div class="slide-in-arrow">
-                    <a class="slide-close-link" href="#">
+            <div class="slide-in-arrow">
+                <label for="toggle">
+                    <span class="slide-close-link" href="#">
                         <img src="img/slide-in-arrow.png"/>
-                    </a>   
-                </div>
+                    </span>   
+               </label>     
+            </div>
                 <!--<div class="selector-text-this-board">This Board</div>
                 <div class="selector-text-my-boards">My Boards</div>-->
             <div class="slideout-stacked-title">
@@ -1640,459 +1691,469 @@
                     <div class="side-slide-item-list-bottom-pad"></div>
                 </div>
             </div>
-        </section>
-        
-        <section id="boards" class="side-section">
+    </section>
+<!-- END  -->
+
+<!-- START SLIDEOUT MENU : Boards --> 
+    <section id="boards" class="ss-boards allNav ss-menu-container">
         <div class="slide-section-header">
-            	<div class="slide-in-arrow">
-                    <a class="slide-close-link" href="#">
+            <div class="slide-in-arrow">
+                <label for="toggle">
+                    <span class="slide-close-link" href="#">
                         <img src="img/slide-in-arrow.png"/>
-                    </a>   
-                </div>
+                    </span>   
+               </label>     
+            </div>
                 
-            
-            <div class="slideout-stacked-title">
-                <div class="slide-sec-title-text">
-                    Boards<span class="title-col">:</span>
-                    <span class="slide-section-sub-cat-title boards-slide-section-sub-cat-title">
-                        Guest
-                    </span>
-                </div>
-                <div class="selector-dd-container">
-                    <div id="dd" class="dd selector-dd" tabindex="1">
-                        <img class="dd-mini-menu" src="img/mini-menu-btn.png"/>
-                        <ul class="dropdown">
-                            <li><a href="#" class="boards-guest-btn">Guest Boards</a></li>
-                            <li><a href="#" class="boards-host-btn">Hosted Boards</a></li>
-                            <li><a href="#" class="open-add-board">Create a Board</a></li>
-                        </ul>
+                <div class="slideout-stacked-title">
+                    <div class="slide-sec-title-text">
+                        Boards<span class="title-col">:</span>
+                        <span class="slide-section-sub-cat-title boards-slide-section-sub-cat-title">
+                            Guest
+                        </span>
                     </div>
-                 </div>
-            </div>
-            
-            <script type="text/javascript">
-                $(document).ready(function() {
-                    $(".boards-guest-btn").click(function() {
-                        $(".boards-slide-section-sub-cat-title").html("Guest");
+                    <div class="selector-dd-container">
+                        <div id="dd" class="dd selector-dd" tabindex="1">
+                            <img class="dd-mini-menu" src="img/mini-menu-btn.png"/>
+                            <ul class="dropdown">
+                                <li><a href="#" class="boards-guest-btn">Guest Boards</a></li>
+                                <li><a href="#" class="boards-host-btn">Hosted Boards</a></li>
+                                <li><a href="#" class="open-add-board">Create a Board</a></li>
+                            </ul>
+                        </div>
+                     </div>
+                </div>
+
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        $(".boards-guest-btn").click(function() {
+                            $(".boards-slide-section-sub-cat-title").html("Guest");
+                        });
+                        $(".boards-host-btn").click(function() {
+                            $(".boards-slide-section-sub-cat-title").html("Host");
+                        });
+                       });
+                    /* Makes New Friends menu slide out */
+                    $( ".open-add-board" ).click(function() { 
+                        $(".toggleBoardsCreateBoard").click();/* Clicks radio button to open slide out */
+                        $(".open-add-board").click();/* Closes dropdown menu */
                     });
-                    $(".boards-host-btn").click(function() {
-                        $(".boards-slide-section-sub-cat-title").html("Host");
-                    });
-                   });
-            </script>
-            
+                </script>
+
             </div><!--slide section header-->
-            
-            <div class="slide-section-friend-container">
-            	<div class="slide-section-content-scroll-box">
-                    <ul class="side-slide-item-list boards-slide-list">
-                        <!--Start Host Boards-->
-                        <li class="side-slide-item host-board">
-                            <div class="board-title" style="color:#dc0082;">
-                                Jenny Smith's Home Board
-                            </div>
-                            <a href="#" class="friend-menu-btn">
-                                <img src="img/slide-item-menu-btn.png"/>
-                            </a>
-                            <a href="#" class="friend-jump-btn" title="jump to this board">
-                                <img src="img/jump-boards.png"/>
-                            </a>
-                            <div class="board-host">
-                                host: Jenny Smith
-                            </div>
-                            <div class="board-number-of-guests">
-                                guests: 87
-                            </div> 
-                            <div class="board-menu-container">
-                                <div class="board-created-on-date">
-                                    created <span>1/23/2015</span>
+                <div class="slide-section-friend-container">
+                    <div class="slide-section-content-scroll-box">
+                        <ul class="side-slide-item-list boards-slide-list">
+                            <!--Start Host Boards-->
+                            <li class="side-slide-item host-board">
+                                <div class="board-title" style="color:#dc0082;">
+                                    Jenny Smith's Home Board
                                 </div>
-                                <div class="board-last-tacd">
-                                    last tacd <span>2/17/2015</span>
+                                <a href="#" class="friend-menu-btn">
+                                    <img src="img/slide-item-menu-btn.png"/>
+                                </a>
+                                <a href="#" class="friend-jump-btn" title="jump to this board">
+                                    <img src="img/jump-boards.png"/>
+                                </a>
+                                <div class="board-host">
+                                    host: Jenny Smith
                                 </div>
-                                <div class="board-menu-nav-container">
-                                    <ul class="friend-menu-nav">
-                                        <li><a href="#"><img src="img/remove-icon-wht.png"/></a></li>
-                                        <li><a href="#"><img src="img/plus-white-icon.png"/></a></li>
-                                        <li class="friend-menu-last">
-                                            <a href="#">
-                                                <div class="li-board-lock">
-                                                    <img class="unlocked" src="img/lock-board-wht.png"/>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <div class="board-sub-menu-pub-priv">
-                                        <div class="board-sub-menu-private">Private</div>
-                                        <div class="board-sub-menu-public">Public</div>
+                                <div class="board-number-of-guests">
+                                    guests: 87
+                                </div> 
+                                <div class="board-menu-container">
+                                    <div class="board-created-on-date">
+                                        created <span>1/23/2015</span>
+                                    </div>
+                                    <div class="board-last-tacd">
+                                        last tacd <span>2/17/2015</span>
+                                    </div>
+                                    <div class="board-menu-nav-container">
+                                        <ul class="friend-menu-nav">
+                                            <li><a href="#"><img src="img/remove-icon-wht.png"/></a></li>
+                                            <li><a href="#"><img src="img/plus-white-icon.png"/></a></li>
+                                            <li class="friend-menu-last">
+                                                <a href="#">
+                                                    <div class="li-board-lock">
+                                                        <img class="unlocked" src="img/lock-board-wht.png"/>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="board-sub-menu-pub-priv">
+                                            <div class="board-sub-menu-private">Private</div>
+                                            <div class="board-sub-menu-public">Public</div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="side-slide-item host-board">
-                            <div class="board-title" style="color:#dc0082;">
-                                Vacation to Rio
-                            </div>
-                            <a href="#" class="friend-menu-btn">
-                                <img src="img/slide-item-menu-btn.png"/>
-                            </a>
-                            <a href="#" class="friend-jump-btn" title="jump to this board">
-                                <img src="img/jump-boards.png"/>
-                            </a>
-                            <div class="board-host">
-                                host: Jenny Smith
-                            </div>
-                            <div class="board-number-of-guests">
-                                guests: 14
-                            </div>   
-                            <div class="board-menu-container">
-                                <div class="board-created-on-date">
-                                    created <span>1/23/2015</span>
+                            </li>
+                            <li class="side-slide-item host-board">
+                                <div class="board-title" style="color:#dc0082;">
+                                    Vacation to Rio
                                 </div>
-                                <div class="board-last-tacd">
-                                    last tacd <span>2/17/2015</span>
+                                <a href="#" class="friend-menu-btn">
+                                    <img src="img/slide-item-menu-btn.png"/>
+                                </a>
+                                <a href="#" class="friend-jump-btn" title="jump to this board">
+                                    <img src="img/jump-boards.png"/>
+                                </a>
+                                <div class="board-host">
+                                    host: Jenny Smith
                                 </div>
-                                <div class="board-menu-nav-container">
-                                    <ul class="friend-menu-nav">
-                                        <li><a href="#"><img src="img/remove-icon-wht.png"/></a></li>
-                                        <li><a href="#"><img src="img/plus-white-icon.png"/></a></li>
-                                        <li class="friend-menu-last">
-                                            <a href="#">
-                                                <div class="li-board-lock">
-                                                    <img class="unlocked" src="img/lock-board-wht.png"/>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <div class="board-sub-menu-pub-priv">
-                                        <div class="board-sub-menu-private">Private</div>
-                                        <div class="board-sub-menu-public">Public</div>
+                                <div class="board-number-of-guests">
+                                    guests: 14
+                                </div>   
+                                <div class="board-menu-container">
+                                    <div class="board-created-on-date">
+                                        created <span>1/23/2015</span>
+                                    </div>
+                                    <div class="board-last-tacd">
+                                        last tacd <span>2/17/2015</span>
+                                    </div>
+                                    <div class="board-menu-nav-container">
+                                        <ul class="friend-menu-nav">
+                                            <li><a href="#"><img src="img/remove-icon-wht.png"/></a></li>
+                                            <li><a href="#"><img src="img/plus-white-icon.png"/></a></li>
+                                            <li class="friend-menu-last">
+                                                <a href="#">
+                                                    <div class="li-board-lock">
+                                                        <img class="unlocked" src="img/lock-board-wht.png"/>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="board-sub-menu-pub-priv">
+                                            <div class="board-sub-menu-private">Private</div>
+                                            <div class="board-sub-menu-public">Public</div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="side-slide-item host-board">
-                            <div class="board-title" style="color:#dc0082;">
-                                Grandma Beth's 83rd!
-                            </div>
-                            <a href="#" class="friend-menu-btn">
-                                <img src="img/slide-item-menu-btn.png"/>
-                            </a>
-                            <a href="#" class="friend-jump-btn" title="jump to this board">
-                                <img src="img/jump-boards.png"/>
-                            </a>
-                            <div class="board-host">
-                                host: Jenny Smith
-                            </div>
-                            <div class="board-number-of-guests">
-                                guests: 22
-                            </div>     
-                            <div class="board-menu-container">
-                                <div class="board-created-on-date">
-                                    created <span>1/23/2015</span>
+                            </li>
+                            <li class="side-slide-item host-board">
+                                <div class="board-title" style="color:#dc0082;">
+                                    Grandma Beth's 83rd!
                                 </div>
-                                <div class="board-last-tacd">
-                                    last tacd <span>2/17/2015</span>
+                                <a href="#" class="friend-menu-btn">
+                                    <img src="img/slide-item-menu-btn.png"/>
+                                </a>
+                                <a href="#" class="friend-jump-btn" title="jump to this board">
+                                    <img src="img/jump-boards.png"/>
+                                </a>
+                                <div class="board-host">
+                                    host: Jenny Smith
                                 </div>
-                                <div class="board-menu-nav-container">
-                                    <ul class="friend-menu-nav">
-                                        <li><a href="#"><img src="img/remove-icon-wht.png"/></a></li>
-                                        <li><a href="#"><img src="img/plus-white-icon.png"/></a></li>
-                                        <li class="friend-menu-last">
-                                            <a href="#">
-                                                <div class="li-board-lock">
-                                                    <img class="unlocked" src="img/lock-board-wht.png"/>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <div class="board-sub-menu-pub-priv">
-                                        <div class="board-sub-menu-private">Private</div>
-                                        <div class="board-sub-menu-public">Public</div>
+                                <div class="board-number-of-guests">
+                                    guests: 22
+                                </div>     
+                                <div class="board-menu-container">
+                                    <div class="board-created-on-date">
+                                        created <span>1/23/2015</span>
+                                    </div>
+                                    <div class="board-last-tacd">
+                                        last tacd <span>2/17/2015</span>
+                                    </div>
+                                    <div class="board-menu-nav-container">
+                                        <ul class="friend-menu-nav">
+                                            <li><a href="#"><img src="img/remove-icon-wht.png"/></a></li>
+                                            <li><a href="#"><img src="img/plus-white-icon.png"/></a></li>
+                                            <li class="friend-menu-last">
+                                                <a href="#">
+                                                    <div class="li-board-lock">
+                                                        <img class="unlocked" src="img/lock-board-wht.png"/>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="board-sub-menu-pub-priv">
+                                            <div class="board-sub-menu-private">Private</div>
+                                            <div class="board-sub-menu-public">Public</div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="side-slide-item host-board">
-                            <div class="board-title" style="color:#dc0082;">
-                                The Arlington Project
-                            </div>
-                            <a href="#" class="friend-menu-btn">
-                                <img src="img/slide-item-menu-btn.png"/>
-                            </a>
-                            <a href="#" class="friend-jump-btn" title="jump to this board">
-                                <img src="img/jump-boards.png"/>
-                            </a>
-                            <div class="board-host">
-                                host: Jenny Smith
-                            </div>
-                            <div class="board-number-of-guests">
-                                guests: 2
-                            </div>
-                            <div class="board-menu-container">
-                                <div class="board-created-on-date">
-                                    created <span>1/23/2015</span>
+                            </li>
+                            <li class="side-slide-item host-board">
+                                <div class="board-title" style="color:#dc0082;">
+                                    The Arlington Project
                                 </div>
-                                <div class="board-last-tacd">
-                                    last tacd <span>2/17/2015</span>
+                                <a href="#" class="friend-menu-btn">
+                                    <img src="img/slide-item-menu-btn.png"/>
+                                </a>
+                                <a href="#" class="friend-jump-btn" title="jump to this board">
+                                    <img src="img/jump-boards.png"/>
+                                </a>
+                                <div class="board-host">
+                                    host: Jenny Smith
                                 </div>
-                                <div class="board-menu-nav-container">
-                                    <ul class="friend-menu-nav">
-                                        <li><a href="#"><img src="img/remove-icon-wht.png"/></a></li>
-                                        <li><a href="#"><img src="img/plus-white-icon.png"/></a></li>
-                                        <li class="friend-menu-last">
-                                            <a href="#">
-                                                <div class="li-board-lock">
-                                                    <img class="unlocked" src="img/lock-board-wht.png"/>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <div class="board-sub-menu-pub-priv">
-                                        <div class="board-sub-menu-private">Private</div>
-                                        <div class="board-sub-menu-public">Public</div>
+                                <div class="board-number-of-guests">
+                                    guests: 2
+                                </div>
+                                <div class="board-menu-container">
+                                    <div class="board-created-on-date">
+                                        created <span>1/23/2015</span>
+                                    </div>
+                                    <div class="board-last-tacd">
+                                        last tacd <span>2/17/2015</span>
+                                    </div>
+                                    <div class="board-menu-nav-container">
+                                        <ul class="friend-menu-nav">
+                                            <li><a href="#"><img src="img/remove-icon-wht.png"/></a></li>
+                                            <li><a href="#"><img src="img/plus-white-icon.png"/></a></li>
+                                            <li class="friend-menu-last">
+                                                <a href="#">
+                                                    <div class="li-board-lock">
+                                                        <img class="unlocked" src="img/lock-board-wht.png"/>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="board-sub-menu-pub-priv">
+                                            <div class="board-sub-menu-private">Private</div>
+                                            <div class="board-sub-menu-public">Public</div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="side-slide-item host-board">
-                            <div class="board-title" style="color:#dc0082;">
-                                Girls Night Out!
-                            </div>
-                            <a href="#" class="friend-menu-btn">
-                                <img src="img/slide-item-menu-btn.png"/>
-                            </a>
-                            <a href="#" class="friend-jump-btn" title="jump to this board">
-                                <img src="img/jump-boards.png"/>
-                            </a>
-                            <div class="board-host">
-                                host: Jenny Smith
-                            </div>
-                            <div class="board-number-of-guests">
-                                guests: 26
-                            </div> 
-                            <div class="board-menu-container">
-                                <div class="board-created-on-date">
-                                    created <span>1/23/2015</span>
+                            </li>
+                            <li class="side-slide-item host-board">
+                                <div class="board-title" style="color:#dc0082;">
+                                    Girls Night Out!
                                 </div>
-                                <div class="board-last-tacd">
-                                    last tacd <span>2/17/2015</span>
+                                <a href="#" class="friend-menu-btn">
+                                    <img src="img/slide-item-menu-btn.png"/>
+                                </a>
+                                <a href="#" class="friend-jump-btn" title="jump to this board">
+                                    <img src="img/jump-boards.png"/>
+                                </a>
+                                <div class="board-host">
+                                    host: Jenny Smith
                                 </div>
-                                <div class="board-menu-nav-container">
-                                    <ul class="friend-menu-nav">
-                                        <li><a href="#"><img src="img/remove-icon-wht.png"/></a></li>
-                                        <li><a href="#"><img src="img/plus-white-icon.png"/></a></li>
-                                        <li class="friend-menu-last">
-                                            <a href="#">
-                                                <div class="li-board-lock">
-                                                    <img class="unlocked" src="img/lock-board-wht.png"/>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <div class="board-sub-menu-pub-priv">
-                                        <div class="board-sub-menu-private">Private</div>
-                                        <div class="board-sub-menu-public">Public</div>
+                                <div class="board-number-of-guests">
+                                    guests: 26
+                                </div> 
+                                <div class="board-menu-container">
+                                    <div class="board-created-on-date">
+                                        created <span>1/23/2015</span>
+                                    </div>
+                                    <div class="board-last-tacd">
+                                        last tacd <span>2/17/2015</span>
+                                    </div>
+                                    <div class="board-menu-nav-container">
+                                        <ul class="friend-menu-nav">
+                                            <li><a href="#"><img src="img/remove-icon-wht.png"/></a></li>
+                                            <li><a href="#"><img src="img/plus-white-icon.png"/></a></li>
+                                            <li class="friend-menu-last">
+                                                <a href="#">
+                                                    <div class="li-board-lock">
+                                                        <img class="unlocked" src="img/lock-board-wht.png"/>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="board-sub-menu-pub-priv">
+                                            <div class="board-sub-menu-private">Private</div>
+                                            <div class="board-sub-menu-public">Public</div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                        <!--Start Guest Boards-->
-                        <li class="side-slide-item guest-board">
-                            <div class="board-title" style="color:#662d91;">
-                                Jess &amp; Mike's Wedding
-                            </div>
-                            <a href="#" class="friend-jump-btn" title="jump to this board">
-                                <img src="img/jump-boards.png"/>
-                            </a>
-                            <div class="board-host">
-                                host: Jessica Walters
-                            </div>
-                            <div class="board-number-of-guests">
-                                guests: 37
-                            </div>     
-                        </li>
-                        <li class="side-slide-item guest-board">
-                            <div class="board-title" style="color:#009cff;">
-                                Cubs game with the girls
-                            </div>
-                            <a href="#" class="friend-jump-btn" title="jump to this board">
-                                <img src="img/jump-boards.png"/>
-                            </a>
-                            <div class="board-host">
-                                host: Sarah Jones
-                            </div>
-                            <div class="board-number-of-guests">
-                                guests: 7
-                            </div>     
-                        </li>
-                        <li class="side-slide-item guest-board">
-                            <div class="board-title" style="color:#1cbbb4;">
-                                Mom&#39;s Surprise Party
-                            </div>
-                            <a href="#" class="friend-jump-btn">
-                                <img src="img/jump-boards.png"/>
-                            </a>
-                            <div class="board-host">
-                                host: Ally Peterson
-                            </div>
-                            <div class="board-number-of-guests">
-                                guests: 32
-                            </div>     
-                        </li>
-                        <li class="side-slide-item guest-board">
-                            <div class="board-title" style="color:#f26522;">
-                                David's Graduation
-                            </div>
-                            <a href="#" class="friend-jump-btn" title="jump to this board">
-                                <img src="img/jump-boards.png"/>
-                            </a>
-                            <div class="board-host">
-                                host: Mike Masterson
-                            </div>
-                            <div class="board-number-of-guests">
-                                guests: 22
-                            </div>     
-                        </li>
-                        <li class="side-slide-item guest-board">
-                            <div class="board-title" style="color:#cc0000;">
-                                Which car should I buy?
-                            </div>
-                            <a href="#" class="friend-jump-btn" title="jump to this board">
-                                <img src="img/jump-boards.png"/>
-                            </a>
-                            <div class="board-host">
-                                host: Addie Kreslo
-                            </div>
-                            <div class="board-number-of-guests">
-                                guests: 28
-                            </div>     
-                        </li>
-                        <li class="side-slide-item guest-board">
-                            <div class="board-title" style="color:#007dc3;">
-                                Grandma's 75th Birthday
-                            </div>
-                            <a href="#" class="friend-jump-btn" title="jump to this board">
-                                <img src="img/jump-boards.png"/>
-                            </a>
-                            <div class="board-host">
-                                host: Kelvin Johnson
-                            </div>
-                            <div class="board-number-of-guests">
-                                guests: 40
-                            </div>     
-                        </li>
-                        <li class="side-slide-item guest-board">
-                            <div class="board-title" style="color:#ec008c;">
-                                Keaton's Prom Dress?
-                            </div>
-                            <a href="#" class="friend-jump-btn" title="jump to this board">
-                                <img src="img/jump-boards.png"/>
-                            </a>
-                            <div class="board-host">
-                                host: Keaton O'Kelly
-                            </div>
-                            <div class="board-number-of-guests">
-                                guests: 67
-                            </div>     
-                        </li>
-                        <li class="side-slide-item guest-board">
-                            <div class="board-title" style="color:#f7941d;">
-                                Meeting Baby Emmy
-                            </div>
-                            <a href="#" class="friend-jump-btn" title="jump to this board">
-                                <img src="img/jump-boards.png"/>
-                            </a>
-                            <div class="board-host">
-                                host: Brea James
-                            </div>
-                            <div class="board-number-of-guests">
-                                guests: 14
-                            </div>     
-                        </li>
-                        <li class="side-slide-item guest-board">
-                            <div class="board-title" style="color:#2e3192;">
-                                My New Condo
-                            </div>
-                            <a href="#" class="friend-jump-btn" title="jump to this board">
-                                <img src="img/jump-boards.png"/>
-                            </a>
-                            <div class="board-host">
-                                host: Dennis Michaels
-                            </div>
-                            <div class="board-number-of-guests">
-                                guests: 18
-                            </div>     
-                        </li>
-                        <li class="side-slide-item guest-board">
-                            <div class="board-title" style="color:#ec008c;">
-                                What do you think of these Kitchen Designs?
-                            </div>
-                            <a href="#" class="friend-jump-btn" title="jump to this board">
-                                <img src="img/jump-boards.png"/>
-                            </a>
-                            <div class="board-host">
-                                host: Kristie Wells
-                            </div>
-                            <div class="board-number-of-guests">
-                                guests: 33
-                            </div>     
-                        </li>
-                        <li class="side-slide-item guest-board">
-                            <div class="board-title" style="color:#662d91;">
-                                Jess &amp; Mike's Wedding
-                            </div>
-                            <a href="#" class="friend-jump-btn" title="jump to this board">
-                                <img src="img/jump-boards.png"/>
-                            </a>
-                            <div class="board-host">
-                                host: Jessica Walters
-                            </div>
-                            <div class="board-number-of-guests">
-                                guests: 37
-                            </div>     
-                        </li>
-                        <li class="side-slide-item guest-board">
-                            <div class="board-title" style="color:#009cff;">
-                                Cubs game with the girls
-                            </div>
-                            <a href="#" class="friend-jump-btn" title="jump to this board">
-                                <img src="img/jump-boards.png"/>
-                            </a>
-                            <div class="board-host">
-                                host: Sarah Jones
-                            </div>
-                            <div class="board-number-of-guests">
-                                guests: 7
-                            </div>     
-                        </li>
-                        <li class="side-slide-item guest-board">
-                            <div class="board-title" style="color:#1cbbb4;">
-                                Mom's Surprise Party
-                            </div>
-                            <a href="#" class="friend-jump-btn" title="jump to this board">
-                                <img src="img/jump-boards.png"/>
-                            </a>
-                            <div class="board-host">
-                                host: Ally Peterson
-                            </div>
-                            <div class="board-number-of-guests">
-                                guests: 32
-                            </div>     
-                        </li>
-                    </ul>
-                    <div class="side-slide-item-list-bottom-pad"></div>
-            	</div>
-            </div>
-        </section>
-        
-<!-- START SIDE SLIDE Add Board -->
-        <section id="add-board" class="side-section">
-        	<div class="slide-section-header">
+                            </li>
+                            <!--Start Guest Boards-->
+                            <li class="side-slide-item guest-board">
+                                <div class="board-title" style="color:#662d91;">
+                                    Jess &amp; Mike's Wedding
+                                </div>
+                                <a href="#" class="friend-jump-btn" title="jump to this board">
+                                    <img src="img/jump-boards.png"/>
+                                </a>
+                                <div class="board-host">
+                                    host: Jessica Walters
+                                </div>
+                                <div class="board-number-of-guests">
+                                    guests: 37
+                                </div>     
+                            </li>
+                            <li class="side-slide-item guest-board">
+                                <div class="board-title" style="color:#009cff;">
+                                    Cubs game with the girls
+                                </div>
+                                <a href="#" class="friend-jump-btn" title="jump to this board">
+                                    <img src="img/jump-boards.png"/>
+                                </a>
+                                <div class="board-host">
+                                    host: Sarah Jones
+                                </div>
+                                <div class="board-number-of-guests">
+                                    guests: 7
+                                </div>     
+                            </li>
+                            <li class="side-slide-item guest-board">
+                                <div class="board-title" style="color:#1cbbb4;">
+                                    Mom&#39;s Surprise Party
+                                </div>
+                                <a href="#" class="friend-jump-btn">
+                                    <img src="img/jump-boards.png"/>
+                                </a>
+                                <div class="board-host">
+                                    host: Ally Peterson
+                                </div>
+                                <div class="board-number-of-guests">
+                                    guests: 32
+                                </div>     
+                            </li>
+                            <li class="side-slide-item guest-board">
+                                <div class="board-title" style="color:#f26522;">
+                                    David's Graduation
+                                </div>
+                                <a href="#" class="friend-jump-btn" title="jump to this board">
+                                    <img src="img/jump-boards.png"/>
+                                </a>
+                                <div class="board-host">
+                                    host: Mike Masterson
+                                </div>
+                                <div class="board-number-of-guests">
+                                    guests: 22
+                                </div>     
+                            </li>
+                            <li class="side-slide-item guest-board">
+                                <div class="board-title" style="color:#cc0000;">
+                                    Which car should I buy?
+                                </div>
+                                <a href="#" class="friend-jump-btn" title="jump to this board">
+                                    <img src="img/jump-boards.png"/>
+                                </a>
+                                <div class="board-host">
+                                    host: Addie Kreslo
+                                </div>
+                                <div class="board-number-of-guests">
+                                    guests: 28
+                                </div>     
+                            </li>
+                            <li class="side-slide-item guest-board">
+                                <div class="board-title" style="color:#007dc3;">
+                                    Grandma's 75th Birthday
+                                </div>
+                                <a href="#" class="friend-jump-btn" title="jump to this board">
+                                    <img src="img/jump-boards.png"/>
+                                </a>
+                                <div class="board-host">
+                                    host: Kelvin Johnson
+                                </div>
+                                <div class="board-number-of-guests">
+                                    guests: 40
+                                </div>     
+                            </li>
+                            <li class="side-slide-item guest-board">
+                                <div class="board-title" style="color:#ec008c;">
+                                    Keaton's Prom Dress?
+                                </div>
+                                <a href="#" class="friend-jump-btn" title="jump to this board">
+                                    <img src="img/jump-boards.png"/>
+                                </a>
+                                <div class="board-host">
+                                    host: Keaton O'Kelly
+                                </div>
+                                <div class="board-number-of-guests">
+                                    guests: 67
+                                </div>     
+                            </li>
+                            <li class="side-slide-item guest-board">
+                                <div class="board-title" style="color:#f7941d;">
+                                    Meeting Baby Emmy
+                                </div>
+                                <a href="#" class="friend-jump-btn" title="jump to this board">
+                                    <img src="img/jump-boards.png"/>
+                                </a>
+                                <div class="board-host">
+                                    host: Brea James
+                                </div>
+                                <div class="board-number-of-guests">
+                                    guests: 14
+                                </div>     
+                            </li>
+                            <li class="side-slide-item guest-board">
+                                <div class="board-title" style="color:#2e3192;">
+                                    My New Condo
+                                </div>
+                                <a href="#" class="friend-jump-btn" title="jump to this board">
+                                    <img src="img/jump-boards.png"/>
+                                </a>
+                                <div class="board-host">
+                                    host: Dennis Michaels
+                                </div>
+                                <div class="board-number-of-guests">
+                                    guests: 18
+                                </div>     
+                            </li>
+                            <li class="side-slide-item guest-board">
+                                <div class="board-title" style="color:#ec008c;">
+                                    What do you think of these Kitchen Designs?
+                                </div>
+                                <a href="#" class="friend-jump-btn" title="jump to this board">
+                                    <img src="img/jump-boards.png"/>
+                                </a>
+                                <div class="board-host">
+                                    host: Kristie Wells
+                                </div>
+                                <div class="board-number-of-guests">
+                                    guests: 33
+                                </div>     
+                            </li>
+                            <li class="side-slide-item guest-board">
+                                <div class="board-title" style="color:#662d91;">
+                                    Jess &amp; Mike's Wedding
+                                </div>
+                                <a href="#" class="friend-jump-btn" title="jump to this board">
+                                    <img src="img/jump-boards.png"/>
+                                </a>
+                                <div class="board-host">
+                                    host: Jessica Walters
+                                </div>
+                                <div class="board-number-of-guests">
+                                    guests: 37
+                                </div>     
+                            </li>
+                            <li class="side-slide-item guest-board">
+                                <div class="board-title" style="color:#009cff;">
+                                    Cubs game with the girls
+                                </div>
+                                <a href="#" class="friend-jump-btn" title="jump to this board">
+                                    <img src="img/jump-boards.png"/>
+                                </a>
+                                <div class="board-host">
+                                    host: Sarah Jones
+                                </div>
+                                <div class="board-number-of-guests">
+                                    guests: 7
+                                </div>     
+                            </li>
+                            <li class="side-slide-item guest-board">
+                                <div class="board-title" style="color:#1cbbb4;">
+                                    Mom's Surprise Party
+                                </div>
+                                <a href="#" class="friend-jump-btn" title="jump to this board">
+                                    <img src="img/jump-boards.png"/>
+                                </a>
+                                <div class="board-host">
+                                    host: Ally Peterson
+                                </div>
+                                <div class="board-number-of-guests">
+                                    guests: 32
+                                </div>     
+                            </li>
+                        </ul>
+                        <div class="side-slide-item-list-bottom-pad"></div>
+                    </div>
+                </div>
+    </section>
+<!-- END  -->
+
+<!-- START SLIDEOUT MENU : Create Board--> 
+    <section id="add-board" class="ss-boards-create-board ss-menu-container">
+        <div class="slide-section-header">
             	<div class="close-add-btn">
-                    <a class="add-link close-add-board" href="#">
-                        <img src="img/slide-in-arrow.png"/>
-                    </a>   
+                    <label for="toggleBoards">
+                        <span class="add-link close-add-board" href="#">
+                            <img src="img/slide-in-arrow.png"/>
+                        </span>   
+                    </label>
                 </div>
                 
                 <div class="sub-slide-menu-title">
@@ -2399,12 +2460,12 @@
                     
                     </div>
             	</div>
-        </section>
-<!-- END SIDE SLIDE Add Board -->
+    </section>
+<!-- END  -->
 
-
-        <section id="search" class="side-section">
-            <div class="slide-section-header">
+<!-- START SLIDEOUT MENU : Search--> 
+    <section id="search" class="ss-search allNav ss-menu-container">
+        <div class="slide-section-header">
             	<div class="slide-in-arrow">
                     <a class="slide-close-link" href="#">
                         <img src="img/slide-in-arrow.png"/>
@@ -2609,36 +2670,42 @@
                     <div class="side-slide-item-list-bottom-pad"></div>
             	</div>
             </div>
-        </section>
+    </section>
+<!-- END  -->
 
-
-<!--START ME Section-->
-<section id="me" class="side-section">
-            <div class="slide-section-header">
+<!-- START SLIDEOUT MENU : My Account--> 
+    <section id="me" class="ss-my-account allNav ss-menu-container">
+        <div class="slide-section-header">
             	<div class="slide-in-arrow">
-                    <a class="slide-close-link" href="#">
-                        <img src="img/slide-in-arrow.png"/>
-                    </a>   
+                    <label for="toggle">
+                        <span class="slide-close-link" href="#">
+                            <img src="img/slide-in-arrow.png"/>
+                        </span>   
+                    </label>
                 </div>
                 
-               <div class="slideout-stacked-title">
-                <div class="slide-sec-title-text">
-                    My Account
+                <div class="slideout-stacked-title">
+                    <div class="slide-sec-title-text">
+                        My Account
+                    </div>
                 </div>
-            </div>
-            
-                <div class="add-btn open-notifications-btn">
-                    <a class="add-link" href="#">
-                        <img src="img/notifications-icon.png"/>
-                    </a>
-                    <div class="notification-counter">8</div>
-                </div>
+
+                <label for="toggleMyAccountNotifications">
+                    <div class="add-btn open-notifications-btn">
+                        <span class="add-link" href="#">
+                            <img src="img/notifications-icon.png"/>
+                        </span>
+                        <div class="notification-counter">8</div>
+                    </div>
+                </label>
             </div><!--slide section header-->
             
             <div class="slide-section-friend-container">
             	<div class="slide-section-content-scroll-box">
                     <div class="me-user-name" style="color:#ed145b;">Sally Schmally</div>
-                    <div class="me-change-signature-btn">change signature</div>
+                    <label for="toggleMyAccountChangeSignature">
+                        <div class="me-change-signature-btn">change signature</div>
+                    </label>
                     <div class="me-tac-coin-contianer">
                         <img src="img/tac-coin.png"/>
                         <div class="coin-count-number">:&emsp;<span>143</span></div>
@@ -2677,254 +2744,19 @@
                     <div class="side-slide-item-list-bottom-pad"></div>
             	</div>
             </div>
-        </section>
-    <!--END ME Section-->
+    </section>
+<!-- END  -->
 
-
-<!--START Change Signature Section-->
-<section id="me-change-signature" class="side-section">
-            <div class="slide-section-header">
+<!-- START SLIDEOUT MENU : Notifications--> 
+    <section id="me-notification" class="ss-my-account-notification ss-menu-container">
+         <div class="slide-section-header">
             	<div class="close-add-btn">
-                    <a class="add-link close-change-signature" href="#">
-                        <img src="img/slide-in-arrow.png"/>
-                    </a>   
+                    <label for="toggleMyAccount">
+                        <span class="add-link close-change-signature" href="#">
+                            <img src="img/slide-in-arrow.png"/>
+                        </span>   
+                    </label>
                 </div>
-                
-                <div class="slideout-stacked-title">
-                    <div class="slide-sec-title-text">
-                        Change Signature
-                    </div>
-                </div>
-            </div><!--slide section header-->
-            
-            <div class="slide-section-friend-container">
-            	<div class="slide-section-content-scroll-box">
-                    <div class="me-user-name" style="color:#ed145b;">
-                        Current Signature
-                        <div class="me-tac-coin-contianer">
-                            <img src="img/tac-coin.png"/>
-                            <div class="coin-count-number">:&emsp;<span>143</span></div>
-                        </div>
-                    </div>
-                    <div class="all-color-selection-container">
-                        <div class="color-option-container">
-                            <label for="cs1">
-                                <div class="color-option" style="background-color:black;"></div>
-                            </label>
-                            <input type="radio" id="cs1" name="colorSelect" />
-                            <label for="cs1"><span></span></label>
-                        </div>
-                        <div class="color-option-container">
-                            <label for="cs2">
-                                <div class="color-option" style="background-color:brown;"></div>
-                            </label>
-                            <input type="radio" id="cs2" name="colorSelect" />
-                            <label for="cs2"><span></span></label>
-                        </div>
-                        <div class="color-option-container">
-                            <label for="cs3">
-                                <div class="color-option" style="background-color:blue;"></div>
-                            </label>
-                            <input type="radio" id="cs3" name="colorSelect" />
-                            <label for="cs3"><span></span></label>
-                        </div>
-                        <div class="color-option-container">
-                            <label for="cs4">
-                                <div class="color-option" style="background-color:green;"></div>
-                            </label>
-                            <input type="radio" id="cs4" name="colorSelect" />
-                            <label for="cs4"><span></span></label>
-                        </div>
-                        <div class="color-option-container">
-                            <label for="cs5">
-                                <div class="color-option" style="background-color:red;"></div>
-                            </label>
-                            <input type="radio" id="cs5" name="colorSelect" />
-                            <label for="cs5"><span></span></label>
-                        </div>
-                        <div class="color-option-container">
-                            <label for="cs6">
-                                <div class="color-option" style="background-color:orange;"></div>
-                            </label>
-                            <input type="radio" id="cs6" name="colorSelect" />
-                            <label for="cs6"><span></span></label>
-                        </div>
-                        <div class="color-option-container">
-                            <label for="cs7">
-                                <div class="color-option" style="background-color:#ed145b;"></div>
-                            </label>
-                            <input type="radio" id="cs7" name="colorSelect" checked />
-                            <label for="cs7"><span></span></label>
-                        </div>
-                        <!--End Free-->
-                        <div class="color-option-container">
-                            <label for="cs8">
-                                <div class="color-option locked-color-option" style="background-color:pink;">
-                                    <div class="color-cost-dollar">$</div>
-                                </div>
-                            </label>
-                            <input type="radio" id="cs8" name="colorSelect" class="locked-color-option" />
-                            <label for="cs8"><span></span></label>
-                        </div>
-                        <div class="color-option-container">
-                            <label for="cs9">
-                                <div class="color-option locked-color-option" style="background-color:#1cbbb4;">
-                                    <div class="color-cost-dollar">$</div>
-                                </div>
-                            </label>
-                            <input type="radio" id="cs9" name="colorSelect" class="locked-color-option"/>
-                            <label for="cs9"><span></span></label>
-                        </div>
-                        <div class="color-option-container">
-                            <label for="cs10">
-                                <div class="color-option locked-color-option" style="background-color:#00a2e5;">
-                                    <div class="color-cost-dollar">$</div>
-                                </div>
-                            </label>
-                            <input type="radio" id="cs10" name="colorSelect" class="locked-color-option"/>
-                            <label for="cs10"><span></span></label>
-                        </div>
-                        <div class="color-option-container">
-                            <label for="cs11">
-                                <div class="color-option locked-color-option" style="background-color:#f26522;">
-                                    <div class="color-cost-dollar">$</div>
-                                </div>
-                            </label>
-                            <input type="radio" id="cs11" name="colorSelect" class="locked-color-option"/>
-                            <label for="cs11"><span></span></label>
-                        </div>
-                        <div class="color-option-container">
-                            <label for="cs12">
-                                <div class="color-option locked-color-option" style="background-color:#f400ef;">
-                                    <div class="color-cost-dollar">$</div>
-                                </div>
-                            </label>
-                            <input type="radio" id="cs12" name="colorSelect" class="locked-color-option"/>
-                            <label for="cs12"><span></span></label>
-                        </div>
-                        <div class="color-option-container">
-                            <label for="cs13">
-                                <div class="color-option locked-color-option" style="background-color:#b400ff;">
-                                    <div class="color-cost-dollar">$</div>
-                                </div>
-                            </label>
-                            <input type="radio" id="cs13" name="colorSelect" class="locked-color-option"/>
-                            <label for="cs13"><span></span></label>
-                        </div>
-                        <div class="color-option-container">
-                            <label for="cs14">
-                                <div class="color-option locked-color-option" style="background-color:purple;">
-                                    <div class="color-cost-dollar">$</div>
-                                </div>
-                            </label>
-                            <input type="radio" id="cs14" name="colorSelect" class="locked-color-option"/>
-                            <label for="cs14"><span></span></label>
-                        </div>
-                        <div class="color-option-container">
-                            <label for="cs15">
-                                <div class="color-option locked-color-option" style="background-color:#68c156;">
-                                    <div class="color-cost-dollar">$</div>
-                                </div>
-                            </label>
-                            <input type="radio" id="cs15" name="colorSelect" class="locked-color-option"/>
-                            <label for="cs15"><span></span></label>
-                        </div>
-                        <div class="color-option-container">
-                            <label for="cs16">
-                                <div class="color-option locked-color-option" style="background-color:#00ff00;">
-                                    <div class="color-cost-dollar">$</div>
-                                </div>
-                            </label>
-                            <input type="radio" id="cs16" name="colorSelect" class="locked-color-option"/>
-                            <label for="cs16"><span></span></label>
-                        </div>
-                    </div>
-                    <div class="all-font-selection-container">
-                        <div class="signature-radio-column">
-                            <ul class="font-selection">
-                                <li><input type="radio" id="ss1" name="signatureSelect" checked />
-                                    <label for="ss1"><span></span><div class="font-choice-sample">
-                                        font option 1</div></label>
-                                </li>
-                                <li><input type="radio" id="ss2" name="signatureSelect" />
-                                    <label for="ss2"><span></span><div class="font-choice-sample">
-                                        font option 2</div></label>
-                                </li>
-                                <li><input type="radio" id="ss3" name="signatureSelect" />
-                                    <label for="ss3"><span></span><div class="font-choice-sample">
-                                        font option 3</div></label>
-                                </li>
-                                <li><input type="radio" id="ss4" name="signatureSelect" />
-                                    <label for="ss4"><span></span><div class="font-choice-sample">
-                                        font option 4</div></label>
-                                </li>
-                                <li><input type="radio" id="ss5" name="signatureSelect" />
-                                    <label for="ss5"><span></span><div class="font-choice-sample">
-                                        font option 5</div></label>
-                                </li>
-                                <li><input type="radio" id="ss6" name="signatureSelect" />
-                                    <label for="ss6"><span></span><div class="font-choice-sample">
-                                        font option 6</div></label>
-                                </li>
-                                <li><input type="radio" id="ss7" name="signatureSelect" />
-                                    <label for="ss7"><span></span>
-                                        <div class="font-cost-dollar">$</div>
-                                        <div class="font-choice-sample">font option 7</div>
-                                    </label>
-                                </li>
-                                <li><input type="radio" id="ss8" name="signatureSelect" />
-                                    <label for="ss8"><span></span>
-                                        <div class="font-cost-dollar">$</div>
-                                        <div class="font-choice-sample">font option 8</div>
-                                    </label>
-                                </li>
-                                <li><input type="radio" id="ss9" name="signatureSelect" />
-                                    <label for="ss9"><span></span>
-                                        <div class="font-cost-dollar">$</div>
-                                        <div class="font-choice-sample">font option 9</div>
-                                    </label>
-                                </li>
-                                <li><input type="radio" id="ss10" name="signatureSelect" />
-                                    <label for="ss10"><span></span>
-                                        <div class="font-cost-dollar">$</div>
-                                        <div class="font-choice-sample">font option 10</div>
-                                    </label>
-                                </li>
-                                <li><input type="radio" id="ss11" name="signatureSelect" />
-                                    <label for="ss11"><span></span>
-                                        <div class="font-cost-dollar">$</div>
-                                        <div class="font-choice-sample">font option 11</div>
-                                    </label>
-                                </li>
-                                <li><input type="radio" id="ss12" name="signatureSelect" />
-                                    <label for="ss12"><span></span>
-                                        <div class="font-cost-dollar">$</div>
-                                        <div class="font-choice-sample">font option 12</div>
-                                    </label>
-                                </li>
-                            
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="side-slide-item-list-bottom-pad"></div>
-                </div>
-                <div class="update-signature-btn-container">
-                    <div class="update-signature">Update</div>
-                </div>
-        </div>
-        </section>
-<!--END Change Signature Section-->
-
-<!--START Notifications Section-->
-    <section id="me-notification" class="side-section">
-        <div class="slide-section-header">
-            	<div class="slide-in-arrow">
-                    <a class="slide-close-link" href="#">
-                        <img src="img/slide-in-arrow.png"/>
-                    </a>   
-                </div>
-                <!--<div class="selector-text-this-board friend-not-this-btn">This Board</div>
-                <div class="selector-text-my-boards friend-my-btn">My Boards</div>-->
                 
                 <div class="slideout-stacked-title">
                     <div class="slide-sec-title-text">
@@ -3450,11 +3282,246 @@
             
         </div>
     </section>
-<!--END Notifications Section-->
+<!-- END  -->
 
+<!-- START SLIDEOUT MENU : Change Signature--> 
+    <section id="me-change-signature" class="ss-my-account-change-signature ss-menu-container">
+        <div class="slide-section-header">
+            	<div class="close-add-btn">
+                    <label for="toggleMyAccount">
+                        <span class="add-link close-change-signature" href="#">
+                            <img src="img/slide-in-arrow.png"/>
+                        </span>   
+                    </label>
+                </div>
+                
+                <div class="slideout-stacked-title">
+                    <div class="slide-sec-title-text">
+                        Change Signature
+                    </div>
+                </div>
+            </div><!--slide section header-->
+            
+            <div class="slide-section-friend-container">
+            	<div class="slide-section-content-scroll-box">
+                    <div class="me-user-name" style="color:#ed145b;">
+                        Current Signature
+                        <div class="me-tac-coin-contianer">
+                            <img src="img/tac-coin.png"/>
+                            <div class="coin-count-number">:&emsp;<span>143</span></div>
+                        </div>
+                    </div>
+                    <div class="all-color-selection-container">
+                        <div class="color-option-container">
+                            <label for="cs1">
+                                <div class="color-option" style="background-color:black;"></div>
+                            </label>
+                            <input type="radio" id="cs1" name="colorSelect" />
+                            <label for="cs1"><span></span></label>
+                        </div>
+                        <div class="color-option-container">
+                            <label for="cs2">
+                                <div class="color-option" style="background-color:brown;"></div>
+                            </label>
+                            <input type="radio" id="cs2" name="colorSelect" />
+                            <label for="cs2"><span></span></label>
+                        </div>
+                        <div class="color-option-container">
+                            <label for="cs3">
+                                <div class="color-option" style="background-color:blue;"></div>
+                            </label>
+                            <input type="radio" id="cs3" name="colorSelect" />
+                            <label for="cs3"><span></span></label>
+                        </div>
+                        <div class="color-option-container">
+                            <label for="cs4">
+                                <div class="color-option" style="background-color:green;"></div>
+                            </label>
+                            <input type="radio" id="cs4" name="colorSelect" />
+                            <label for="cs4"><span></span></label>
+                        </div>
+                        <div class="color-option-container">
+                            <label for="cs5">
+                                <div class="color-option" style="background-color:red;"></div>
+                            </label>
+                            <input type="radio" id="cs5" name="colorSelect" />
+                            <label for="cs5"><span></span></label>
+                        </div>
+                        <div class="color-option-container">
+                            <label for="cs6">
+                                <div class="color-option" style="background-color:orange;"></div>
+                            </label>
+                            <input type="radio" id="cs6" name="colorSelect" />
+                            <label for="cs6"><span></span></label>
+                        </div>
+                        <div class="color-option-container">
+                            <label for="cs7">
+                                <div class="color-option" style="background-color:#ed145b;"></div>
+                            </label>
+                            <input type="radio" id="cs7" name="colorSelect" checked />
+                            <label for="cs7"><span></span></label>
+                        </div>
+                        <!--End Free-->
+                        <div class="color-option-container">
+                            <label for="cs8">
+                                <div class="color-option locked-color-option" style="background-color:pink;">
+                                    <div class="color-cost-dollar">$</div>
+                                </div>
+                            </label>
+                            <input type="radio" id="cs8" name="colorSelect" class="locked-color-option" />
+                            <label for="cs8"><span></span></label>
+                        </div>
+                        <div class="color-option-container">
+                            <label for="cs9">
+                                <div class="color-option locked-color-option" style="background-color:#1cbbb4;">
+                                    <div class="color-cost-dollar">$</div>
+                                </div>
+                            </label>
+                            <input type="radio" id="cs9" name="colorSelect" class="locked-color-option"/>
+                            <label for="cs9"><span></span></label>
+                        </div>
+                        <div class="color-option-container">
+                            <label for="cs10">
+                                <div class="color-option locked-color-option" style="background-color:#00a2e5;">
+                                    <div class="color-cost-dollar">$</div>
+                                </div>
+                            </label>
+                            <input type="radio" id="cs10" name="colorSelect" class="locked-color-option"/>
+                            <label for="cs10"><span></span></label>
+                        </div>
+                        <div class="color-option-container">
+                            <label for="cs11">
+                                <div class="color-option locked-color-option" style="background-color:#f26522;">
+                                    <div class="color-cost-dollar">$</div>
+                                </div>
+                            </label>
+                            <input type="radio" id="cs11" name="colorSelect" class="locked-color-option"/>
+                            <label for="cs11"><span></span></label>
+                        </div>
+                        <div class="color-option-container">
+                            <label for="cs12">
+                                <div class="color-option locked-color-option" style="background-color:#f400ef;">
+                                    <div class="color-cost-dollar">$</div>
+                                </div>
+                            </label>
+                            <input type="radio" id="cs12" name="colorSelect" class="locked-color-option"/>
+                            <label for="cs12"><span></span></label>
+                        </div>
+                        <div class="color-option-container">
+                            <label for="cs13">
+                                <div class="color-option locked-color-option" style="background-color:#b400ff;">
+                                    <div class="color-cost-dollar">$</div>
+                                </div>
+                            </label>
+                            <input type="radio" id="cs13" name="colorSelect" class="locked-color-option"/>
+                            <label for="cs13"><span></span></label>
+                        </div>
+                        <div class="color-option-container">
+                            <label for="cs14">
+                                <div class="color-option locked-color-option" style="background-color:purple;">
+                                    <div class="color-cost-dollar">$</div>
+                                </div>
+                            </label>
+                            <input type="radio" id="cs14" name="colorSelect" class="locked-color-option"/>
+                            <label for="cs14"><span></span></label>
+                        </div>
+                        <div class="color-option-container">
+                            <label for="cs15">
+                                <div class="color-option locked-color-option" style="background-color:#68c156;">
+                                    <div class="color-cost-dollar">$</div>
+                                </div>
+                            </label>
+                            <input type="radio" id="cs15" name="colorSelect" class="locked-color-option"/>
+                            <label for="cs15"><span></span></label>
+                        </div>
+                        <div class="color-option-container">
+                            <label for="cs16">
+                                <div class="color-option locked-color-option" style="background-color:#00ff00;">
+                                    <div class="color-cost-dollar">$</div>
+                                </div>
+                            </label>
+                            <input type="radio" id="cs16" name="colorSelect" class="locked-color-option"/>
+                            <label for="cs16"><span></span></label>
+                        </div>
+                    </div>
+                    <div class="all-font-selection-container">
+                        <div class="signature-radio-column">
+                            <ul class="font-selection">
+                                <li><input type="radio" id="ss1" name="signatureSelect" checked />
+                                    <label for="ss1"><span></span><div class="font-choice-sample">
+                                        font option 1</div></label>
+                                </li>
+                                <li><input type="radio" id="ss2" name="signatureSelect" />
+                                    <label for="ss2"><span></span><div class="font-choice-sample">
+                                        font option 2</div></label>
+                                </li>
+                                <li><input type="radio" id="ss3" name="signatureSelect" />
+                                    <label for="ss3"><span></span><div class="font-choice-sample">
+                                        font option 3</div></label>
+                                </li>
+                                <li><input type="radio" id="ss4" name="signatureSelect" />
+                                    <label for="ss4"><span></span><div class="font-choice-sample">
+                                        font option 4</div></label>
+                                </li>
+                                <li><input type="radio" id="ss5" name="signatureSelect" />
+                                    <label for="ss5"><span></span><div class="font-choice-sample">
+                                        font option 5</div></label>
+                                </li>
+                                <li><input type="radio" id="ss6" name="signatureSelect" />
+                                    <label for="ss6"><span></span><div class="font-choice-sample">
+                                        font option 6</div></label>
+                                </li>
+                                <li><input type="radio" id="ss7" name="signatureSelect" />
+                                    <label for="ss7"><span></span>
+                                        <div class="font-cost-dollar">$</div>
+                                        <div class="font-choice-sample">font option 7</div>
+                                    </label>
+                                </li>
+                                <li><input type="radio" id="ss8" name="signatureSelect" />
+                                    <label for="ss8"><span></span>
+                                        <div class="font-cost-dollar">$</div>
+                                        <div class="font-choice-sample">font option 8</div>
+                                    </label>
+                                </li>
+                                <li><input type="radio" id="ss9" name="signatureSelect" />
+                                    <label for="ss9"><span></span>
+                                        <div class="font-cost-dollar">$</div>
+                                        <div class="font-choice-sample">font option 9</div>
+                                    </label>
+                                </li>
+                                <li><input type="radio" id="ss10" name="signatureSelect" />
+                                    <label for="ss10"><span></span>
+                                        <div class="font-cost-dollar">$</div>
+                                        <div class="font-choice-sample">font option 10</div>
+                                    </label>
+                                </li>
+                                <li><input type="radio" id="ss11" name="signatureSelect" />
+                                    <label for="ss11"><span></span>
+                                        <div class="font-cost-dollar">$</div>
+                                        <div class="font-choice-sample">font option 11</div>
+                                    </label>
+                                </li>
+                                <li><input type="radio" id="ss12" name="signatureSelect" />
+                                    <label for="ss12"><span></span>
+                                        <div class="font-cost-dollar">$</div>
+                                        <div class="font-choice-sample">font option 12</div>
+                                    </label>
+                                </li>
+                            
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="side-slide-item-list-bottom-pad"></div>
+                </div>
+                <div class="update-signature-btn-container">
+                    <div class="update-signature">Update</div>
+                </div>
+        </div>
+    </section>
+<!-- END  -->
 
-
-    <div class="modal-overlay">
+<!-- START Modals -->
+ <div class="modal-overlay">
         <div class="modal-message-box new-board-created-modal-message">
             <div class="booya">Booya!</div>
             <p>Your new board has been created and is ready for Taccing.</p>
@@ -3496,299 +3563,12 @@
             <div class="bodal-bt-container"><a class="modal-btn btn-grey" href="#">Cancel</a></div>
         </div>
     </div>
-
-</main>
+<!-- END Modals -->
 
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
-<script>
-$('.me-btn').click(function() {
-	$(".side-section").animate({
-		  right: "-340px"
-		}, 500, function() {
-	 });
-     $("#me").animate({
-		  right: "0px"
-		}, 500, function() {
-	 });
-    $(".search-container-mobile").slideUp();
-});  
 
-$('.me-change-signature-btn').click(function() {
-	$("#me").animate({
-		  right: "+=320px"
-		}, 550, function() {
-	 });
-    $("#me div").animate({
-		  opacity: ".55"
-		}, 500, function() {
-	 });
-    $("#me").css("backgroundColor", "#ececec");
-    $("#me-change-signature").animate({
-		  right: "+=340px"
-		}, 500, function() {
-	 });
-    $(".search-container-mobile").slideUp();
-    $(".me-change-signature-btn").fadeOut(500);
-});
-    
-$('.open-notifications-btn').click(function() {
-	$("#me").animate({
-		  right: "+=320px"
-		}, 550, function() {
-	 });
-    $("#me div").animate({
-		  opacity: ".55"
-		}, 500, function() {
-	 });
-    $("#me").css("backgroundColor", "#ececec");
-    $("#me-notification").animate({
-		  right: "+=340px"
-		}, 500, function() {
-	 });
-    $(".search-container-mobile").slideUp();
-    $(".me-notifications-btn").fadeOut(500);
-});
-    
-$('#me, .close-change-signature, .close-notifications').click(function() {   
-    if($('#me').css('right') > '10px') {
-      $("#me").animate({
-		  right: "0px"
-		}, 500, function() {
-	 });
-    $("#me-change-signature, #me-notification").animate({
-		  right: "-340px"
-		}, 525, function() {
-	 });
-     $("#me div").animate({
-		  opacity: "1"
-		}, 500, function() {
-	 });
-     $("#me").css("backgroundColor", "#cccccc");
-     $(".me-change-signature-btn, .me-notifications-btn").fadeIn(500);
-     }
-}); 
-    
-$('.peeps-btn').click(function() {
-	$(".side-section").animate({
-		  right: "-340px"
-		}, 500, function() {
-	 });
-     $("#friends").animate({
-		  right: "0px"
-		}, 500, function() {
-	 });
-    $(".search-container-mobile").slideUp();
-});
-$('.open-add-friend').click(function() {
-	$("#friends").animate({
-		  right: "+=320px"
-		}, 550, function() {
-	 });
-    $("#friends div").animate({
-		  opacity: ".55"
-		}, 500, function() {
-	 });
-    $("#friends").css("backgroundColor", "#ececec");
-    $("#add-friends").animate({
-		  right: "+=340px"
-		}, 500, function() {
-	 });
-    $(".search-container-mobile").slideUp();
-});
-        
-$('.open-sacca-timeline').click(function() {
-	$("#friends").animate({
-		  right: "+=320px"
-		}, 550, function() {
-	 });
-    $("#friends div").animate({
-		  opacity: ".55"
-		}, 500, function() {
-	 });
-    $("#friends").css("backgroundColor", "#ececec");
-    $("#friends-timeline").animate({
-		  right: "+=340px"
-		}, 500, function() {
-	 });
-    $(".search-container-mobile").slideUp();
-}); 
-$('.open-sacca-boards').click(function() {
-	$("#friends").animate({
-		  right: "+=320px"
-		}, 550, function() {
-	 });
-    $("#friends div").animate({
-		  opacity: ".55"
-		}, 500, function() {
-	 });
-    $("#friends").css("backgroundColor", "#ececec");
-    $("#friends-board").animate({
-		  right: "+=340px"
-		}, 500, function() {
-	 });
-    $(".search-container-mobile").slideUp();
-}); 
-    
-$('#friends, .close-add-friend, .close-friend-timeline, .close-friend-board').click(function() {   
-    if($('#friends').css('right') > '10px') {
-      $("#friends").animate({
-		  right: "0px"
-		}, 500, function() {
-	 });
-    $("#add-friends, #friends-timeline, #friends-board").animate({
-		  right: "-340px"
-		}, 525, function() {
-	 });
-     $("#friends div").animate({
-		  opacity: "1"
-		}, 500, function() {
-	 });
-     $("#friends").css("backgroundColor", "#cccccc");
-     }
-});        
-    
-$('.time-line-btn').click(function() {
-     $(".side-section").animate({
-		  right: "-340px"
-		}, 500, function() {
-	 });
-     $("#time-line").animate({
-		  right: "0px"
-		}, 500, function() {
-	 });
-    $(".search-container-mobile").slideUp();
-});
-
-$('.boards-btn').click(function() {
-	$(".side-section").animate({
-		  right: "-340px"
-		}, 500, function() {
-	 });
-     $("#boards").animate({
-		  right: "0px"
-		}, 500, function() {
-	 });
-    $(".search-container-mobile").slideUp();
-});	 
-$('.open-add-board').click(function() {
-	$("#boards").animate({
-		  right: "+=320px"
-		}, 550, function() {
-	 });
-    $("#boards div").animate({
-		  opacity: ".55"
-		}, 500, function() {
-	 });
-    $("#boards").css("backgroundColor", "#ececec");
-    $("#add-board").animate({
-		  right: "+=340px"
-		}, 500, function() {
-	 });
-    $(".search-container-mobile").slideUp();
-});        
-$('#boards, .close-add-board').click(function() {   
-    if($('#boards').css('right') > '10px') {
-      $("#boards").animate({
-		  right: "0px"
-		}, 500, function() {
-	 });
-    $("#add-board").animate({
-		  right: "-340px"
-		}, 525, function() {
-	 });
-     $("#boards div").animate({
-		  opacity: "1"
-		}, 500, function() {
-	 });
-     $("#boards").css("backgroundColor", "#cccccc");
-     }
-}); 
-$('.add-board-add-friend-btn').click(function() { 
-    $('.add-board-add-group-list').slideUp(500);
-    $('.add-board-add-friend-list').slideDown(500);
-});
-$('.add-board-add-group-btn').click(function() { 
-    $('.add-board-add-friend-list').slideUp(500);
-    $('.add-board-add-group-list').slideDown(500);
-});
-
-$(".create-new-board-btn").click(function() {
-        $(".modal-overlay, .new-board-created-modal-message" ).fadeIn(500);
-        $(".boards-host-btn, .close-add-board").click();
-        $('.add-board-name-board .add-friend-search-field').val("");
-        $(".add-board-add-group-btn, .add-board-add-friend-btn").css({ backgroundColor: '#cccccc' });
-        $('.add-board-add-friend-list, .add-board-add-group-list').slideUp(500);
-    });
-    
-
-  $('.search-field').keyup(function () {
-    // console.log(this.value);
-    if(this.value.length > 2 && this.value.length < 4) {  
-      $(".side-section").animate({
-		  right: "-340px"
-		}, 500, function() {
-	 });
-     $("#search").animate({
-		  right: "0px"
-		}, 500, function() {
-	 });
-    }
-    if(this.value.length < 3) {
-          $("#search").animate({
-		  right: "-340px"
-		}, 500, function() {
-	 });
-     }
-   });
-    
-    $('.add-friend-add-friend-btn').click(function(){
-        $('.create-group-btn-container').fadeOut("fast");
-        $('.add-friend-search-field').val("");
-        $('.create-group-title').fadeOut("fast");
-        $('.name-group-list').fadeOut("fast");
-        
-        setTimeout(
-          function() 
-          {
-            $('.request-friend-btn-container').fadeIn("slow");
-            $('.add-friend-search').fadeIn("slow");
-          }, 300);
-    });
-    $('.add-friend-add-group-btn').click(function(){
-        $('.request-friend-btn-container').fadeOut("fast");
-        $('.add-friend-search').fadeOut("fast");
-        $('.slide-section-friend-container .add-friend-list').fadeOut("fast");
-        setTimeout(
-          function() 
-          {
-            $('.create-group-btn-container').fadeIn("slow");
-            $('.create-group-title').fadeIn("slow");
-            $('.name-group-list').fadeIn("slow");
-          }, 300);
-    });
-    
-    $('.add-friend-search-field').keyup(function () {
-    // console.log(this.value);
-    if(this.value.length > 2 && this.value.length < 4) {  
-      $(".add-friend-list").fadeIn(500);
-    }
-    if(this.value.length < 3) {
-      $(".add-friend-list").fadeOut(500);
-    }
-   });
-    
-    
-/*$('.search-field').click(function() {
-	$(".side-section").animate({
-		  right: "-340px"
-		}, 500, function() {
-	 });
-     $("#search").animate({
-		  right: "0px"
-		}, 500, function() {
-	 });
-});*/
+<script type="text/javascript">
     
 /* Friend Menu Button Open Functions */ 
 	$("#friends .side-slide-item .friend-menu-btn").click(function() {
@@ -3816,161 +3596,120 @@ $(".create-new-board-btn").click(function() {
         else
             $(this).closest("ul.side-slide-item-list li").animate({height: 175}, 500);
     });
-    
 
-$('.slide-close-link').click(function() {
-	$(".side-section").animate({
-		  right: "-340px"
-		}, 500, function() {
-	 });
-    $(".search-container-mobile").slideUp();
-    $('.board').animate({
-		  opacity: "1.0"
-		}, 500, function() {
-	 });
-    $(".open-add-friend").fadeIn(500);
-});	 
-    
+/* People Drop Down Menu Sort function */    
+    $(".friend-this-btn").click(function() {/*This Board*/
+        $(".friend-not-this").fadeOut(600);
+        $(".my-group-item").fadeOut(600);
+        setTimeout(
+          function() 
+          {
+            $(".friend-this").fadeIn(600);
+            $(".friend-only-this").fadeIn(600);
+        }, 600);
+    });
+    $(".friend-not-this-btn").click(function() {/*My Friends*/
+        $(".my-group-item").fadeOut(600);
+        $(".friend-only-this").fadeOut(600);
+        setTimeout(
+          function() 
+          {
+            $(".friend-not-this").fadeIn(600);
+            $(".friend-this").fadeIn(600);
+        }, 600);
+    });
+    $(".groups-my-btn").click(function() {
+        $(".friend-this").fadeOut(600);
+        $(".friend-not-this").fadeOut(600);
+        $(".friend-only-this").fadeOut(600);
+        setTimeout(
+          function() 
+          {
+            $(".my-group-item").fadeIn(600);
+          }, 600);
+    });   
 
-$('.search-btn').click(function() {
-	$(".search-container-mobile").slideToggle()
-    $(".side-section").animate({
-		  right: "-340px"
-		}, 500, function() {
-	 });
-	 });
-$('.cd-nav-trigger').click(function() {
-	$(".search-container-mobile").hide()
-    $(".side-section").animate({
-		  right: "-340px"
-		}, 500, function() {
-	 });
-    $('.board').animate({
-		  opacity: "1.0"
-		}, 500, function() {
-	 });
-});
-        
-$('.navitem').click(function() {
-	$('.board').animate({
-		  opacity: ".14"
-		}, 500, function() {
-	 });
-    $(".open-add-friend").fadeIn(500);
-    $(".open-add-board").fadeIn(500);
-});
+/* Timline Drop Down Menu Sort function */ 
+    $(".timeline-all-btn").click(function() {
+        $(".all-timeline").fadeOut(1500);
+    });
+    $(".timeline-my-friends-btn").click(function() {
+        $(".all-timeline").fadeIn(1500);
+    }); 
+    
+/* Boards Drop Down Menu Sort function */     
+    $(".boards-guest-btn").click(function() {
+        $(".host-board").fadeOut(1500);
+        $(".guest-board").fadeIn(1500);
+    });
+    $(".boards-host-btn").click(function() {
+        $(".guest-board").fadeOut(1500);
+        $(".host-board").fadeIn(1500);
+    }); 
+    
+/* Notifications Drop Down Menu Sort function */     
+    $(".notifications-date-btn").click(function() {
+        $(".notification-settings").fadeOut(500);
+        $(".notification-by-type-container").fadeOut(500);
+        $(".notification-by-date-container").fadeIn(500);
+    }); 
+    $(".notifications-type-btn").click(function() {
+        $(".notification-settings").fadeOut(500);
+        $(".notification-by-date-container").fadeOut(500);
+        $(".notification-by-type-container").fadeIn(500);
+    }); 
+    $(".notifications-settings-btn").click(function() {
+        $(".notification-settings").fadeIn(500);
+        $(".notification-by-date-container").fadeOut(500);
+        $(".notification-by-type-container").fadeOut(500);
+    }); 
+    
+/* If image in timeline it will align right */    
+    $(".time-line-img").attr("align","right");
  
-$(".friend-this-btn").click(function() {/*This Board*/
-    $(".friend-not-this").fadeOut(1200);
-    $(".my-group-item").fadeOut(1200);
-    setTimeout(
-      function() 
-      {
-        $(".friend-this").fadeIn(1200);
-        $(".friend-only-this").fadeIn(1200);
-    }, 1200);
-});
-$(".friend-not-this-btn").click(function() {/*My Friends*/
-    $(".my-group-item").fadeOut(1200);
-    $(".friend-only-this").fadeOut(1200);
-    setTimeout(
-      function() 
-      {
-        $(".friend-not-this").fadeIn(1200);
-        $(".friend-this").fadeIn(1200);
-    }, 1200);
-});
-$(".groups-my-btn").click(function() {
-    $(".friend-this").fadeOut(1200);
-    $(".friend-not-this").fadeOut(1200);
-    $(".friend-only-this").fadeOut(1200);
-    setTimeout(
-      function() 
-      {
-        $(".my-group-item").fadeIn(1200);
-      }, 1200);
-});
-    
-$(".timeline-all-btn").click(function() {
-    $(".all-timeline").fadeOut(1500);
-});
-$(".timeline-my-friends-btn").click(function() {
-    $(".all-timeline").fadeIn(1500);
-}); 
-$(".boards-guest-btn").click(function() {
-    $(".host-board").fadeOut(1500);
-    $(".guest-board").fadeIn(1500);
-});
-$(".boards-host-btn").click(function() {
-    $(".guest-board").fadeOut(1500);
-    $(".host-board").fadeIn(1500);
-}); 
-$(".notifications-date-btn").click(function() {
-    $(".notification-settings").fadeOut(500);
-    $(".notification-by-type-container").fadeOut(500);
-    $(".notification-by-date-container").fadeIn(500);
-}); 
-$(".notifications-type-btn").click(function() {
-    $(".notification-settings").fadeOut(500);
-    $(".notification-by-date-container").fadeOut(500);
-    $(".notification-by-type-container").fadeIn(500);
-}); 
-$(".notifications-settings-btn").click(function() {
-    $(".notification-settings").fadeIn(500);
-    $(".notification-by-date-container").fadeOut(500);
-    $(".notification-by-type-container").fadeOut(500);
-}); 
-
-
-    
-$('.slide-close-link, .navitem').click(function() {
-    $("#friends div, #boards div, #me div").animate({
-		  opacity: "1"
-		}, 500, function() {
-	 });
-    $("#friends, #boards, #me").css("backgroundColor", "#cccccc");
-    $(".me-change-signature-btn").fadeIn(500);
-});
-     
-$(".time-line-img").attr("align","right");
-
-$('.add-friend-add-friend-btn').click(function () {
-            $(".add-friend-add-friend-btn").css({ backgroundColor: '#1cbbb4' }); 
-            $(".add-friend-add-group-btn").css({ backgroundColor: '#cccccc' });
-        }
-    );
-$('.add-friend-add-group-btn').click(function () {
-            $(".add-friend-add-group-btn").css({ backgroundColor: '#1cbbb4' }); 
-            $(".add-friend-add-friend-btn").css({ backgroundColor: '#cccccc' });
-        }
-    );
-
-$('.add-board-add-friend-btn').click(function () {
+/* Toggle Add Board's add frined or add group buttons*/    
+    $('.add-board-add-friend-btn').click(function() { 
+        $('.add-board-add-group-list').slideUp(500);
+        $('.add-board-add-friend-list').slideDown(500);
+    });
+    $('.add-board-add-group-btn').click(function() { 
+        $('.add-board-add-friend-list').slideUp(500);
+        $('.add-board-add-group-list').slideDown(500);
+    });
+    $('.add-board-add-friend-btn').click(function () {
             $(".add-board-add-friend-btn").css({ backgroundColor: '#1cbbb4' }); 
             $(".add-board-add-group-btn").css({ backgroundColor: '#cccccc' });
         }
-    );
-$('.add-board-add-group-btn').click(function () {
+    );  
+    $('.add-board-add-group-btn').click(function () {
             $(".add-board-add-group-btn").css({ backgroundColor: '#1cbbb4' }); 
             $(".add-board-add-friend-btn").css({ backgroundColor: '#cccccc' });
         }
     );
-    
-$('.board-sub-menu-private').click(function () {
-            $(".board-sub-menu-private").css({ backgroundColor: '#1cbbb4' }); 
-            $(".board-sub-menu-public").css({ backgroundColor: '#bcbcbc' });
-        }
-    ); 
-$('.board-sub-menu-public').click(function () {
-            $(".board-sub-menu-private").css({ backgroundColor: '#bcbcbc' }); 
-            $(".board-sub-menu-public").css({ backgroundColor: '#1cbbb4' });
-        }
-    ); 
-    
-    
-$(".plus-btn").click(function() {
-        $(this).find( ".plus-link-img" ).toggle();
+
+/* Create Board button functionality */
+    $(".create-new-board-btn").click(function() {
+        $(".modal-overlay, .new-board-created-modal-message" ).fadeIn(500);
+        $(".boards-host-btn, .close-add-board").click();
+        $('.add-board-name-board .add-friend-search-field').val("");
+        $(".add-board-add-group-btn, .add-board-add-friend-btn").css({ backgroundColor: '#cccccc' });
+        $('.add-board-add-friend-list, .add-board-add-group-list').slideUp(500);
     });
+
+    $(".plus-btn").click(function() {
+            $(this).find( ".plus-link-img" ).toggle();
+        });
+    
+/* Search for Friend in Add Friends Section */    
+    $('.add-friend-search-field').keyup(function () {
+    // console.log(this.value);
+    if(this.value.length > 2 && this.value.length < 4) {  
+      $(".add-friend-list").fadeIn(500);
+    }
+    if(this.value.length < 3) {
+      $(".add-friend-list").fadeOut(500);
+    }
+   });
     
 /* MODALS */
     $(".remove-friend").click(function() {
@@ -4001,24 +3740,27 @@ $(".plus-btn").click(function() {
         $(".modal-overlay, .locked-color-modal-message" ).fadeIn(500);
         $(".close-add-friend").click();
     });
-    
-    
-    /* Close Modal */ 
+     
+/* Close Modal */ 
     $(".modal-overlay, .stay-on-this-board").click(function() {
         $(".modal-overlay, .modal-message-box" ).fadeOut(500);
     });
     
-    /* Lock unlock boards toggle class */
+/* Lock unlock boards toggle class */
     $( ".li-board-lock img.unlocked" ).click(function() {
       $( this ).toggleClass( "locked" );
     });
-
     
-/* Prevent auto-zoom on text input fields */
-var $viewportMeta = $('meta[name="viewport"]');
-$('input, select, textarea').bind('focus blur', function(event) {
-$viewportMeta.attr('content', 'width=device-width,initial-scale=1,maximum-scale=' +        (event.type == 'blur' ? 10 : 1));
-}); 
+/* Active Search Results */
+    $('.search-field').keyup(function () {
+        // console.log(this.value);
+        if(this.value.length > 1) {  
+          $(".toggleSearch").click();
+        }
+        if(this.value.length < 2) {
+              $(".toggle").click();
+        }
+   });
 </script>
 
 <!-- Start slideout menus main dropdown. This Board, My Board, Host, Guest, etc -->
@@ -4060,17 +3802,6 @@ $viewportMeta.attr('content', 'width=device-width,initial-scale=1,maximum-scale=
 				});
 			});
 		</script>
-<!--GA code-->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-58264924-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
 
 </body>
 </html>

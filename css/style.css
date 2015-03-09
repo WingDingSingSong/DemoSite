@@ -20,6 +20,7 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   color: #bcbcbc;
   background-color: #ffffff;
+    overflow: hidden;
 }
 a {
   text-decoration: none;
@@ -77,7 +78,9 @@ Modal Info
     display: none;
 }
 
-/* START Check Box */
+/* -------------------------------- 
+           START Check Box
+-------------------------------- */
 input[type=checkbox] {
   display: none;
 }
@@ -114,8 +117,9 @@ input[type=checkbox]:checked + label:after {
   left:4px;
   font-family:Arial, Helvetica, sans-serif;
 }
-
-/* End Check Box */
+/* -------------------------------- 
+          END Check Box
+-------------------------------- */
 
 
 /* START Radio Button */
@@ -188,21 +192,18 @@ Board
 Slide Out Side Menus
 -------------------------------*/
   #friends, #add-friends, #friends-timeline, #friends-board, #time-line, #search, #boards, #add-board, #me, #me-change-signature, #me-notification{
-	  right:-100%;
-	  height:100%;
-	  width:320px;
-	  top:40px;
-	  position:fixed;
-	  background-color:#cccccc;
-      /*-webkit-box-shadow: -3px 0px 6px 0px rgba(255, 255, 255, 0.75);
-    -moz-box-shadow:    -3px 0px 6px 0px rgba(255, 255, 255, 0.75);
-    box-shadow:         -3px 0px 6px 0px rgba(255, 255, 255, 0.75);*/
+    top:40px;
+    background-color:#cccccc;
   }
+
 #me-change-signature{
     background-color: #ffffff;
+    border-left: solid 1px #cccccc;
 }
 
-
+#me-notification{
+    border-left: solid 1px #cccccc;
+}
 
 .title-col{
     padding:4px;}
@@ -239,7 +240,7 @@ Slide Out Side Menus
 	  right:1px;
       border-left: solid 1px #e1e1e1 ;
   }
-  a.slide-close-link:link, a.slide-close-link:active, a.slide-close-link:visited, a.slide-close-link:hover{
+  .slide-close-link{
 	  margin:0px;
 	  width:40px;
 	  height:40px;
@@ -586,15 +587,14 @@ Slide Out Side Menus
 .modal-message-box p{
     font-size:24px;
 }
-.booya{
+  .booya{
       font-family: 'Architects Daughter', "Comic Sans MS", cursive;
       font-size: 64px;
       color: #1cbbb4;
       margin: 10% 10% 25px;
 }
-.bodal-bt-container{
-       margin: 30px;
-       display: inline-block;
+   .bodal-bt-container{
+       margin: 50px auto;
     }
 a.modal-btn:link, a.modal-btn:active, a.modal-btn:visited, a.modal-btn:hover{
     margin: 6px auto;
@@ -610,10 +610,7 @@ a.modal-btn:link, a.modal-btn:active, a.modal-btn:visited, a.modal-btn:hover{
     height: 36px;   
     cursor: pointer;
 }
-a.btn-grey:link, a.btn-grey:active, a.btn-grey:visited, a.btn-grey:hover{
-    background-color: #cccccc;
-}
-.create-board-btn-container{
+  .create-board-btn-container{
     position:absolute;
     bottom: 88px;
     height: 48px;
@@ -623,7 +620,6 @@ a.btn-grey:link, a.btn-grey:active, a.btn-grey:visited, a.btn-grey:hover{
     border-top: 1px solid #ffffff;
     z-index: 999;
 }
-
 /* ------------- Me Section ---------- */
 #me .add-btn img {
 margin-top:6px;
@@ -1177,7 +1173,7 @@ a.friend-invite-request-btn:hover {
 	left:8px;
 	color:#bcbcbc;
 }
-.friends-menu-check-right span{
+.friends-menu-time-line-check-contianer span{
     display: inline-block;
     max-width: 110px;
     width: auto;
@@ -1204,8 +1200,7 @@ a.friend-invite-request-btn:hover {
     position:absolute;
     top:2px;
     left:25px;
-}
-        
+}      
 .friend-menu-nav-container{
     position: absolute;
     top: 50px;
@@ -1872,7 +1867,9 @@ END Selector Dropdown Styling
       width: 72%;
       text-align: center;
   }
- 
+  .booya{
+      font-size: 42px;
+    }  
 #cd-nav ul.is-visible {
       width:100%;
       max-width:100%;
@@ -1972,60 +1969,7 @@ END Selector Dropdown Styling
     .selector-dd .dropdown li a {
         padding: 20px 10px;
     }
-
-.modal-message-box{
-      width: 90%;
-      height: 90%;
-      position: fixed;
-      top: 5%;
-      left:5%;
-      background: #ffffff;
-      text-align: center;
-      display: none;
-    }
-.modal-message-box p{
-    font-size:22px;
-    margin-bottom: 5%;
-}
-.booya{
-      font-family: 'Architects Daughter', "Comic Sans MS", cursive;
-      font-size: 42px;
-      color: #1cbbb4;
-      margin: 10% 10%;
-}
-.bodal-bt-container{
-       margin: 8%;
-       display: inline-block;
-    }
-a.modal-btn:link, a.modal-btn:active, a.modal-btn:visited, a.modal-btn:hover{
-    margin: 6px auto;
-    text-align: center;
-    color: #ffffff;
-    width: 180px;
-    background-color: #1cbbb4;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    font-size: 22px;
-    padding: 4px 10px;
-    height: 32px;   
-    cursor: pointer;
-}
-a.btn-grey:link, a.btn-grey:active, a.btn-grey:visited, a.btn-grey:hover{
-    background-color: #cccccc;
-}
     
-    
-.create-board-btn-container{
-    position:absolute;
-    bottom: 88px;
-    height: 48px;
-    width: 100%;
-    background-color: #cccccc;
-    text-align: center;
-    border-top: 1px solid #ffffff;
-    z-index: 999;
-}
   
 .signature-radio-column ul{
     margin-bottom: 186px;
@@ -2111,58 +2055,6 @@ a.btn-grey:link, a.btn-grey:active, a.btn-grey:visited, a.btn-grey:hover{
         padding: 20px 10px;
     }
 
-.modal-message-box{
-      width: 80%;
-      height: 80%;
-      position: fixed;
-      top: 10%;
-      left:10%;
-      background: #ffffff;
-      text-align: center;
-      display: none;
-  }
-.modal-message-box p{
-    font-size:24px;
-    margin-bottom: 5%;
-}
-.booya{
-      font-family: 'Architects Daughter', "Comic Sans MS", cursive;
-      font-size: 64px;
-      color: #1cbbb4;
-      margin: 10% 10% 5%;
-}
-.bodal-bt-container{
-   margin: 5%;
-   display: inline-block;
-}
-a.modal-btn:link, a.modal-btn:active, a.modal-btn:visited, a.modal-btn:hover{
-    margin: 6px auto;
-    text-align: center;
-    color: #ffffff;
-    width: 180px;
-    background-color: #1cbbb4;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    font-size: 25px;
-    padding: 4px 10px;
-    height: 36px;   
-    cursor: pointer;
-}
-a.btn-grey:link, a.btn-grey:active, a.btn-grey:visited, a.btn-grey:hover{
-    background-color: #cccccc;
-}
-.create-board-btn-container{
-    position:absolute;
-    bottom: 88px;
-    height: 48px;
-    width: 100%;
-    background-color: #cccccc;
-    text-align: center;
-    border-top: 1px solid #ffffff;
-    z-index: 999;
-}
-    
 .create-board-btn-container, .request-friend-btn-container, .create-group-btn-container{
     position:absolute;
     bottom: 88px;
@@ -2172,6 +2064,9 @@ a.btn-grey:link, a.btn-grey:active, a.btn-grey:visited, a.btn-grey:hover{
     text-align: center;
     border-top: 1px solid #ffffff;
     z-index: 999;
+    }
+    .booya{
+      font-size: 64px;
     }
 
 .signature-radio-column ul{
@@ -2220,57 +2115,9 @@ a.btn-grey:link, a.btn-grey:active, a.btn-grey:visited, a.btn-grey:hover{
    #cd-nav ul li.search-field-nav{
         display: inline-block;
     }
-.modal-message-box{
-      width: 80%;
-      height: 80%;
-      position: fixed;
-      top: 10%;
-      left:10%;
-      background: #ffffff;
-      text-align: center;
-      display: none;
-  }
-.modal-message-box p{
-    font-size:24px;
-    margin-bottom: 20px;
-}
-.booya{
-      font-family: 'Architects Daughter', "Comic Sans MS", cursive;
+  .booya{
       font-size: 64px;
-      color: #1cbbb4;
-      margin: 10% 10% 25px;
-}
-.bodal-bt-container{
-       margin: 30px;
-       display: inline-block;
     }
-a.modal-btn:link, a.modal-btn:active, a.modal-btn:visited, a.modal-btn:hover{
-    margin: 6px auto;
-    text-align: center;
-    color: #ffffff;
-    width: 180px;
-    background-color: #1cbbb4;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    font-size: 25px;
-    padding: 4px 10px;
-    height: 36px;   
-    cursor: pointer;
-}
-a.btn-grey:link, a.btn-grey:active, a.btn-grey:visited, a.btn-grey:hover{
-    background-color: #cccccc;
-}
-.create-board-btn-container{
-    position:absolute;
-    bottom: 88px;
-    height: 48px;
-    width: 100%;
-    background-color: #cccccc;
-    text-align: center;
-    border-top: 1px solid #ffffff;
-    z-index: 999;
-}
  .create-board-btn-container, .request-friend-btn-container, .create-group-btn-container{
     position:absolute;
     bottom: 40px;
@@ -2552,3 +2399,83 @@ a.btn-grey:link, a.btn-grey:active, a.btn-grey:visited, a.btn-grey:hover{
   outline: none !important; 
 }
 
+/*---------------------------------
+-----------------------------------
+Side Slide Navigation Functionality
+-----------------------------------
+---------------------------------*/
+.ss-menu-container{
+	position: absolute;
+    background-color: #cccccc;
+	top: 0;
+	right: -320px;
+	width: 320px;
+	height: 100%;
+	transition: right 800ms;
+}
+.ss-people{
+	background-color:blue;
+}
+.ss-boards{
+	background-color:red;
+}
+.ss-timeline{
+	background-color:green;
+}
+.ss-search{
+	background-color:orange;
+}
+.ss-my-account{
+	background-color:purple;
+}
+.ss-friend-boards{
+	background-color:yellow;
+}
+.ss-friend-invite{
+	background-color:brown;
+}
+.ss-friend-create-group{
+	background-color:grey;
+}
+.ss-boards-create-board{
+	background-color:teal;
+}
+.ss-my-account-notification{
+	background-color:#666;
+}
+.ss-my-account-change-signature{
+	background-color:#960;
+}
+
+.toggleRadio {
+    position: relative;
+    visibility: hidden;
+}
+
+.toggle:checked ~ .allNav {right: -320px;}
+
+.togglePeople:checked ~ .ss-people {right: 0px;} 
+.toggleBoards:checked ~ .ss-boards {right: 0px;}
+.toggleTimeline:checked ~ .ss-timeline {right: 0px;} 
+.toggleSearch:checked ~ .ss-search {right: 0px;} 
+.toggleMyAccount:checked ~ .ss-my-account {right: 0px;} 
+
+.toggleFriendTimeline:checked ~ .ss-friend-timeline {right: 0px;}
+.toggleFriendTimeline:checked ~ .ss-people {right: 320px;} 
+
+.toggleFriendBoards:checked ~ .ss-friend-boards {right: 0px;}
+.toggleFriendBoards:checked ~ .ss-people {right: 320px;}
+.toggleFriendInvite:checked ~ .ss-friend-invite {right: 0px;}
+.toggleFriendInvite:checked ~ .ss-people {right: 320px;} 
+
+.toggleFriendCreateGroup:checked ~ .ss-friend-create-group {right: 0px;}
+.toggleFriendCreateGroup:checked ~ .ss-people {right: 320px;} 
+
+.toggleBoardsCreateBoard:checked ~ .ss-boards-create-board {right: 0px;}
+.toggleBoardsCreateBoard:checked ~ .ss-boards {right: 320px;} 
+
+.toggleMyAccountNotifications:checked ~ .ss-my-account-notification {right: 0px;}
+.toggleMyAccountNotifications:checked ~ .ss-my-account {right: 320px;}
+
+.toggleMyAccountChangeSignature:checked ~ .ss-my-account-change-signature {right: 0px;} 
+.toggleMyAccountChangeSignature:checked ~ .ss-my-account {right: 320px;}
