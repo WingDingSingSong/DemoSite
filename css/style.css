@@ -171,14 +171,15 @@ Board
     left: 0px;
     width: 100%;
     height: 100%;
-    z-index: 0;
     overflow: hidden;
 }
 .board{
     overflow: auto;
     height: 102%;
     width: 102%;
-    padding: 40px 2% 0 0;    
+    padding: 40px 2% 0 0; 
+    position: relative;
+    z-index: 0;
 }
 
 .example-content{
@@ -2408,43 +2409,10 @@ Side Slide Navigation Functionality
 	position: absolute;
     background-color: #cccccc;
 	top: 0;
+    width: 320px;
 	right: -320px;
-	width: 320px;
 	height: 100%;
 	transition: right 800ms;
-}
-.ss-people{
-	background-color:blue;
-}
-.ss-boards{
-	background-color:red;
-}
-.ss-timeline{
-	background-color:green;
-}
-.ss-search{
-	background-color:orange;
-}
-.ss-my-account{
-	background-color:purple;
-}
-.ss-friend-boards{
-	background-color:yellow;
-}
-.ss-friend-invite{
-	background-color:brown;
-}
-.ss-friend-create-group{
-	background-color:grey;
-}
-.ss-boards-create-board{
-	background-color:teal;
-}
-.ss-my-account-notification{
-	background-color:#666;
-}
-.ss-my-account-change-signature{
-	background-color:#960;
 }
 
 .toggleRadio {
