@@ -104,7 +104,7 @@
 <input type="radio" id="toggleFriendBoards" class="toggleFriendBoards toggleRadio" name="main-nav" />
 
 <input type="radio" id="toggleFriendInvite" class="toggleFriendInvite toggleRadio" name="main-nav" />
-<input type="radio" id="toggleFriendCreateGroup" class="toggleFriendCreateGroup toggleRadio" name="main-nav" />
+<input type="radio" id="toggleCreateGroup" class="toggleCreateGroup toggleRadio" name="main-nav" />
 
 <input type="radio" id="toggleBoardsCreateBoard" class="toggleBoardsCreateBoard toggleRadio" name="main-nav" />
 
@@ -138,7 +138,8 @@
                                 <li><a href="#" class="friend-this-btn">This Board</a></li>
                                 <li><a href="#" class="friend-not-this-btn">My Friends</a></li>
                                 <li><a href="#" class="groups-my-btn">My Groups</a></li>
-                                <li><a href="#" class="open-add-friend">New Friends &amp; Groups</a></li></label>
+                                <li><a href="#" class="open-add-friend">Invite New Friends</a></li>
+                                <li><a href="#" class="open-create-group">Create New Group</a></li>
                             </ul>
                         </div>
                      </div>
@@ -160,6 +161,11 @@
                     $( ".open-add-friend" ).click(function() {
                       $(".toggleFriendInvite").click();/* Clicks radio button to open slide out */
                         $(".open-add-friend").click();/* Closes dropdown menu */
+                    });
+                    /* Makes New Friends menu slide out */
+                    $( ".open-create-group" ).click(function() {
+                      $(".toggleCreateGroup").click();/* Clicks radio button to open slide out */
+                        $(".open-create-group").click();/* Closes dropdown menu */
                     });
                 </script>
                 
@@ -976,26 +982,18 @@
                 </div>
                 
                 <div class="sub-slide-menu-title">
-                    New Friends &amp; Groups
+                    Invite New Friends
                 </div>
            </div><!--slide section header-->
-            
-                <div class="request-friend-btn-container">
-                    <div class="request-friend-btn">Request Friends</div>
-                </div>
-                <div class="create-group-btn-container">
-                    <div class="create-group-btn">Create Group</div>
-                </div>
-                
-            
-            <div class="slide-section-friend-container ">
-                
-            	<div class="slide-section-content-scroll-box">
-                <div class="add-friend-add-friend-btn">Find New Friends</div>
-                <div class="add-friend-add-group-btn">Create a Group</div>
-                    
+        
+            <div class="create-group-btn-container">
+                <div class="create-group-btn">Create Group</div>
+            </div>
+        
+           <div class="slide-section-friend-container ">
+             <div class="slide-section-content-scroll-box">
                 <div class="add-friend-search">
-                    <div class="add-friend-search-box"/>
+                    <div class="add-friend-search-box">
                         <input placeholder="Search for a friend" class="add-friend-search-field"/>
                     </div>
                 </div>
@@ -1104,11 +1102,42 @@
                                 </a> 
                             </div>
                         </li>   
-                    </ul>    
+                    </ul>  
+                    <div class="side-slide-item-list-bottom-pad"></div>
+            	</div>
+            </div>
+    </section>
+<!-- END  -->
+
+<!-- START SLIDEOUT MENU : Create Groups --> 
+    <section id="add-group" class="ss-friend-create-group ss-menu-container">
+          <div class="slide-section-header">
+            	<div class="close-add-btn">
+                    <label for="togglePeople">
+                        <span class="add-link close-add-friend" href="#">
+                            <img src="img/slide-in-arrow.png"/>
+                        </span>   
+                    </label>
+                </div>
                 
-                
+                <div class="sub-slide-menu-title">
+                    Create New Groups
+                </div>
+           </div><!--slide section header-->
+           
+           <div class="request-friend-btn-container">
+                <div class="request-friend-btn">Request Friends</div>
+           </div>
+           
+           <div class="slide-section-friend-container">
+              <div class="slide-section-content-scroll-box">
+                <div class="add-friend-search">
+                    <div class="add-friend-search-box">
+                        <input placeholder="Search for a friend" class="add-friend-search-field"/>
+                    </div>
+                </div>
                 <div class="create-group-title">
-                    <div class="create-group-title-box"/>
+                    <div class="create-group-title-box">
                         <input placeholder="Name your group" class="create-group-title-field"/>
                     </div>
                 </div>
@@ -1256,21 +1285,13 @@
                                 </a> 
                             </div>
                         </li>
-                        
-                    </ul>
-                
+                     </ul>
                     <div class="side-slide-item-list-bottom-pad"></div>
             	</div>
             </div>
     </section>
 <!-- END  -->
 
-<!-- START SLIDEOUT MENU : Create Groups --> 
-    <section id="add-group" class="ss-friend-create-group ss-menu-container">
-        <br /><br /><br />Create New Group<br><br />
-        <label for="togglePeople">Close &#8677;</label>
-    </section>
-<!-- END  -->
 
 <!-- START SLIDEOUT MENU : Friend's Timeline-->
     <section id="friends-timeline" class="ss-friend-timeline ss-menu-container">
@@ -1527,8 +1548,6 @@
                     </span>   
                </label>     
             </div>
-                <!--<div class="selector-text-this-board">This Board</div>
-                <div class="selector-text-my-boards">My Boards</div>-->
             <div class="slideout-stacked-title">
                 <div class="slide-sec-title-text">
                     Timeline<span class="title-col">:</span>
@@ -2476,9 +2495,11 @@
     <section id="search" class="ss-search allNav ss-menu-container">
         <div class="slide-section-header">
             	<div class="slide-in-arrow">
-                    <a class="slide-close-link" href="#">
-                        <img src="img/slide-in-arrow.png"/>
-                    </a>   
+                    <label for="toggle">
+                        <span class="slide-close-link" href="#">
+                            <img src="img/slide-in-arrow.png"/>
+                        </span>   
+                    </label>
                 </div>
                 
                 
@@ -3700,6 +3721,18 @@
         }
     );
 
+/* Toggle Public and Private on Boards sub-menu */    
+    $('.board-sub-menu-private').click(function () {
+            $(".board-sub-menu-private").css({ backgroundColor: '#1cbbb4' }); 
+            $(".board-sub-menu-public").css({ backgroundColor: '#bcbcbc' });
+        }
+    ); 
+    $('.board-sub-menu-public').click(function () {
+                $(".board-sub-menu-private").css({ backgroundColor: '#bcbcbc' }); 
+                $(".board-sub-menu-public").css({ backgroundColor: '#1cbbb4' });
+            }
+        ); 
+    
 /* Create Board button functionality */
     $(".create-new-board-btn").click(function() {
         $(".modal-overlay, .new-board-created-modal-message" ).fadeIn(500);
@@ -3709,6 +3742,7 @@
         $('.add-board-add-friend-list, .add-board-add-group-list').slideUp(500);
     });
 
+/* Toggle PLUS icon with CHECK MARK icon */
     $(".plus-btn").click(function() {
             $(this).find( ".plus-link-img" ).toggle();
         });

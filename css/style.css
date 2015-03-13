@@ -192,7 +192,7 @@ Board
 /*-------------------------------
 Slide Out Side Menus
 -------------------------------*/
-  #friends, #add-friends, #friends-timeline, #friends-board, #time-line, #search, #boards, #add-board, #me, #me-change-signature, #me-notification{
+#friends, #add-friends, #add-group, #friends-timeline, #friends-board, #time-line, #search, #boards, #add-board, #me, #me-change-signature, #me-notification{
     top:40px;
     background-color:#cccccc;
   }
@@ -384,7 +384,6 @@ Slide Out Side Menus
 	  left:15px;
       z-index: 50;
       clear: both;
-      display: none;
 }
 .add-friend-search-field, .create-group-title-field{
     width: 280px;
@@ -414,13 +413,11 @@ Slide Out Side Menus
     text-align: center;
     font-size: 13px;
 }
-#add-friends .selector-text-this-board{
-    left: 80px;
-}
 #add-friends .slide-section-content-scroll-box{
     top: 0px;
 }
-#add-friends ul.side-slide-item-list li{
+#add-friends ul.side-slide-item-list li,
+#add-group ul.side-slide-item-list li{
 	  min-height:40px;
   }
 .add-friend-list .friend-img-box,
@@ -449,7 +446,6 @@ Slide Out Side Menus
     background-color: #1cbbb4;
 }
 .add-friend-list, .name-group-list{
-    display: none;
     margin-top: 52px !important;
 }
 .plus-btn img{
@@ -536,9 +532,6 @@ Slide Out Side Menus
 }
 .add-board-pub-prive-contianer input[type="radio"] + label span {
      margin-top:-4px;
-}
-.request-friend-btn-container, .create-group-btn-container{
-    display: none;
 }
 .create-board-btn-container, .request-friend-btn-container, .create-group-btn-container{
     position:absolute;
@@ -2430,21 +2423,51 @@ Side Slide Navigation Functionality
 .toggleMyAccount:checked ~ .ss-my-account {right: 0px;} 
 
 .toggleFriendTimeline:checked ~ .ss-friend-timeline {right: 0px;}
-.toggleFriendTimeline:checked ~ .ss-people {right: 320px;} 
+.toggleFriendTimeline:checked ~ .ss-people {right: 320px;}
+.toggleFriendTimeline:checked ~ #friends  {background-color: #fff;} 
+.toggleFriendTimeline:checked ~ #friends .slide-section-header {opacity: 0.3;} 
+.toggleFriendTimeline:checked ~ #friends .slide-section-friend-container {opacity: 0.3;}  
 
 .toggleFriendBoards:checked ~ .ss-friend-boards {right: 0px;}
 .toggleFriendBoards:checked ~ .ss-people {right: 320px;}
+.toggleFriendBoards:checked ~ #friends  {background-color: #fff;} 
+.toggleFriendBoards:checked ~ #friends .slide-section-header {opacity: 0.3;} 
+.toggleFriendBoards:checked ~ #friends .slide-section-friend-container {opacity: 0.3;} 
+
 .toggleFriendInvite:checked ~ .ss-friend-invite {right: 0px;}
 .toggleFriendInvite:checked ~ .ss-people {right: 320px;} 
+.toggleFriendInvite:checked ~ #friends  {background-color: #fff;} 
+.toggleFriendInvite:checked ~ #friends .slide-section-header {opacity: 0.3;} 
+.toggleFriendInvite:checked ~ #friends .slide-section-friend-container {opacity: 0.3;} 
 
-.toggleFriendCreateGroup:checked ~ .ss-friend-create-group {right: 0px;}
-.toggleFriendCreateGroup:checked ~ .ss-people {right: 320px;} 
+.toggleCreateGroup:checked ~ .ss-friend-create-group {right: 0px;}
+.toggleCreateGroup:checked ~ .ss-people {right: 320px;} 
+.toggleCreateGroup:checked  ~ #friends  {background-color: #fff;} 
+.toggleCreateGroup:checked  ~ #friends .slide-section-header {opacity: 0.3;} 
+.toggleCreateGroup:checked  ~ #friends .slide-section-friend-container {opacity: 0.3;} 
 
 .toggleBoardsCreateBoard:checked ~ .ss-boards-create-board {right: 0px;}
 .toggleBoardsCreateBoard:checked ~ .ss-boards {right: 320px;} 
+.toggleBoardsCreateBoard:checked ~ #boards  {background-color: #fff;} 
+.toggleBoardsCreateBoard:checked ~ #boards .slide-section-header {opacity: 0.3;} 
+.toggleBoardsCreateBoard:checked ~ #boards .slide-section-friend-container {opacity: 0.3;} 
 
 .toggleMyAccountNotifications:checked ~ .ss-my-account-notification {right: 0px;}
 .toggleMyAccountNotifications:checked ~ .ss-my-account {right: 320px;}
+.toggleMyAccountNotifications:checked ~ #me  {background-color: #fff;} 
+.toggleMyAccountNotifications:checked ~ #me .slide-section-header {opacity: 0.3;} 
+.toggleMyAccountNotifications:checked ~ #me .slide-section-friend-container {opacity: 0.3;}
 
 .toggleMyAccountChangeSignature:checked ~ .ss-my-account-change-signature {right: 0px;} 
 .toggleMyAccountChangeSignature:checked ~ .ss-my-account {right: 320px;}
+.toggleMyAccountChangeSignature:checked ~ #me  {background-color: #fff;} 
+.toggleMyAccountChangeSignature:checked ~ #me .slide-section-header {opacity: 0.3;} 
+.toggleMyAccountChangeSignature:checked ~ #me .slide-section-friend-container {opacity: 0.3;}
+
+.slide-section-friend-container, .slide-section-header{
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
