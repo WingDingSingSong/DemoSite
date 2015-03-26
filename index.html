@@ -9,7 +9,7 @@
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="js/modernizr.js"></script><!-- Modernizr -->
   	<link href="http://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
-    <title>tacBOARD</title>
+    <title>TacBoard</title>
 
 </head>
 
@@ -25,12 +25,12 @@
     <div class="this-board-title">My Homeboard</div>
 	</header>
 	<div id="cd-nav">
-		<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
 		<nav id="cd-main-nav">
-			<ul>
+            <ul>
 				<li class="nvbtn navitem tac-btn">
                     <a href="#" class="tooltips">
-                        <img class="peeps-nav-img" src="img/tac-icon.png"/>
+                        <img class="peeps-nav-img tac-icon-mobile" src="img/tac-icon-mobile.png"/>
+                        <img class="peeps-nav-img tac-icon-computer" src="img/tac-icon.png"/>
                         <span>Tac</span>
                     </a>
                 </li>
@@ -58,7 +58,7 @@
                         <span>Boards</span>
                     </a>
                 </li>
-                <li class="nvbtn navitem search-btn">
+                <!--<li class="nvbtn navitem search-btn">
                     <a href="#" class="tooltips">
 	                        <img src="img/search-icon.png"/>
                     </a>
@@ -67,7 +67,7 @@
                     <div class="search-box"/>
                         <input placeholder="search" class="search-field"/>
                     </div>
-                </li>
+                </li>-->
                 <li class="nvbtn navitem me-btn">
                     <a href="#" class="tooltips">
                     	<label for="toggleMyAccount">
@@ -2760,6 +2760,17 @@
                             </div>
                         </div>
                      </div>
+                    <div class="check-scroll-bar-container">
+                        <div class="h-scroll-check-left">
+                            <input id="hScroll" type="checkbox" >
+                            <label for="hScroll"></label>
+                        </div>
+                        <div class="h-scroll-check-right">
+                            <label class="checkbox" for="hScroll">
+                                &emsp;Show horizontal scroll bar
+                            </label>
+                        </div>
+                    </div>
                     <div class="me-stat-container">
                         <p>Lifetime Stats</p>
                         <ul>
@@ -3758,6 +3769,16 @@
     }
    });
     
+	    
+/* Search for Friend in Add Friends Section */
+    $("#hScroll").click(function() {
+        if($('#hScroll').prop('checked')) {
+            $(".board").css({ height: '100%' });
+        } else {
+            $(".board").css({ height: '104%' });
+        }
+   });
+	
 /* MODALS */
     $(".remove-friend").click(function() {
         $(".modal-overlay, .delete-modal-message" ).fadeIn(500);
