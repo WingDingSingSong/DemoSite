@@ -31,6 +31,103 @@ input:focus {
     outline:none;
 }
 
+/*---------------------------------*/
+/*------Start Sign In Styling------*/
+/*---------------------------------*/
+.sign-in-container{
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+.sign-in-container input{
+    width: 100%;
+    border: 1px solid #cccccc;
+    padding: 10px 6px;
+    margin: 2px 0;
+    font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    color: #b7b7b7;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+.sign-in-container .login-btn{
+    width: 100%;
+    padding: 10px 6px;
+    margin: 2px 0;
+    font-size: 22px;
+	font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: #ffffff;
+    background-color: #1cbbb4;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+.sign-in-container .facebook-login-btn{
+    width: 100%;
+    padding: 11px 6px;
+    margin: 2px 0;
+    font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: #ffffff;
+    background-color: #3a5898;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+.sign-in-container .facebook-login-btn img{
+    margin-bottom: -3px;
+}
+.sign-in-container .login-btn:hover, .sign-in-container .facebook-login-btn:hover{
+    cursor: pointer;
+}
+.or-fb-divider{
+    height: 35px;
+    font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
+    color: #b7b7b7;
+    position: relative;
+}
+.or-fb-divider span{
+    background-color: #ffffff;
+    position: 
+}
+.or-fb-divider .strike-line{
+    height: 1px;
+    width: 96%;
+    background-color: #b7b7b7;
+    position: absolute;
+    top: 50%;
+    margin: 0 2%;
+}
+.or-fb-divider .fb-divider-text{
+    margin: 0 0 0 -20px;
+    width: 40px;
+    text-align: center;
+    background-color: #ffffff;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+}
+a.log-in-link:link, a.log-in-link:active, a.log-in-link:visited {
+    color: #ccc;
+    font-size: 16px;
+    text-align: center;
+    text-align: center;
+}
+a.log-in-link:hover{
+    color: #1cbbb4;
+}
+
 
 /* -------------------------------- 
 Modules - reusable parts of our design
@@ -1685,6 +1782,17 @@ END Selector Dropdown Styling
 
 @media only screen and (min-width: 320px) {
 
+/* Start Sign in page */
+.tac-logo{
+	margin:10% auto;
+    text-align: center;
+}
+.tac-logo img{
+    width: 200px;
+    height: 82px;
+}
+/* End Sign in page */
+
 header #cd-logo {
 padding-top:4px;
 position: absolute;
@@ -1801,6 +1909,18 @@ ul.side-slide-item-list{
 ---------------------------------*/
 
 @media only screen and (min-width: 768px) {
+	
+/* Start Sign in page */
+.tac-logo{
+	margin:8% auto;
+    text-align: center;
+}
+.tac-logo img{
+    width: 250px;
+    height: 103px;
+}
+/* End Sign in page */
+	
   header {
     margin-bottom: 4em;
   } 
@@ -1897,6 +2017,18 @@ ul.side-slide-item-list{
 ------------Computer---------------
 ---------------------------------*/
 @media only screen and (min-width: 1000px) {
+
+/* Start Sign in page */
+.tac-logo{
+	margin:5% auto;
+    text-align: center;
+}
+.tac-logo img{
+    width: 300px;
+    height: 123px;
+}
+/* End Sign in page */
+  
   header {
     height: 40px;
   } 
