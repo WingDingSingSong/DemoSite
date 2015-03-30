@@ -2767,7 +2767,7 @@
                         </div>
                         <div class="h-scroll-check-right">
                             <label class="checkbox" for="hScroll">
-                                &emsp;Show horizontal scroll bar
+                                &emsp;Hide scroll bar
                             </label>
                         </div>
                     </div>
@@ -3773,9 +3773,11 @@
 /* Search for Friend in Add Friends Section */
     $("#hScroll").click(function() {
         if($('#hScroll').prop('checked')) {
-            $(".board").css({ height: '100%' });
-        } else {
             $(".board").css({ height: '104%' });
+            $(".board").css({ width: '104%' });
+        } else {
+            $(".board").css({ height: '100%' });
+            $(".board").css({ width: '100%' });
         }
    });
 	
