@@ -1,0 +1,680 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="js/modernizr.js"></script><!-- Modernizr -->
+<style>
+body{
+    padding: 0px;
+    margin: 0px;
+    overflow-y: scroll;
+    width: 100%;
+    overflow-x: hidden;
+  font-family: "Source Sans Pro", sans-serif;
+}
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#cd-nav ul{
+    bottom: -16px;
+}
+ul.mobile-item-list{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+li.mobile-item-container{
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 20px 0px;
+    border-bottom: solid 1px #ccc;
+    background-color: #fff;
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+.mobile-button-column{
+    width: 80px;
+    text-align: center;
+    background-color: #fff;
+    padding: 12px 0 0px 12px;
+    height: 100%;
+    display: inline-block;
+}
+.mobile-button-container{
+    position: relative;
+    bottom: 0%;
+}
+.mobile-tac-column{
+    height: 100%;
+    width: -moz-calc(100% - 85px);
+    width: -webkit-calc(100% - 85px);
+    width: calc(100% - 85px);
+    height: -o-calc(100% - 85px);
+    padding: 0 10px 0 30px;
+    text-align: center;
+    background-color: #fff;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: inline-block;
+}
+.mobile-tac-column img{
+    max-width: 100%;
+    width: auto;
+    position: relative;
+    /*top: 50%;
+    transform: translateY(-50%);*/
+}
+.mobile-tac-date, .mobile-tac-time{
+  font-family: "Source Sans Pro", sans-serif;
+    color: #bcbcbc;
+    font-size: 16px;
+}
+.mobile-canvas-view-btn,
+.mobile-conversation-btn,
+.mobile-tac-bac-btn{
+    height: 52px;
+    width: 52px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin: 12px auto 7px;  
+    overflow: hidden;
+}
+.mobile-canvas-view-btn{
+    background-color:#ffb800;
+    background-image: url(img/mobile-canvas-view-btn.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.mobile-conversation-btn{
+    background-color:#178cd6;
+    background-image: url(img/mobile-conversation-btn.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.mobile-tac-bac-btn{
+    background-color:#1cbbb4;
+    background-image: url(img/mobile-tac-bac-btn.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.mobile-body{
+    padding: 40px 0;
+    display:block;
+    width: 100%;
+    overflow-x: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+.convo-1{
+    top: 0px;
+    left: 0px;
+}
+.convo-2, .convo-3{
+    top: 0px;
+    left: 100%;
+    display: none;
+}
+.convo-nav{
+    position: fixed;
+    top: 0px;
+    left: 100%;
+    height: 40px;
+    width: 100%;
+    background-color: #b7b7b7;
+    z-index: 999;
+    -webkit-backface-visibility:hidden;
+}
+.convo-nav-trail{
+    height: 24px;
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    width: 80%;
+    overflow: hidden;
+}
+.convo-circle{
+    height: 24px;
+    width: 24px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%; 
+    background-color: #fff;
+    position: absolute;
+}
+.convo-circle-active{
+    height: 12px;
+    width: 12px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%; 
+    background-color: #1cbbb4;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+}
+.circle-convo-1{
+    top: 0px;
+    left: 0px;
+}
+.circle-convo-2{
+    top: 0px;
+    left: 64px;
+    display: none;
+}
+.circle-convo-3{
+    top: 0px;
+    left: 126px;
+    display: none;
+}
+.mobile-trail-back{
+    position: absolute;
+    top: 6px;
+    right: 8px;
+}    
+.mtb2{display: none;}
+.convo-circle-link-bar{
+    height: 8px;
+    width: 0px;
+    position: absolute;
+    background-color: #fff;
+    top: 8px;
+}
+.convo-circle-link-bar-1{
+    left: 24px;
+}
+.convo-circle-link-bar-2{
+    left: 86px;
+}
+.temp-header{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    background-color: #efefef;
+    z-index: 999;
+    width: 100%;
+    height: 40px;
+    -webkit-backface-visibility:hidden;
+}
+.temp-header .this-board-title{
+    position: absolute;
+    top: -2px;
+    right: 10px;
+    }
+.temp-header #cd-logo{margin: 2px 0 0 6px;}
+.board-canvas-view{
+    position: absolute;
+    top: 8px;
+    right: 4px;
+}
+.temp-nav{
+    width: 100%;
+    height: 50px;
+    position:fixed;
+    bottom: 0px;
+    left: 0px;
+    background-color: #ebebeb;
+    z-index: 999;
+    -webkit-backface-visibility:hidden;
+}
+.nav-item{
+    width: 15.5%;
+    text-align: center;
+    display: inline-block;
+    padding-top: 8px;
+}
+.nav-item img{
+    background-color: #999;
+}
+.tac-arc{
+    position: fixed;
+    right: 0px;
+    bottom: 50px;
+    width: 65px;
+    height: 65px;
+    background-color: #1cbbb4;
+    z-index: 1000;
+    -webkit-border-top-left-radius: 100%;
+    -moz-border-radius-topleft: 100%;
+    border-top-left-radius: 100%;
+    -webkit-backface-visibility:hidden;
+}
+.tac-arc img{
+    position: absolute;
+    bottom: 10px;
+    right: 6px;
+}
+.tac-bac-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    z-index: 9999;
+    display: none;
+}
+.tac-bac-header{
+    position: absolute;
+    height: 34px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: #1cbbb4;
+    text-align: center;
+    color: #fff;
+    padding: 4px;
+    font-size:22px;
+}
+.tac-bac-close{
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    height: 22px;
+    width: 22px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 100;
+    font-family: Arial, sans-serif;
+}
+.tac-bac-container .temp-nav .nav-item{
+    padding-top: 0px;
+}
+</style>
+    
+</head>
+
+<body>
+
+<div class="temp-header">
+    <div id="cd-logo">
+        <a href="#">
+            <img src="img/logo.png" alt="Logo">
+        </a>
+    </div>
+    <div class="this-board-title">My Homeboard</div>
+    <div class="board-canvas-view">
+        <img src="img/mobile-header-canvas-btn.png"/>
+    </div>
+</div>
+
+<div class="tac-arc">
+    <img src="img/tac-arc-btn.png"/>
+</div>    
+    
+<div class="temp-nav">
+    <div class="nav-item"><img src="img/home-icon.png"/></div>
+    <div class="nav-item"><img src="img/peeps-icon.png"/></div>
+    <div class="nav-item"><img src="img/boards-icon.png"/></div>
+    <div class="nav-item"><img src="img/time-line-icon.png"/></div>
+    <div class="nav-item"><img src="img/search-icon.png"/></div>
+    <div class="nav-item"><img src="img/settings-icon.png"/></div>
+</div>
+    
+<div class="mobile-body convo-1">
+    <ul class="mobile-item-list">
+     <li class="mobile-item-container">
+        <div class="mobile-button-column">
+            <div class="mobile-button-container">
+                <div class="mobile-tac-date">4/17/15</div>
+                <div class="mobile-tac-time">3:18 AM</div>
+                <div class="mobile-canvas-view-btn"></div>
+                <div class="mobile-conversation-btn"></div>
+                <div class="mobile-tac-bac-btn"></div>
+            </div>
+        </div>
+        <div class="mobile-tac-column">
+            <img src="img/mobile-tac-1.jpg"/>
+        </div>
+    </li>
+     <li class="mobile-item-container">
+        <div class="mobile-button-column">
+            <div class="mobile-button-container">
+                <div class="mobile-tac-date">4/17/15</div>
+                <div class="mobile-tac-time">3:18 AM</div>
+                <div class="mobile-canvas-view-btn"></div>
+                <div class="mobile-conversation-btn"></div>
+                <div class="mobile-tac-bac-btn"></div>
+            </div>
+        </div>
+        <div class="mobile-tac-column">
+            <img src="img/mobile-tac-2.jpg"/>
+        </div>
+    </li>
+
+     <li class="mobile-item-container">
+        <div class="mobile-button-column">
+            <div class="mobile-button-container">
+                <div class="mobile-tac-date">4/17/15</div>
+                <div class="mobile-tac-time">3:18 AM</div>
+                <div class="mobile-canvas-view-btn"></div>
+                <div class="mobile-conversation-btn"></div>
+                <div class="mobile-tac-bac-btn"></div>
+            </div>
+        </div>
+        <div class="mobile-tac-column">
+            <img src="img/mobile-tac-3.jpg"/>
+        </div>
+    </li>
+
+     <li class="mobile-item-container">
+        <div class="mobile-button-column">
+            <div class="mobile-button-container">
+                <div class="mobile-tac-date">4/17/15</div>
+                <div class="mobile-tac-time">3:18 AM</div>
+                <div class="mobile-canvas-view-btn"></div>
+                <div class="mobile-conversation-btn"></div>
+                <div class="mobile-tac-bac-btn"></div>
+            </div>
+        </div>
+        <div class="mobile-tac-column">
+            <img src="img/mobile-tac-4.jpg"/>
+        </div>
+    </li>
+
+     <li class="mobile-item-container">
+        <div class="mobile-button-column">
+            <div class="mobile-button-container">
+                <div class="mobile-tac-date">4/17/15</div>
+                <div class="mobile-tac-time">3:18 AM</div>
+                <div class="mobile-canvas-view-btn"></div>
+                <div class="mobile-tac-bac-btn"></div>
+            </div>
+        </div>
+        <div class="mobile-tac-column">
+            <img src="img/mobile-tac-5.jpg"/>
+        </div>
+    </li>
+
+     <li class="mobile-item-container">
+        <div class="mobile-button-column">
+            <div class="mobile-button-container">
+                <div class="mobile-tac-date">4/17/15</div>
+                <div class="mobile-tac-time">3:18 AM</div>
+                <div class="mobile-canvas-view-btn"></div>
+                <div class="mobile-tac-bac-btn"></div>
+            </div>
+        </div>
+        <div class="mobile-tac-column">
+            <img src="img/mobile-tac-6.jpg"/>
+        </div>
+    </li>
+
+     <li class="mobile-item-container">
+        <div class="mobile-button-column">
+            <div class="mobile-button-container">
+                <div class="mobile-tac-date">4/17/15</div>
+                <div class="mobile-tac-time">3:18 AM</div>
+                <div class="mobile-canvas-view-btn"></div>
+                <div class="mobile-conversation-btn"></div>
+                <div class="mobile-tac-bac-btn"></div>
+            </div>
+        </div>
+        <div class="mobile-tac-column">
+            <img src="img/mobile-tac-7.jpg"/>
+        </div>
+    </li>
+
+     <li class="mobile-item-container">
+        <div class="mobile-button-column">
+            <div class="mobile-button-container">
+                <div class="mobile-tac-date">4/17/15</div>
+                <div class="mobile-tac-time">3:18 AM</div>
+                <div class="mobile-canvas-view-btn"></div>
+                <div class="mobile-conversation-btn"></div>
+                <div class="mobile-tac-bac-btn"></div>
+            </div>
+        </div>
+        <div class="mobile-tac-column">
+            <img src="img/mobile-tac-8.jpg"/>
+        </div>
+    </li>
+    </ul>  
+</div>
+
+<div class="convo-nav">
+    <div class="convo-nav-trail">
+        <div class="convo-circle circle-convo-1"></div>
+        <div class="convo-circle-link-bar convo-circle-link-bar-1"></div>
+        <div class="convo-circle circle-convo-2"><div class="convo-circle-active"></div></div>
+        <div class="convo-circle-link-bar convo-circle-link-bar-2"></div>
+        <div class="convo-circle circle-convo-3"><div class="convo-circle-active"></div></div>
+    </div>
+    <div class="mobile-trail-back mtb1"><img src="img/mobile-trail-back.png"/></div>
+    <div class="mobile-trail-back mtb2"><img src="img/mobile-trail-back.png"/></div>
+</div>
+    
+<div class="mobile-body convo-2">
+    <ul class="mobile-item-list">
+     <li class="mobile-item-container">
+        <div class="mobile-button-column">
+            <div class="mobile-button-container">
+                <div class="mobile-tac-date">4/17/15</div>
+                <div class="mobile-tac-time">3:18 AM</div>
+                <div class="mobile-canvas-view-btn"></div>
+                <div class="mobile-conversation-btn"></div>
+                <div class="mobile-tac-bac-btn"></div>
+            </div>
+        </div>
+        <div class="mobile-tac-column">
+            <img src="img/mobile-tac-9.png"/>
+        </div>
+    </li>
+     <li class="mobile-item-container">
+        <div class="mobile-button-column">
+            <div class="mobile-button-container">
+                <div class="mobile-tac-date">4/17/15</div>
+                <div class="mobile-tac-time">3:18 AM</div>
+                <div class="mobile-canvas-view-btn"></div>
+                <div class="mobile-conversation-btn"></div>
+                <div class="mobile-tac-bac-btn"></div>
+            </div>
+        </div>
+        <div class="mobile-tac-column">
+            <img src="img/mobile-tac-10.png"/>
+        </div>
+    </li>
+
+     <li class="mobile-item-container">
+        <div class="mobile-button-column">
+            <div class="mobile-button-container">
+                <div class="mobile-tac-date">4/17/15</div>
+                <div class="mobile-tac-time">3:18 AM</div>
+                <div class="mobile-canvas-view-btn"></div>
+                <div class="mobile-conversation-btn"></div>
+                <div class="mobile-tac-bac-btn"></div>
+            </div>
+        </div>
+        <div class="mobile-tac-column">
+            <img src="img/mobile-tac-11.png"/>
+        </div>
+    </li>
+
+     <li class="mobile-item-container">
+        <div class="mobile-button-column">
+            <div class="mobile-button-container">
+                <div class="mobile-tac-date">4/17/15</div>
+                <div class="mobile-tac-time">3:18 AM</div>
+                <div class="mobile-canvas-view-btn"></div>
+                <div class="mobile-tac-bac-btn"></div>
+            </div>
+        </div>
+        <div class="mobile-tac-column">
+            <img src="img/mobile-tac-12.png"/>
+        </div>
+    </li>
+
+     <li class="mobile-item-container">
+        <div class="mobile-button-column">
+            <div class="mobile-button-container">
+                <div class="mobile-tac-date">4/17/15</div>
+                <div class="mobile-tac-time">3:18 AM</div>
+                <div class="mobile-canvas-view-btn"></div>
+                <div class="mobile-tac-bac-btn"></div>
+            </div>
+        </div>
+        <div class="mobile-tac-column">
+            <img src="img/mobile-tac-13.png"/>
+        </div>
+    </li>
+    </ul>  
+</div>
+    
+<div class="mobile-body convo-3">
+    <ul class="mobile-item-list">
+     <li class="mobile-item-container">
+        <div class="mobile-button-column">
+            <div class="mobile-button-container">
+                <div class="mobile-tac-date">4/17/15</div>
+                <div class="mobile-tac-time">3:18 AM</div>
+                <div class="mobile-canvas-view-btn"></div>
+                <div class="mobile-tac-bac-btn"></div>
+            </div>
+        </div>
+        <div class="mobile-tac-column">
+            <img src="img/mobile-tac-14.png"/>
+        </div>
+    </li>
+     <li class="mobile-item-container">
+        <div class="mobile-button-column">
+            <div class="mobile-button-container">
+                <div class="mobile-tac-date">4/17/15</div>
+                <div class="mobile-tac-time">3:18 AM</div>
+                <div class="mobile-canvas-view-btn"></div>
+                <div class="mobile-tac-bac-btn"></div>
+            </div>
+        </div>
+        <div class="mobile-tac-column">
+            <img src="img/mobile-tac-15.png"/>
+        </div>
+    </li>
+
+     <li class="mobile-item-container">
+        <div class="mobile-button-column">
+            <div class="mobile-button-container">
+                <div class="mobile-tac-date">4/17/15</div>
+                <div class="mobile-tac-time">3:18 AM</div>
+                <div class="mobile-canvas-view-btn"></div>
+                <div class="mobile-tac-bac-btn"></div>
+            </div>
+        </div>
+        <div class="mobile-tac-column">
+            <img src="img/mobile-tac-16.png"/>
+        </div>
+    </li>
+
+     <li class="mobile-item-container">
+        <div class="mobile-button-column">
+            <div class="mobile-button-container">
+                <div class="mobile-tac-date">4/17/15</div>
+                <div class="mobile-tac-time">3:18 AM</div>
+                <div class="mobile-canvas-view-btn"></div>
+                <div class="mobile-tac-bac-btn"></div>
+            </div>
+        </div>
+        <div class="mobile-tac-column">
+            <img src="img/mobile-tac-17.png"/>
+        </div>
+    </li>
+
+     <li class="mobile-item-container">
+        <div class="mobile-button-column">
+            <div class="mobile-button-container">
+                <div class="mobile-tac-date">4/17/15</div>
+                <div class="mobile-tac-time">3:18 AM</div>
+                <div class="mobile-canvas-view-btn"></div>
+                <div class="mobile-tac-bac-btn"></div>
+            </div>
+        </div>
+        <div class="mobile-tac-column">
+            <img src="img/mobile-tac-18.png"/>
+        </div>
+    </li>
+    </ul>  
+</div>
+    
+<div class="tac-bac-container">
+    <div class="tac-bac-header">
+        Tac Bac
+        <div class="tac-bac-close">X</div>
+    </div>
+    <div class="temp-nav">
+        <div class="nav-item tac-bac-close-innav"><img src="img/tac-nav-exit.jpg"/></div>
+        <div class="nav-item"><img src="img/tac-nav-tac.jpg"/></div>
+        <div class="nav-item"><img src="img/tac-nav-erase.jpg"/></div>
+        <div class="nav-item"><img src="img/tac-nav-draw.jpg"/></div>
+        <div class="nav-item"><img src="img/tac-nav-type.jpg"/></div>
+        <div class="nav-item"><img src="img/tac-nav-image.jpg"/></div>
+    </div>
+</div><!--END Tac Bac Container-->
+
+<script>
+$(".convo-1 .mobile-conversation-btn").click(function() {
+    $(".convo-2, .mtb1").show();
+    $(".mtb2").hide();
+    $(".convo-1, .temp-header").animate({left: "-100%"}, 550);
+    $(".convo-2, .convo-nav").animate({left: "0px"}, 550);
+    $(".convo-circle-link-bar-1").animate({width: 40}, 550);
+    setTimeout(function() {$(".circle-convo-2").fadeIn(550);}, 550);
+    $(".circle-convo-1, .circle-convo-2 .convo-circle-active").fadeIn();
+    setTimeout(function() {$(".convo-1").fadeOut();}, 400);
+});
+$(".convo-2 .mobile-conversation-btn").click(function() {
+    $(".convo-3, .mtb2").show();
+    $(".mtb1").hide();
+    $(".convo-2, .temp-header").animate({left: "-100%"}, 550);
+    $(".convo-3, .convo-nav").animate({left: "0px"}, 550);
+    $(".convo-circle-link-bar-2").animate({width: 40}, 550);
+    setTimeout(function() {$(".circle-convo-3").fadeIn(550);}, 550);
+    $(".circle-convo-2 .convo-circle-active").fadeOut();
+    setTimeout(function() {$(".convo-1").fadeOut();}, 400);
+}); 
+    
+$(".circle-convo-1").click(function() {
+    $(".convo-1, .mtb1").show();
+    $(".convo-1, .temp-header").animate({left: "0px"}, 550);
+    $(".convo-2, .convo-3, .convo-nav").animate({left: "100%"}, 550);
+    $(".convo-circle-link-bar").animate({width: 0}, 550);
+    $(".convo-circle, .mtb2").fadeOut();
+    setTimeout(function() {$(".convo-2, .convo-3").fadeOut();}, 400);
+    
+}); 
+$(".circle-convo-2").click(function() {
+    $(".convo-2, .mtb1").show();
+    $(".convo-2").animate({left: "0px"}, 550);
+    $(".convo-3").animate({left: "100%"}, 550);
+    $(".convo-circle-link-bar-2").animate({width: 0}, 550);
+    $(".circle-convo-3, .mtb2").fadeOut();
+    $(".circle-convo-2 .convo-circle-active").fadeIn();
+    setTimeout(function() {$(".convo-3").fadeOut();}, 400);
+});     
+$(".mobile-tac-bac-btn, .tac-arc").click(function() {
+    $(".tac-bac-container").fadeIn(550);
+});  
+$(".tac-bac-close, .tac-bac-close-innav").click(function() {
+    $(".tac-bac-container").fadeOut(550);
+});
+$(".mtb1").click(function() {
+    $(".circle-convo-1").click();
+});
+$(".mtb2").click(function() {
+    $(".circle-convo-2").click();
+});
+    
+</script>
+</body>
+</html>
