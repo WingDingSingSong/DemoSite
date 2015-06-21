@@ -1434,9 +1434,6 @@ ul.friend-menu-nav li a:hover img{
     margin: 0;
     font-family: 'Architects Daughter', "Comic Sans MS", cursive;
 }
-.all-timeline{
-    display: none;
-}
 .tl-date{
     width: 100%;
     float: left;
@@ -1480,6 +1477,9 @@ ul.friend-menu-nav li a:hover img{
 #time-line ul.side-slide-item-list:nth-last-child(-n+2) {
     background-color: red;
     margin: 0 0 88px 0 !important;
+}
+.all-timeline{
+    display: none;
 }
 
 /* boards specific */
