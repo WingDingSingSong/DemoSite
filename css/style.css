@@ -1434,11 +1434,10 @@ ul.friend-menu-nav li a:hover img{
     margin: 0;
     font-family: 'Architects Daughter', "Comic Sans MS", cursive;
 }
-.all-timeline{
-    display: none;
-}
 .tl-date{
     width: 100%;
+<<<<<<< HEAD
+=======
     float: left;
     display: block;
     font-size: 14px;
@@ -1448,6 +1447,7 @@ ul.friend-menu-nav li a:hover img{
 }
 .tl-board-name{
     width: 100%;
+>>>>>>> FETCH_HEAD
     float: left;
     display: block;
     font-size: 14px;
@@ -1455,6 +1455,18 @@ ul.friend-menu-nav li a:hover img{
     font-family: "Source Sans Pro", sans-serif;
     color: #bcbcbc;
 }
+<<<<<<< HEAD
+.tl-board-name{
+    width: 100%;
+    float: left;
+    display: block;
+    font-size: 14px;
+    margin: 2px 0 0 0;
+    font-family: "Source Sans Pro", sans-serif;
+    color: #bcbcbc;
+}
+=======
+>>>>>>> FETCH_HEAD
 .timeline-tac-delete{
     width:28px;
     height: 28px;
@@ -1481,6 +1493,12 @@ ul.friend-menu-nav li a:hover img{
     background-color: red;
     margin: 0 0 88px 0 !important;
 }
+<<<<<<< HEAD
+=======
+.all-timeline{
+    display: none;
+}
+>>>>>>> FETCH_HEAD
 
 /* boards specific */
 ul.boards-slide-list li{
