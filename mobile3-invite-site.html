@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/caf0e1a5-71d3-49f5-9610-e92e71bd92fa.css"/>
+    <link rel="stylesheet" href="css/m3-style.css"> <!-- Resource style -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="js/modernizr.js"></script><!-- Modernizr -->
+
+</head>
+
+<body>
+    <header id="m3-header">
+        <img class="logo" src="img/logo.jpg"/>
+        <a class="m3-link-to-home" href="mobile3.html">home</a>
+    </header>
+    <div class="m3-browse-section-header">
+        <div class="m3-title">Invite
+            <form>
+                <input class="m3-search-invite" type="text" name="search-name" placeholder="enter name here" autofocus/>
+            </form>      
+        </div>
+    </div>
+    <div class="m3-boards-list-container">
+        <ul class="m3-invite-list">
+            <li class="m3-invite-list">
+                <label>
+                    <input class="check" type="checkbox"/>
+                    <span class="m3-invite-checked"></span>
+                    <div class="m3-list-profile-pic"></div>
+                    <div class="m3-list-invite-name">Person's Name Goes Here</div>
+                </label>
+            </li>
+            <li class="m3-invite-list">
+                <label>
+                    <input class="check" type="checkbox"/>
+                    <span class="m3-invite-checked"></span>
+                    <div class="m3-list-profile-pic"></div>
+                    <div class="m3-list-invite-name">Person's Name Goes Here</div>
+                </label>
+            </li>
+            <li class="m3-invite-list">
+                <label>
+                    <input class="check" type="checkbox"/>
+                    <span class="m3-invite-checked"></span>
+                    <div class="m3-list-profile-pic"></div>
+                    <div class="m3-list-invite-name">Person's Name Goes Here</div>
+                </label>
+            </li>
+            <li class="m3-invite-list">
+                <label>
+                    <input class="check" type="checkbox"/>
+                    <span class="m3-invite-checked"></span>
+                    <div class="m3-list-profile-pic"></div>
+                    <div class="m3-list-invite-name">Person's Name Goes Here</div>
+                </label>
+            </li>
+            <li class="m3-invite-list">
+                <label>
+                    <input class="check" type="checkbox"/>
+                    <span class="m3-invite-checked"></span>
+                    <div class="m3-list-profile-pic"></div>
+                    <div class="m3-list-invite-name">Person's Name Goes Here</div>
+                </label>
+            </li>
+            <li class="m3-invite-list">
+                <label>
+                    <input class="check" type="checkbox"/>
+                    <span class="m3-invite-checked"></span>
+                    <div class="m3-list-profile-pic"></div>
+                    <div class="m3-list-invite-name">Person's Name Goes Here</div>
+                </label>
+            </li>
+            <li class="m3-invite-list">
+                <label>
+                    <input class="check" type="checkbox"/>
+                    <span class="m3-invite-checked"></span>
+                    <div class="m3-list-profile-pic"></div>
+                    <div class="m3-list-invite-name">Person's Name Goes Here</div>
+                </label>
+            </li>
+        </ul>
+    </div>
+    
+
+    <div class="m3-invite-btn-container">
+        <div class="m3-invite-btn">invite now</div>
+    </div>
+    
+    
+    <div class="modal-message-box">
+        <div class="booya">Booyah!</div>
+        <p>Your invite has been sent.</p>
+        <div class="modal-bt-container"><a class="modal-btn" href="mobile3-board-page.html">Close</a></div>
+    </div>
+    
+    <script>//Temporat script for demoing list auto populate
+            /* Active Search Results */
+            $('.m3-search-invite').keyup(function () {
+                // console.log(this.value);
+                if(this.value.length > 1) {  
+                  $(".m3-invite-list").fadeIn();
+                }
+                if(this.value.length < 2) {
+                  $(".m3-invite-list").fadeOut();
+                  $(".m3-invite-btn-container").fadeOut();
+                }
+           });
+        
+        //Load modal on "Submit"
+        $(".m3-invite-btn").click(function(){
+           $(".modal-message-box").fadeIn();
+        });
+        
+        $('.check').change(function() {
+          if ($(this).is(':checked')) {
+            $(".m3-invite-btn-container").fadeIn();
+          } 
+        });
+      </script>
+</body>
+</html>
