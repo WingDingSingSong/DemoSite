@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/caf0e1a5-71d3-49f5-9610-e92e71bd92fa.css"/>
+    <link rel="stylesheet" href="css/m3-style.css"> <!-- Resource style -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="js/modernizr.js"></script><!-- Modernizr -->
+
+</head>
+
+<body>
+    <header id="m3-header">
+        <img class="logo" src="img/logo.jpg"/>
+        <a class="m3-link-to-home" href="mobile3.html">home</a>
+    </header>
+    
+    <div class="email-invite-box">
+        <div class="email-invite-msg">Friends are<br/>the best!</div>
+        <p>Enter email addresses below. Separate multiple emails with commas.</p>
+        <form>
+            <input class="m3-email-invite-field" type="text" name="" placeholder="enter emails here" autofocus/>
+            <input class="m3-email-invite-submit" type="submit" value="Send Invite">
+        </form> 
+    </div>
+    
+
+    <div class="m3-invite-btn-container">
+        <div class="m3-invite-btn">invite now</div>
+    </div>
+    
+    
+    <div class="modal-message-box">
+        <div class="booya">How Exciting!</div>
+        <p>Your invitation has been sent.</p>
+        <div class="modal-bt-container"><a class="modal-btn" href="mobile3-board-page.html">Close</a></div>
+    </div>
+    
+    <script>//Temporat script for demoing list auto populate
+            /* Active Search Results */
+            $('.m3-email-invite-field').keyup(function () {
+                // console.log(this.value);
+                if(this.value.length > 1) {  
+                  $(".m3-email-invite-submit").fadeIn();
+                }
+                if(this.value.length < 2) {
+                  $(".m3-email-invite-submit").fadeOut();
+                  $(".m3-invite-btn-container").fadeOut();
+                }
+           });
+        
+        //Load modal on "Submit"
+        $(".m3-email-invite-submit").click(function(){
+           $(".modal-message-box").fadeIn();
+        });
+        
+        //Stay on page on "Submit"
+        $(document).ready(function(){
+           var $form = $('form');
+           $form.submit(function(){
+              $.post($(this).attr('action'), $(this).serialize(), function(response){
+                    // do something here on success
+              },'json');
+              return false;
+           });
+        });
+      </script>
+</body>
+</html>
