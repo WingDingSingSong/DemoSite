@@ -96,5 +96,22 @@
             </li>
         </ul>
     </div>
+    
+    <div class="modal-message-box">
+        <div class="img-large-container">
+            <img src="https://s3-us-west-2.amazonaws.com/tacboard-cdn/IeM6gpo0mzAcfRTYE829ES9OJkjEV523CdGGvnctxSc.jpg"/>
+        </div>
+        <div class="close-img-large">x</div>
+    </div>
+    
+    <script>
+    //Load modal on "Submit"
+        $(".timeline-img").click(function(){
+           $(".modal-message-box").fadeIn();
+        });
+        $(".close-img-large").click(function(){
+           $(".modal-message-box").fadeOut();
+        });
+    </script>
 </body>
 </html>

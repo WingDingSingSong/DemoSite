@@ -405,6 +405,7 @@ li.m3-timeline-list{
     border-bottom: 1px solid #d7d7d7; 
     overflow: hidden;
     position: relative;
+    padding: 10px 0;
 }
 .timeline-tac{
     width: 100%;
@@ -419,16 +420,20 @@ li.m3-timeline-list{
     padding-top: 4px;
 }
 .timeline-img{
-    max-width: 110px;
-    margin: 0px 12px 0px 4px;
+    max-width: 200px;
+    margin: 0px 12px 0px 12px;
+}
+.timeline-sketch{
+    float: right;
+    margin: 0 15px;
 }
 .timeline-username{
     width: auto;
     min-width:174px;
     text-align: left;
     margin: 0 0 10px 0;
-    font-size: 16px;
-    height: 18px;
+    font-size: 18px;
+    height: 24px;
     text-overflow: ellipsis;
     white-space: nowrap;
     display: block;
@@ -436,9 +441,10 @@ li.m3-timeline-list{
 }
 .timeline-tac-copy{
     display:block;
-    font-size: 15px;
+    font-size: 16px;
+    line-height: 26px;
     margin: 0;
-    padding: 0 10px 24px 0;
+    padding: 0 10px 36px 0;
     font-family:'ArchitectsDaughterW00-R';
 }
 .tl-date{
@@ -450,6 +456,48 @@ li.m3-timeline-list{
     font-family: "Source Sans Pro", sans-serif;
     color: #bcbcbc;
 }
+/* start timeline larger image modal */
+.img-large-container{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    background: #000 url("../img/image-loading.gif") no-repeat center;
+    text-align: center;
+    vertical-align: middle;
+}
+.img-large-container img{
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.close-img-large{
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 35px;
+    height: 35px;
+    font-family:'ArchitectsDaughterW00-R';
+    background-color: #1cbbb4;
+    text-align: right;
+    padding: 3px 8px 0px 0px;
+    font-size: 22px;
+    font-weight: 100;
+    color: #fff;
+    font-weight: bold;
+    -webkit-border-top-left-radius: 80%;
+    -moz-border-radius-topleft: 80%;
+    border-top-left-radius: 80%;
+}
+/* end timeline larger image modal */
+
 
 .m3-create-board-container{
     position: fixed;
@@ -500,9 +548,9 @@ input:focus {
 
 .modal-message-box{
     width: 100%;
-    height: calc(100% - 50px);
+    height: 100%;
     position: fixed;
-    top: 50px;
+    top: 0px;
     background: #ffffff;
     text-align: center;
     display: none;
