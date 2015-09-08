@@ -182,14 +182,14 @@ input[type=checkbox] {
   display: none;
 }
 input[type=checkbox] + label {
-  background-color:#ebebeb;
+  background-color:#fff;
   height: 21px;
   width: 21px;
   font-size:18px;
   display: block;
   position: relative;
   transition: all 0.4s;
-  border: solid 5px #ebebeb;
+  border: solid 2px #ebebeb;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -672,32 +672,43 @@ Slide Out Side Menus
       display: none;
       overflow: hidden;
       padding:12px;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      border-radius: 8px;
   }
 .modal-message-box p{
-    font-size:24px;
+    font-size:20px;
+    margin: 0 auto 25px;
 }
-  .booya{
+.booya{
       font-family: 'Architects Daughter', "Comic Sans MS", cursive;
       font-size: 64px;
       color: #1cbbb4;
-      margin: 10% 10% 25px;
+      margin: 10% 10% 10px;
 }
-   .bodal-bt-container{
-       margin: 42px auto;
+.bodal-bt-container{
+       margin: 16px auto 0;
     }
+.bodal-bt-container img{
+    margin-bottom: -3px;
+}
 a.modal-btn:link, a.modal-btn:active, a.modal-btn:visited, a.modal-btn:hover{
     margin: 6px auto;
     text-align: center;
     color: #ffffff;
-    width: 180px;
+    width: 240px;
+    display: block;
     background-color: #1cbbb4;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    font-size: 25px;
-    padding: 4px 10px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    font-size: 20px;
+    padding: 8px 10px;
     height: 36px;   
     cursor: pointer;
+}
+a.modal-gmail-btn:link, a.modal-gmail-btn:active, a.modal-gmail-btn:visited, a.modal-gmail-btn:hover{
+    background-color: #c52b0c !important;
 }
 a.btn-grey:link, a.btn-grey:active, a.btn-grey:visited, a.btn-grey:hover {
     border: solid 1px #999;
@@ -705,7 +716,7 @@ a.btn-grey:link, a.btn-grey:active, a.btn-grey:visited, a.btn-grey:hover {
     color:#999;
     background-color: #fff;
 }
-  .create-board-btn-container{
+.create-board-btn-container{
     position:absolute;
     bottom: 88px;
     height: 48px;
@@ -715,8 +726,100 @@ a.btn-grey:link, a.btn-grey:active, a.btn-grey:visited, a.btn-grey:hover {
     border-top: 1px solid #ffffff;
     z-index: 999;
 }
+.invite-slide-gm{
+    position: relative;
+    height: 95%;
+    width: 100%;
+    padding-bottom: 12px;
+}
+.invite-slide-gm .booya{
+    margin-top: 5%;
+}
+.gmail-contacts-contianer{
+    width: 95%;
+    height: calc(100% - 180px);
+    overflow: auto;
+    margin: 20px auto;
+    text-align: left;
+}
+.gmail-containt-box{
+    width: 49%;
+    height: 50px;
+    display: inline-block;
+    position: relative;
+    border-bottom: 1px solid #f1f1f1;
+}
+.gmail-containt-box .friend-img-box{
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    background-image: url("http://tacboard-webapp.s3-website-us-west-2.amazonaws.com/img/peeps-icon.png");
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+}
+.gmail-containt-box .friend-img-box img{
+    height: 50px;
+    width: 50px;
+}
+.gmail-containt-box .gm-friend-name{
+    font-family: "Source Sans Pro", sans-serif;
+    position: absolute;
+    top: 5px;
+    left: 60px;
+    width: calc(100% - 60px);
+    text-align: left;
+    font-size: 18px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+}
+.gm-invite-text span{
+    opacity: 0;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+.gmail-containt-box label{
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+label div.gm-invite-text{
+    color: #1cbbb4;
+    position: absolute;
+    top: 26px;
+    left: 60px;
+    font-size: 18px;
+}
+label input.gmcheck:checked + div.gm-invite-text {
+   color: #ffa70f;
+}
+label input.gmcheck:checked + div.gm-invite-text span{
+   opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+.gmail-button-containers{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom:0px;
+    padding-bottom: 20px;
+}
+.gmail-button-cell{
+    display: inline-block;
+    width: 48%;
+}
+.gmail-invite-btn{
+    display: none;
+}
+
+
+
 /*------------- Email invite -----------*/
-.invite-slide-2, .invite-slide-3{
+.invite-slide-2, .invite-slide-3, .invite-slide-gm{
     display: none;
 }
 .email-invite-field{
@@ -730,7 +833,7 @@ a.btn-grey:link, a.btn-grey:active, a.btn-grey:visited, a.btn-grey:hover {
 	padding:.3em;
 	text-align:center;
 	font-size:14px;
-    margin: 30px 0 0 0;
+    margin: 0px 0 10px 0;
 }
 .ps-invite{
     font-size: 14px;
@@ -1473,22 +1576,29 @@ ul.friend-menu-nav li a:hover img{
     border-radius: 50%;
     border: solid 1px #fff;
     position: absolute;
-    bottom: 8px;
-    right: 8px;
+    bottom: 0px;
+    left: 0px;
     overflow: hidden;
-    background-color: #ccc;
-     transition: background-color 0.5s ease;
+    transition: color 0.5s ease;
     }
-.timeline-tac-delete:hover{
-    background-color: #1cbbb4;
-    border: solid 1px #1cbbb4;
-     transition: background-color 0.5s, border  0.5s ease;
-}
 .timeline-tac-delete img{
     position: absolute;
-    top: -8px;
-    left: -6px;
+    background-color: #ccc;
+    top: -10px;
+    left: -9px;
 }
+.timeline-tac-delete div{
+    margin: 0px 28px;
+}
+.timeline-tac-delete:hover {
+    color: #1cbbb4;
+    transition: background-color 0.5s, border  0.5s ease;
+}
+.timeline-tac-delete:hover .timeline-tac-delete-img{
+    background-color: #1cbbb4;
+    transition: background-color 0.5s, border  0.5s ease;
+}
+
 #time-line ul.side-slide-item-list:nth-last-child(-n+2) {
     background-color: red;
     margin: 0 0 88px 0 !important;
@@ -1535,12 +1645,19 @@ ul.boards-slide-list li{
 	left:8px;
 	color:#bcbcbc;
 }
+.toggle-signature{
+	position:absolute;
+	font-size:16px;
+	top:34px;
+	left:8px;
+	color:#bcbcbc;
+}
 .board-menu-container{
     position:absolute;
 	font-size:16px;
 	top:86px;
 	left:4px;
-    height: 50px;
+    height: 88px;
     width: 98%;
     padding: 4px;
 }
@@ -1551,6 +1668,24 @@ ul.boards-slide-list li{
 	left:6px;
 	color:#bcbcbc;
 }
+.show-tac-signatures{
+    display: inline-block;
+    width: 300px;;
+    position:absolute;
+    top:16px;
+    left:4px;
+}
+.show-tac-signatures-left{
+    display: inline-block;
+    width: 24px;
+}
+.show-tac-signatures-right{
+    display: inline-block;
+    width: 300px;;
+    position:absolute;
+    top:2px;
+    left:25px;
+}  
 .board-last-tacd{
 	position:absolute;
 	font-size:16px;
@@ -1560,10 +1695,10 @@ ul.boards-slide-list li{
 }
 .board-menu-nav-container{
     position: absolute;
-    top: 48px;
+    top: 54px;
     width: 100%;
     padding: 3px;
-    height: 40px;
+    height: 30px;
 }
 .board-sub-menu-pub-priv{
     width: 122px;
@@ -2125,7 +2260,10 @@ ul.side-slide-item-list{
     border-top: 1px solid #ffffff;
     z-index: 999;
 }
-
+    
+.gmail-containt-box{
+    width: 49%;
+}
 }
 
 
@@ -2293,6 +2431,23 @@ ul.side-slide-item-list{
     .selector-dd .dropdown li a {
         padding: 14px 10px 16px 10px;
     }
+    .gmail-containt-box{
+        width: 32%;
+    }
+    
+}
+
+@media only screen and (min-width: 1365px) {
+    .gmail-containt-box{
+        width: 24%;
+    }
+    .gmail-contacts-contianer{
+        height: calc(100% - 230px);
+    }
+    .gmail-button-containers{
+        padding-bottom: 60px;
+    }
+    
 }
 
 /*---------------------------------
